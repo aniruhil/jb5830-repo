@@ -1,0 +1,19 @@
+# Table of contents
+# Learn more at https://jupyterbook.org/customize/toc.html
+
+format: jb-book
+root: docs/Intro
+parts:
+  - caption: Reading Data
+    chapters:
+    - file: docs/Module01
+  - caption: Cleaning & Organizng Data
+    chapters:    
+    - file: docs/Module02
+    - file: docs/Module03 
+    - file: docs/Module04
+  - caption: Visualizing Data
+    chapters:   
+    - file: docs/Module05
+    - file: docs/Module06
+   
