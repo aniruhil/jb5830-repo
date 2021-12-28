@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Introduction to R &amp; RStudio &#8212; Data Analytics with R (MPA 5830)</title>
+    <title>Reading data in R &#8212; Data Analytics with R (MPA 5830)</title>
     
   <link href="../_static/css/theme.css" rel="stylesheet">
   <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
@@ -106,7 +106,7 @@
 <ul class="current nav bd-sidenav">
  <li class="toctree-l1 current active">
   <a class="current reference internal" href="#">
-   Introduction to R &amp; RStudio
+   Reading data in R
   </a>
  </li>
 </ul>
@@ -257,12 +257,12 @@
                 <ul class="visible nav section-nav flex-column">
  <li class="toc-h1 nav-item toc-entry">
   <a class="reference internal nav-link" href="#">
-   Introduction to R &amp; RStudio
+   Reading data in R
   </a>
   <ul class="visible nav section-nav flex-column">
    <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#what-will-you-learn-in-this-module-you-will-learn-how-to">
-     What will you learn?In this module you will learn how to
+    <a class="reference internal nav-link" href="#what-will-you-learn">
+     What will you learn?
     </a>
    </li>
    <li class="toc-h2 nav-item toc-entry">
@@ -299,6 +299,16 @@
    Reading Files from the Web
   </a>
   <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#excel-files-off-the-web">
+     Excel files off the web
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#reading-compressed-files-zip-gz-etc">
+     Reading compressed files (*.zip, *.gz, etc.)
+    </a>
+   </li>
    <li class="toc-h2 nav-item toc-entry">
     <a class="reference internal nav-link" href="#labeling-data-values">
      Labeling data values
@@ -366,11 +376,12 @@
         
               <div>
                 
-  <div class="tex2jax_ignore mathjax_ignore section" id="introduction-to-r-rstudio">
-<h1>Introduction to R &amp; RStudio<a class="headerlink" href="#introduction-to-r-rstudio" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="what-will-you-learn-in-this-module-you-will-learn-how-to">
-<h2>What will you learn?In this module you will learn how to<a class="headerlink" href="#what-will-you-learn-in-this-module-you-will-learn-how-to" title="Permalink to this headline">¶</a></h2>
-<p>(a) access data files in R, both locally (i.e., from a folder on your computer) and from the web (i.e., without manually downloading a data file);
+  <div class="tex2jax_ignore mathjax_ignore section" id="reading-data-in-r">
+<h1>Reading data in R<a class="headerlink" href="#reading-data-in-r" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="what-will-you-learn">
+<h2>What will you learn?<a class="headerlink" href="#what-will-you-learn" title="Permalink to this headline">¶</a></h2>
+<p>In this module you will learn how to
+(a) access data files in R, both locally (i.e., from a folder on your computer) and from the web (i.e., without manually downloading a data file);
 (b) explore the contents of a data file with specific comands,
 (c) add value labels and create a new qualitative variable,
 (d) save data files in native R format,
@@ -670,11 +681,10 @@ $ Year  &lt;int&gt; 2017, 2017
 </table>
 </div></div>
 </div>
+<p>Here are some more files read directly from the web.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="c1"># Some more files read from the web</span>
-
-<span class="nf">read.table</span><span class="p">(</span>
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">read.table</span><span class="p">(</span>
   <span class="s">&quot;https://stats.idre.ucla.edu/stat/data/test.txt&quot;</span><span class="p">,</span>
   <span class="n">header</span> <span class="o">=</span> <span class="kc">TRUE</span>
   <span class="p">)</span> <span class="o">-&gt;</span> <span class="n">test.txt</span> 
@@ -706,6 +716,29 @@ $ Year  &lt;int&gt; 2017, 2017
 </div>
 </div>
 <p>If you look at <code class="docutils literal notranslate"><span class="pre">fpe</span></code> you will notice that there are three columns but the rows each have a unique name. These are <code class="docutils literal notranslate"><span class="pre">row</span> <span class="pre">names</span></code> that are remembered by R but will not show up with a column name.</p>
+<div class="section" id="excel-files-off-the-web">
+<h2>Excel files off the web<a class="headerlink" href="#excel-files-off-the-web" title="Permalink to this headline">¶</a></h2>
+<p>Excel files cannot be read off the web in the same manner as we did <code class="docutils literal notranslate"><span class="pre">*.csv</span></code>, <code class="docutils literal notranslate"><span class="pre">*.txt</span></code>, etc. The code sequence is a little more convoluted, as shown below.</p>
+<p>You could also do the following with the <code class="docutils literal notranslate"><span class="pre">{rio}</span></code> package but remember to install the package (if missing) and to run <code class="docutils literal notranslate"><span class="pre">rio::install_formats()</span></code> before executing the code below.</p>
+</div>
+<div class="section" id="reading-compressed-files-zip-gz-etc">
+<h2>Reading compressed files (*.zip, *.gz, etc.)<a class="headerlink" href="#reading-compressed-files-zip-gz-etc" title="Permalink to this headline">¶</a></h2>
+<p>Large files may sit in compressed archives on the web and R has a neat way of allowing you to download the file, unzip it, and read it. Why is this useful? Because if these files tend to be update periodicially, this ability lets you use the same piece of R code to download/unzip/read the updated file. The tedious way would be to manually download, unzip, place in the appropriate data folder, and then read it.</p>
+<p>The code is shown below but not run.</p>
+<p>temp &lt;- tempfile()</p>
+<p>download.file(
+“<span class="xref myst">ftp://ftp.cdc.gov/pub/Health_Statistics/NCHS/nvss/bridged_race/pcen_v2018_y1018.sas7bdat.zip</span>”,
+temp,
+mode = “wb”
+)</p>
+<p>haven::read_sas(
+unzip(
+temp,
+“pcen_v2018_y1018.sas7bdat/pcen_v2018_y1018.sas7bdat”
+)
+) -&gt; oursasdata</p>
+<p>unlink(temp)</p>
+</div>
 <div class="section" id="labeling-data-values">
 <h2>Labeling data values<a class="headerlink" href="#labeling-data-values" title="Permalink to this headline">¶</a></h2>
 <p>Often the data contain columns that record information with numeric codes that reflect some qualitative attributes. For example, whether an individual is Male or Female may be stored as 0 and 1, respectively. We can append the correct qualitative labels to these columns, and then hen we create graphs or tables, what is being displayed will be readily apparent (i.e., the reader\viewer does not have to work hard to figure out what is a <code class="docutils literal notranslate"><span class="pre">0</span></code> and what is a <code class="docutils literal notranslate"><span class="pre">1</span></code>).</p>
@@ -784,38 +817,6 @@ $ Year  &lt;int&gt; 2017, 2017
 </div>
 </div>
 <p>We can easily check the basic descriptive statistics of each column in a data file by running the <code class="docutils literal notranslate"><span class="pre">summary(filename)</span></code> command. Let us see what results if we do this with the <code class="docutils literal notranslate"><span class="pre">hsb2</span></code> data set.</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">summary</span><span class="p">(</span><span class="n">hsb2</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>       id             female           race           ses            schtyp    
- Min.   :  1.00   Min.   :0.000   Min.   :1.00   Min.   :1.000   Min.   :1.00  
- 1st Qu.: 50.75   1st Qu.:0.000   1st Qu.:3.00   1st Qu.:2.000   1st Qu.:1.00  
- Median :100.50   Median :1.000   Median :4.00   Median :2.000   Median :1.00  
- Mean   :100.50   Mean   :0.545   Mean   :3.43   Mean   :2.055   Mean   :1.16  
- 3rd Qu.:150.25   3rd Qu.:1.000   3rd Qu.:4.00   3rd Qu.:3.000   3rd Qu.:1.00  
- Max.   :200.00   Max.   :1.000   Max.   :4.00   Max.   :3.000   Max.   :2.00  
-      prog            read           write            math      
- Min.   :1.000   Min.   :28.00   Min.   :31.00   Min.   :33.00  
- 1st Qu.:2.000   1st Qu.:44.00   1st Qu.:45.75   1st Qu.:45.00  
- Median :2.000   Median :50.00   Median :54.00   Median :52.00  
- Mean   :2.025   Mean   :52.23   Mean   :52.77   Mean   :52.65  
- 3rd Qu.:2.250   3rd Qu.:60.00   3rd Qu.:60.00   3rd Qu.:59.00  
- Max.   :3.000   Max.   :76.00   Max.   :67.00   Max.   :75.00  
-    science          socst      
- Min.   :26.00   Min.   :26.00  
- 1st Qu.:44.00   1st Qu.:46.00  
- Median :53.00   Median :52.00  
- Mean   :51.85   Mean   :52.41  
- 3rd Qu.:58.00   3rd Qu.:61.00  
- Max.   :74.00   Max.   :71.00  
-</pre></div>
-</div>
-</div>
-</div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">summary</span><span class="p">(</span><span class="n">hsb2</span><span class="p">)</span>
@@ -945,6 +946,7 @@ $ Year  &lt;int&gt; 2017, 2017
 </div>
 </div>
 </div>
+<p>Whenever I load a data-set, I run the <code class="docutils literal notranslate"><span class="pre">summary(...)</span></code> command just to ensure that the file did load without errors.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">summary</span><span class="p">(</span><span class="n">hsb2</span><span class="p">)</span>
@@ -1008,7 +1010,7 @@ $ Year  &lt;int&gt; 2017, 2017
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The downloaded binary packages are in
-	/var/folders/qh/6q39v0755_54rxmbl8m5ttnwy0twd7/T//Rtmp32867V/downloaded_packages
+	/var/folders/qh/6q39v0755_54rxmbl8m5ttnwy0twd7/T//RtmpiY9PUm/downloaded_packages
 </pre></div>
 </div>
 <div class="output text_html"><table class="dataframe">
