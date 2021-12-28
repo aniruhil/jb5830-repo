@@ -719,7 +719,20 @@ $ Year  &lt;int&gt; 2017, 2017
 <div class="section" id="excel-files-off-the-web">
 <h2>Excel files off the web<a class="headerlink" href="#excel-files-off-the-web" title="Permalink to this headline">¶</a></h2>
 <p>Excel files cannot be read off the web in the same manner as we did <code class="docutils literal notranslate"><span class="pre">*.csv</span></code>, <code class="docutils literal notranslate"><span class="pre">*.txt</span></code>, etc. The code sequence is a little more convoluted, as shown below.</p>
+<p>library(readxl)</p>
+<p>“<a class="reference external" href="https://github.com/aniruhil/mpa5830-jupyter/blob/main/code/data/Fatalities_by_VehicleType.xlsx">https://github.com/aniruhil/mpa5830-jupyter/blob/main/code/data/Fatalities_by_VehicleType.xlsx</a>” -&gt; my_url</p>
+<p>“Fatalities_by_VehicleType.xlsx” -&gt; my_destfile</p>
+<p>curl::curl_download(
+my_url,
+my_destfile
+)</p>
+<p>read_excel(
+my_destfile
+) -&gt; Fatalities_by_VehicleType</p>
 <p>You could also do the following with the <code class="docutils literal notranslate"><span class="pre">{rio}</span></code> package but remember to install the package (if missing) and to run <code class="docutils literal notranslate"><span class="pre">rio::install_formats()</span></code> before executing the code below.</p>
+<p>library(rio)</p>
+<p>“<a class="reference external" href="https://raw.githubusercontent.com/aniruhil/mpa5830-jupyter/main/code/data/Fatalities_by_VehicleType.xlsx">https://raw.githubusercontent.com/aniruhil/mpa5830-jupyter/main/code/data/Fatalities_by_VehicleType.xlsx</a>” -&gt; url</p>
+<p>import(url) -&gt; my_data</p>
 </div>
 <div class="section" id="reading-compressed-files-zip-gz-etc">
 <h2>Reading compressed files (*.zip, *.gz, etc.)<a class="headerlink" href="#reading-compressed-files-zip-gz-etc" title="Permalink to this headline">¶</a></h2>
