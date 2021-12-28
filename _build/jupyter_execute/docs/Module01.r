@@ -75,8 +75,6 @@ read.table(
 
 fpe # This command asks R to show us what fpe contains 
 
-# Some more files read from the web
-
 read.table(
   "https://stats.idre.ucla.edu/stat/data/test.txt",
   header = TRUE
@@ -89,14 +87,29 @@ read_csv(
 read_sav(
   "https://stats.idre.ucla.edu/stat/data/hsb2.sav"
   ) -> hsb2.spss 
+library(readxl)
 
+"https://github.com/aniruhil/mpa5830-jupyter/blob/main/code/data/Fatalities_by_VehicleType.xlsx" -> my_url
+
+"Fatalities_by_VehicleType.xlsx" -> my_destfile 
+
+curl::curl_download(
+    my_url, 
+    my_destfile
+    )
+
+read_excel(
+    my_destfile
+    ) -> Fatalities_by_VehicleTypelibrary(rio)
+
+"https://raw.githubusercontent.com/aniruhil/mpa5830-jupyter/main/code/data/Fatalities_by_VehicleType.xlsx" -> url
+
+import(url) -> my_data
 read.table(
   'https://stats.idre.ucla.edu/stat/data/hsb2.csv',
   header = TRUE,
   sep = ","
   ) -> hsb2
-
-summary(hsb2)
 
 summary(hsb2)
 
