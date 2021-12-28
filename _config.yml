@@ -1,11 +1,11 @@
 # Book settings
 # Learn more at https://jupyterbook.org/customize/config.html
 
-title: Data Analytics with R (MPA 5830)
-author: Ani Ruhil
-copyright: '2021'
-logo: logo5830.svg
-exclude_patterns: [_build, Thumbs.db, .DS_Store, "**.ipynb_checkpoints", "chicagobike17.RData"]
+title                       : Data Analytics with R (MPA 5830)
+author                      : Ani Ruhil
+copyright                   : '2022'
+logo                        : logo5830.svg
+exclude_patterns            : [_build, Thumbs.db, .DS_Store, "**.ipynb_checkpoints", "chicagobike17.RData"]
 only_build_toc_files: false
 
 # Force re-execution of notebooks on each build.
@@ -23,15 +23,15 @@ execute:
 # Parse and render settings
 parse:
   myst_enable_extensions:  # default extensions to enable in the myst parser. See https://myst-parser.readthedocs.io/en/latest/using/syntax-optional.html
-    # - amsmath
+    - amsmath
     - colon_fence
-    # - deflist
+    - deflist
     - dollarmath
-    # - html_admonition
-    # - html_image
+    - html_admonition
+    - html_image
     - linkify
-    # - replacements
-    # - smartquotes
+    - replacements
+    - smartquotes
     - substitution
     - tasklist
   myst_url_schemes          : [mailto, http, https] # URI schemes that will be recognised as external URLs in Markdown links
@@ -43,7 +43,7 @@ latex:
   latex_engine              : pdflatex
   use_jupyterbook_latex     : true
   latex_documents:
-    targetname               : book.tex
+    targetname              : book.tex
 
 # Add a bibtex file so that we can create citations
 bibtex_bibfiles:

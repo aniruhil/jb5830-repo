@@ -1,7 +1,5 @@
 # Reading data in R
 
-`What will you learn?`
-
 In this module you will learn how to 
 (a) access data files in R, both locally (i.e., from a folder on your computer) and from the web (i.e., without manually downloading a data file);
 (b) explore the contents of a data file with specific comands, 
@@ -48,7 +46,7 @@ One of the golden rules to follow when reading data is to make your life easy by
 
 Data come in several formats but I will walk you through the formats you are most likely to encounter -- MS Excel, CSV, TXT, fixed-width, and then in any one of these commercial software formats: SAS, Stata, or SPSS. 
 
-## CSV data files 
+### CSV data files 
 We start by reading a simple `comma-separated variable` format file and then a `tab-delimited variable` format file. A CSV file has each column separated by a `comma` while a tab-delimited file has every column separated by a `tab` -- `,` versus `\t` 
 
 
@@ -127,7 +125,7 @@ glimpse(df.tab)
     $ z [3m[90m<int>[39m[23m 3, 6, 9, 12, 15, 18, 21
 
 
-## MS Excel files
+### MS Excel files
 
 Microsoft **Excel** files can be read via the `readxl` package, and you see two versions below -- one for the older `*.xls` format and the other for the newer `*.xlsx` format. 
 
@@ -194,7 +192,7 @@ glimpse(df.xlsx)
     $ z [3m[90m<dbl>[39m[23m 3, 6, 9, 12, 15, 18, 21
 
 
-## SPSS, Stata, SAS files
+### SPSS, Stata, SAS files
 Some governmental agencies and other sources tend to use SAS, Stata, or SPSS for storing data and for carrying out various data analyses. This is a legacy issue that is changing but a little too slowly for most of us who do not use these commercial software packages as the mainstays of our data work. But, even if you do not use these packages, you should know how to read in data created in their native formats. As it turns out, **SPSS, Stata, SAS** files can be read via the `haven` package, and with relative ease. 
 
 
@@ -240,7 +238,7 @@ glimpse(df.sas)
     $ z [3m[90m<dbl>[39m[23m 3, 6, 9, 12, 15, 18, 21
 
 
-## Fixed-width files 
+### Fixed-width files 
 It is also common to encounter **fixed-width** files where the raw data are stored without any gaps between successive columns. This is also a legacy format from the early days of computers and punch cards, and one of the most efficient ways of storing large amounts of data. These files come with documentation that will give you the necessary details about where each column starts and ends, etc. [See here for some examples of layouts from the Census Bureau](https://www.census.gov/programs-surveys/geography/technical-documentation/records-layout/2010-zcta-record-layout.html#par_textimage_0).  
 
 
@@ -380,7 +378,11 @@ import(url) -> my_data
 ```
 
 ## Reading compressed files (*.zip, *.gz, etc.)
-Large files may sit in compressed archives on the web and R has a neat way of allowing you to download the file, unzip it, and read it. Why is this useful? Because if these files tend to be update periodicially, this ability lets you use the same piece of R code to download/unzip/read the updated file. The tedious way would be to manually download, unzip, place in the appropriate data folder, and then read it. The code is shown below but not run.
+
+Large files may sit in compressed archives on the web and R has a neat way of allowing you to download the file, unzip it, and read it. Why is this useful? Because if these files tend to be update periodicially, this ability lets you use the same piece of R code to download/unzip/read the updated file. The tedious way would be to manually download, unzip, place in the appropriate data folder, and then read it. 
+
+The code is shown below but not run.
+
 
 ```R
 temp <- tempfile()
@@ -634,7 +636,7 @@ head(penguins)
 
     
     The downloaded binary packages are in
-    	/var/folders/qh/6q39v0755_54rxmbl8m5ttnwy0twd7/T//Rtmp7WI5qh/downloaded_packages
+    	/var/folders/qh/6q39v0755_54rxmbl8m5ttnwy0twd7/T//RtmptNyMaS/downloaded_packages
 
 
 
@@ -688,7 +690,7 @@ head(diamonds)
 ## Exercises for practice 
 These are some exercises you can use to practice and build your R skills. They are not for grade. 
 
-### Exercise 01: Reading in some data files 
+#### Exercise 01: Reading in some data files 
 
 1. Create a new Notebook by going to File -> New -> Notebook.
 
@@ -704,7 +706,7 @@ These are some exercises you can use to practice and build your R skills. They a
 
 7. In a new cell, run the `summary` command and look at the first 6 rows of data with the appropriate `head` command.
 
-### Exercise 02: Reading in local data and labeling some values
+#### Exercise 02: Reading in local data and labeling some values
 
 1. Download [this dataset](https://s3.amazonaws.com/tripdata/201502-citibike-tripdata.zip), extract the file inside the zip archive and upload it to the `data` folder. 
 
@@ -716,7 +718,7 @@ These are some exercises you can use to practice and build your R skills. They a
 
 5. In a new cell, write the commands necessary to save each of the three data-sets as separate `RData` files. 
 
-### Exercise 03: Welcome to Kaggle & Mass Shootings 
+#### Exercise 03: Welcome to Kaggle & Mass Shootings 
 
 Go to [this page on Kaggle](https://www.kaggle.com/zusmani/us-mass-shootings-last-50-years) and read the description of the data-set on mass shootings in the United States that occurred during the 1966-2017 period. once you have read the overview of the data, click the "Data" tab and download the file called `Mass Shootings Dataset.csv`. Be careful; there are several versions so the one you want is the very last one and not any that have a version number attached, such as "Mass Shootings Dataset Ver 2.csv" for example. 
 
@@ -724,6 +726,6 @@ Now read this file, perhaps naming it `shootings` and run the `summary()` comman
 
 Make sure you save the file in RData format as well. 
 
-### Exercise 04: Animal Shelters 
+#### Exercise 04: Animal Shelters 
 
 Go to [this page on Kaggle](https://www.kaggle.com/aaronschlegel/austin-animal-center-shelter-outcomes-and) and download the file called `aac_shelter_outcomes.zip`, unzip it, and AFTER reading the data overview, read in the file and generate the usual `summary` and also save it as an RData file.

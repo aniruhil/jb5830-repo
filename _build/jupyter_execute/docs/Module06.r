@@ -1,4 +1,4 @@
-#install.packages(c("patchwork", "tidylog", "leaflet", "htmltools", "highcharter"))
+# install.packages(c("patchwork", "tidylog", "leaflet", "htmltools", "highcharter"))
 
 library(patchwork)
 library(tidyverse)
