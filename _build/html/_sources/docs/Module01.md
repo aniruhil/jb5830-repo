@@ -352,18 +352,13 @@ Excel files cannot be read off the web in the same manner as we did `*.csv`, `*.
 ```R
 library(readxl)
 
-"https://github.com/aniruhil/mpa5830-jupyter/blob/main/code/data/Fatalities_by_VehicleType.xlsx" -> my_url
+download.file(
+  "https://stats.idre.ucla.edu/stat/data/hsb2.xls", 
+  "hsb2.xls", 
+  mode = "wb"
+  )
 
-"Fatalities_by_VehicleType.xlsx" -> my_destfile 
-
-curl::curl_download(
-    my_url, 
-    my_destfile
-    )
-
-read_excel(
-    my_destfile
-    ) -> Fatalities_by_VehicleType
+read_excel("hsb2.xls") -> hsb2
 ```
 
 You could also do the following with the `{rio}` package but remember to install the package (if missing) and to run `rio::install_formats()` before executing the code below. 
@@ -372,7 +367,7 @@ You could also do the following with the `{rio}` package but remember to install
 ```R
 library(rio)
 
-"https://raw.githubusercontent.com/aniruhil/mpa5830-jupyter/main/code/data/Fatalities_by_VehicleType.xlsx" -> url
+"https://stats.idre.ucla.edu/stat/data/hsb2.xls" -> url
 
 import(url) -> my_data
 ```
