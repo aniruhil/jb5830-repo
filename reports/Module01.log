@@ -17,20 +17,38 @@ Traceback (most recent call last):
     raise CellExecutionError.from_cell_and_msg(cell, exec_reply_content)
 nbclient.exceptions.CellExecutionError: An error occurred while executing the following cell:
 ------------------
-read.csv(
-    "data/ImportDataCSV.csv",
-    sep = ",",
-    header = TRUE
-    ) -> df.csv 
+library(readxl)
+
+"https://github.com/aniruhil/mpa5830-jupyter/blob/main/code/data/Fatalities_by_VehicleType.xlsx" -> my_url
+
+"Fatalities_by_VehicleType.xlsx" -> my_destfile 
+
+curl::curl_download(
+    my_url, 
+    my_destfile
+    )
+
+read_excel(
+    my_destfile
+    ) -> Fatalities_by_VehicleType
 ------------------
 
-Error in file(file, "rt"): cannot open the connection
+Error: Evaluation error: zip file '/Users/ruhil/Documents/github/my-jbooks/mynewbook/docs/Fatalities_by_VehicleType.xlsx' cannot be opened.
 Traceback:
 
-1. read.csv("data/ImportDataCSV.csv", sep = ",", header = TRUE)
-2. read.table(file = file, header = header, sep = sep, quote = quote, 
- .     dec = dec, fill = fill, comment.char = comment.char, ...)
-3. file(file, "rt")
-ERROR: Error in file(file, "rt"): cannot open the connection
+1. read_excel(my_destfile)
+2. read_excel_(path = path, sheet = sheet, range = range, col_names = col_names, 
+ .     col_types = col_types, na = na, trim_ws = trim_ws, skip = skip, 
+ .     n_max = n_max, guess_max = guess_max, progress = progress, 
+ .     .name_repair = .name_repair, format = format)
+3. set_readxl_names(read_fun(path = enc2native(normalizePath(path)), 
+ .     sheet_i = sheet, limits = limits, shim = shim, col_names = col_names, 
+ .     col_types = col_types, na = na, trim_ws = trim_ws, guess_max = guess_max, 
+ .     progress = progress), .name_repair = .name_repair)
+4. tibble::as_tibble(l, .name_repair = .name_repair)
+5. read_fun(path = enc2native(normalizePath(path)), sheet_i = sheet, 
+ .     limits = limits, shim = shim, col_names = col_names, col_types = col_types, 
+ .     na = na, trim_ws = trim_ws, guess_max = guess_max, progress = progress)
+ERROR: Error: Evaluation error: zip file '/Users/ruhil/Documents/github/my-jbooks/mynewbook/docs/Fatalities_by_VehicleType.xlsx' cannot be opened.
 
 
