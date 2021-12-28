@@ -159,5 +159,3 @@ read.delim(
  ) -> weather
 
 weather
-
-
