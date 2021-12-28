@@ -1,7 +1,5 @@
 # Reading data in R
 
-#### What will you learn?
-
 In this module you will learn how to 
 (a) access data files in R, both locally (i.e., from a folder on your computer) and from the web (i.e., without manually downloading a data file);
 (b) explore the contents of a data file with specific comands, 
@@ -127,7 +125,7 @@ glimpse(df.tab)
     $ z [3m[90m<int>[39m[23m 3, 6, 9, 12, 15, 18, 21
 
 
-## MS Excel files
+### MS Excel files
 
 Microsoft **Excel** files can be read via the `readxl` package, and you see two versions below -- one for the older `*.xls` format and the other for the newer `*.xlsx` format. 
 
@@ -194,7 +192,7 @@ glimpse(df.xlsx)
     $ z [3m[90m<dbl>[39m[23m 3, 6, 9, 12, 15, 18, 21
 
 
-## SPSS, Stata, SAS files
+### SPSS, Stata, SAS files
 Some governmental agencies and other sources tend to use SAS, Stata, or SPSS for storing data and for carrying out various data analyses. This is a legacy issue that is changing but a little too slowly for most of us who do not use these commercial software packages as the mainstays of our data work. But, even if you do not use these packages, you should know how to read in data created in their native formats. As it turns out, **SPSS, Stata, SAS** files can be read via the `haven` package, and with relative ease. 
 
 
@@ -240,7 +238,7 @@ glimpse(df.sas)
     $ z [3m[90m<dbl>[39m[23m 3, 6, 9, 12, 15, 18, 21
 
 
-## Fixed-width files 
+### Fixed-width files 
 It is also common to encounter **fixed-width** files where the raw data are stored without any gaps between successive columns. This is also a legacy format from the early days of computers and punch cards, and one of the most efficient ways of storing large amounts of data. These files come with documentation that will give you the necessary details about where each column starts and ends, etc. [See here for some examples of layouts from the Census Bureau](https://www.census.gov/programs-surveys/geography/technical-documentation/records-layout/2010-zcta-record-layout.html#par_textimage_0).  
 
 
@@ -268,7 +266,7 @@ glimpse(df.fw)
     $ Year  [3m[90m<int>[39m[23m 2017, 2017
 
 
-# Reading Files from the Web
+## Reading Files from the Web
 One of the benefits of software like R is its ability to read data files over the web __without requiring you to manually download the file and save a physical copy to be read in__. Specifically, it is possible to list the full web-path for a file and read it in. This ability is invaluable when the data tend to be periodically updated by the source (for example, by the Census Bureau, Bureau of Labor, Bureau of Economic Analysis, etc.). Here are a few examples.  
 
 
@@ -425,12 +423,12 @@ We will read in a small dataset that has information on 200 students. The data c
 | science | standardized science score |
 | socst | standardized social studies score |
 
-# Saving R data files
+## Saving R data files
 You can save your data in a format that R will recognize, giving it the **RData** or **rdata** extension 
 
 Check the **data** directory to confirm that both files are present 
 
-# Minimal example of data processing
+## Minimal example of data processing
 Working with the **hsb2** data: 200 students from the [High School and Beyond study](https://nces.ed.gov/surveys/hsb/). The variables in this file are:  
 
 - female  = (0/1) 
@@ -638,7 +636,7 @@ head(penguins)
 
     
     The downloaded binary packages are in
-    	/var/folders/qh/6q39v0755_54rxmbl8m5ttnwy0twd7/T//Rtmp7WI5qh/downloaded_packages
+    	/var/folders/qh/6q39v0755_54rxmbl8m5ttnwy0twd7/T//RtmptNyMaS/downloaded_packages
 
 
 
