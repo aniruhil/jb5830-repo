@@ -629,24 +629,19 @@ $ Year  [3m[90m&lt;int&gt;[39m[23m 2017, 2017
 <p>Excel files cannot be read off the web in the same manner as we did <code class="docutils literal notranslate"><span class="pre">*.csv</span></code>, <code class="docutils literal notranslate"><span class="pre">*.txt</span></code>, etc. The code sequence is a little more convoluted, as shown below.</p>
 <div class="highlight-R notranslate"><div class="highlight"><pre><span></span><span class="nf">library</span><span class="p">(</span><span class="n">readxl</span><span class="p">)</span>
 
-<span class="s">&quot;https://github.com/aniruhil/mpa5830-jupyter/blob/main/code/data/Fatalities_by_VehicleType.xlsx&quot;</span> <span class="o">-&gt;</span> <span class="n">my_url</span>
+<span class="nf">download.file</span><span class="p">(</span>
+  <span class="s">&quot;https://stats.idre.ucla.edu/stat/data/hsb2.xls&quot;</span><span class="p">,</span> 
+  <span class="s">&quot;hsb2.xls&quot;</span><span class="p">,</span> 
+  <span class="n">mode</span> <span class="o">=</span> <span class="s">&quot;wb&quot;</span>
+  <span class="p">)</span>
 
-<span class="s">&quot;Fatalities_by_VehicleType.xlsx&quot;</span> <span class="o">-&gt;</span> <span class="n">my_destfile</span> 
-
-<span class="n">curl</span><span class="o">::</span><span class="nf">curl_download</span><span class="p">(</span>
-    <span class="n">my_url</span><span class="p">,</span> 
-    <span class="n">my_destfile</span>
-    <span class="p">)</span>
-
-<span class="nf">read_excel</span><span class="p">(</span>
-    <span class="n">my_destfile</span>
-    <span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Fatalities_by_VehicleType</span>
+<span class="nf">read_excel</span><span class="p">(</span><span class="s">&quot;hsb2.xls&quot;</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">hsb2</span>
 </pre></div>
 </div>
 <p>You could also do the following with the <code class="docutils literal notranslate"><span class="pre">{rio}</span></code> package but remember to install the package (if missing) and to run <code class="docutils literal notranslate"><span class="pre">rio::install_formats()</span></code> before executing the code below.</p>
 <div class="highlight-R notranslate"><div class="highlight"><pre><span></span><span class="nf">library</span><span class="p">(</span><span class="n">rio</span><span class="p">)</span>
 
-<span class="s">&quot;https://raw.githubusercontent.com/aniruhil/mpa5830-jupyter/main/code/data/Fatalities_by_VehicleType.xlsx&quot;</span> <span class="o">-&gt;</span> <span class="n">url</span>
+<span class="s">&quot;https://stats.idre.ucla.edu/stat/data/hsb2.xls&quot;</span> <span class="o">-&gt;</span> <span class="n">url</span>
 
 <span class="nf">import</span><span class="p">(</span><span class="n">url</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">my_data</span>
 </pre></div>
