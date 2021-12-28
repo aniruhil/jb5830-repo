@@ -189,9 +189,9 @@
         <!-- ipynb file if we had a myst markdown file -->
         
         <!-- Download raw file -->
-        <a class="dropdown-buttons" href="../_sources/docs/Module01.ipynb"><button type="button"
+        <a class="dropdown-buttons" href="../_sources/docs/Module01.md"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
-                data-placement="left">.ipynb</button></a>
+                data-placement="left">.md</button></a>
         <!-- Download PDF via print -->
         <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
             onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
@@ -224,26 +224,6 @@
             class="fas fa-expand"></i></button></a>
 
             <!-- Launch buttons -->
-
-<div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
-        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
-    <div class="dropdown-buttons">
-        
-        <a class="binder-button" href="https://mybinder.org/v2/gh/aniruhil/jb5830-repo/main?urlpath=tree/docs/docs/Module01.ipynb"><button type="button"
-                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
-                data-placement="left"><img class="binder-button-logo"
-                    src="../_static/images/logo_binder.svg"
-                    alt="Interact on binder">Binder</button></a>
-        
-        
-        
-        <button type="button" class="btn btn-secondary topbarbtn"
-            onclick="initThebeSBT()" title="Launch Thebe" data-toggle="tooltip" data-placement="left"><i
-                class="fas fa-play"></i><span style="margin-left: .4em;">Live Code</span></button>
-        
-    </div>
-</div>
 
         </div>
 
@@ -392,6 +372,21 @@
 <p>Well, what exactly is a <strong>package</strong> in the R language? A package is best thought of as a collection of R functions, data, and documentation that explains what each function does. R has over 14,000 packages, each designed to do something very specific such as, for example, make maps, read large data files very speedily, make animated graphics, and so on.</p>
 <p>Each week you will see several new packages come into play because we will be relying on each to do something very specific for us. The <strong>tidyverse</strong> will be a regular feature.</p>
 <p>How do we load a package? Well, first it has to be installed, but that has been taken care of for you. Once installed, we load it via the <code class="docutils literal notranslate"><span class="pre">library(packaganame)</span></code> command, as shown below.</p>
+<div class="highlight-R notranslate"><div class="highlight"><pre><span></span><span class="nf">library</span><span class="p">(</span><span class="n">tidyverse</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>── [1mAttaching packages[22m ─────────────────────────────────────── tidyverse 1.3.1 ──
+
+[32m✔[39m [34mggplot2[39m 3.3.5     [32m✔[39m [34mpurrr  [39m 0.3.4
+[32m✔[39m [34mtibble [39m 3.1.6     [32m✔[39m [34mdplyr  [39m 1.0.7
+[32m✔[39m [34mtidyr  [39m 1.1.4     [32m✔[39m [34mstringr[39m 1.4.0
+[32m✔[39m [34mreadr  [39m 2.1.1     [32m✔[39m [34mforcats[39m 0.5.1
+
+── [1mConflicts[22m ────────────────────────────────────────── tidyverse_conflicts() ──
+[31m✖[39m [34mdplyr[39m::[32mfilter()[39m masks [34mstats[39m::filter()
+[31m✖[39m [34mdplyr[39m::[32mlag()[39m    masks [34mstats[39m::lag()
+</pre></div>
+</div>
 <p>The message you see with a pinkish background results from our <code class="docutils literal notranslate"><span class="pre">library(tidyverse)</span></code> command, and is just a message indicating what packages were loaded (<code class="docutils literal notranslate"><span class="pre">ggplot2,</span> <span class="pre">tibble,</span> <span class="pre">tidyr,</span> <span class="pre">readr,</span> <span class="pre">purr,</span> <span class="pre">dplyr,</span> <span class="pre">stringr,</span> <span class="pre">forcats</span></code>), and if there is anything else we should be aware of. In this case, there is – some commands (<code class="docutils literal notranslate"><span class="pre">filter()</span></code> and <code class="docutils literal notranslate"><span class="pre">lag()</span></code>) used by the <code class="docutils literal notranslate"><span class="pre">dplyr</span></code> package conflict with identically named commands in the <code class="docutils literal notranslate"><span class="pre">stats</span></code> package.</p>
 <p><code class="docutils literal notranslate"><span class="pre">readr</span></code> is an excellent package designed to read data that might be available in various formats. Since it is loaded as a part of the <code class="docutils literal notranslate"><span class="pre">tidyverse</span></code>, let us move on to seeing how to read data.</p>
 </div>
@@ -402,27 +397,19 @@
 <div class="section" id="csv-data-files">
 <h3>CSV data files<a class="headerlink" href="#csv-data-files" title="Permalink to this headline">¶</a></h3>
 <p>We start by reading a simple <code class="docutils literal notranslate"><span class="pre">comma-separated</span> <span class="pre">variable</span></code> format file and then a <code class="docutils literal notranslate"><span class="pre">tab-delimited</span> <span class="pre">variable</span></code> format file. A CSV file has each column separated by a <code class="docutils literal notranslate"><span class="pre">comma</span></code> while a tab-delimited file has every column separated by a <code class="docutils literal notranslate"><span class="pre">tab</span></code> – <code class="docutils literal notranslate"><span class="pre">,</span></code> versus <code class="docutils literal notranslate"><span class="pre">\t</span></code></p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">read.csv</span><span class="p">(</span>
+<div class="highlight-R notranslate"><div class="highlight"><pre><span></span><span class="nf">read.csv</span><span class="p">(</span>
     <span class="s">&quot;data/ImportDataCSV.csv&quot;</span><span class="p">,</span>
     <span class="n">sep</span> <span class="o">=</span> <span class="s">&quot;,&quot;</span><span class="p">,</span>
     <span class="n">header</span> <span class="o">=</span> <span class="kc">TRUE</span>
     <span class="p">)</span> <span class="o">-&gt;</span> <span class="n">df.csv</span> 
 </pre></div>
 </div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">read.csv</span><span class="p">(</span>
+<div class="highlight-R notranslate"><div class="highlight"><pre><span></span><span class="nf">read.csv</span><span class="p">(</span>
   <span class="s">&quot;data/ImportDataTAB.txt&quot;</span><span class="p">,</span>
   <span class="n">sep</span> <span class="o">=</span> <span class="s">&quot;\t&quot;</span><span class="p">,</span>
   <span class="n">header</span> <span class="o">=</span> <span class="kc">TRUE</span>
   <span class="p">)</span> <span class="o">-&gt;</span> <span class="n">df.tab</span>
 </pre></div>
-</div>
-</div>
 </div>
 <p>Note …</p>
 <ul class="simple">
@@ -432,55 +419,43 @@
 <li><p>The tab-delimited file needs <code class="docutils literal notranslate"><span class="pre">sep</span> <span class="pre">=</span> <span class="pre">&quot;\t&quot;</span></code> because the columns are separated by a tab</p></li>
 </ul>
 <p>If no errors are thrown, then the files should have been read into memory and we can check their contents. The <code class="docutils literal notranslate"><span class="pre">names(filename)</span></code> command will show you the column names, and <code class="docutils literal notranslate"><span class="pre">glimpse(filename)</span></code> will show you a snippet of the data in the file.</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">names</span><span class="p">(</span><span class="n">df.csv</span><span class="p">)</span> 
+<div class="highlight-R notranslate"><div class="highlight"><pre><span></span><span class="nf">names</span><span class="p">(</span><span class="n">df.csv</span><span class="p">)</span> 
 
 <span class="nf">glimpse</span><span class="p">(</span><span class="n">df.csv</span><span class="p">)</span>
 </pre></div>
 </div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_html"><style>
+<style>
 .list-inline {list-style: none; margin:0; padding: 0}
 .list-inline>li {display: inline-block}
 .list-inline>li:not(:last-child)::after {content: "\00b7"; padding: 0 .5ex}
 </style>
 <ol class=list-inline><li>'x'</li><li>'y'</li><li>'z'</li></ol>
-</div><div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Rows: 7
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>Rows: 7
 Columns: 3
-$ x &lt;int&gt; 1, 4, 7, 10, 13, 16, 19
-$ y &lt;int&gt; 2, 5, 8, 11, 14, 17, 20
-$ z &lt;int&gt; 3, 6, 9, 12, 15, 18, 21
+$ x [3m[90m&lt;int&gt;[39m[23m 1, 4, 7, 10, 13, 16, 19
+$ y [3m[90m&lt;int&gt;[39m[23m 2, 5, 8, 11, 14, 17, 20
+$ z [3m[90m&lt;int&gt;[39m[23m 3, 6, 9, 12, 15, 18, 21
 </pre></div>
 </div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="c1"># And now we repeat the preceding commands for the df.tab file</span>
+<div class="highlight-R notranslate"><div class="highlight"><pre><span></span><span class="c1"># And now we repeat the preceding commands for the df.tab file</span>
 
 <span class="nf">names</span><span class="p">(</span><span class="n">df.tab</span><span class="p">)</span>
 
 <span class="nf">glimpse</span><span class="p">(</span><span class="n">df.tab</span><span class="p">)</span>
 </pre></div>
 </div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_html"><style>
+<style>
 .list-inline {list-style: none; margin:0; padding: 0}
 .list-inline>li {display: inline-block}
 .list-inline>li:not(:last-child)::after {content: "\00b7"; padding: 0 .5ex}
 </style>
 <ol class=list-inline><li>'x'</li><li>'y'</li><li>'z'</li></ol>
-</div><div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Rows: 7
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>Rows: 7
 Columns: 3
-$ x &lt;int&gt; 1, 4, 7, 10, 13, 16, 19
-$ y &lt;int&gt; 2, 5, 8, 11, 14, 17, 20
-$ z &lt;int&gt; 3, 6, 9, 12, 15, 18, 21
+$ x [3m[90m&lt;int&gt;[39m[23m 1, 4, 7, 10, 13, 16, 19
+$ y [3m[90m&lt;int&gt;[39m[23m 2, 5, 8, 11, 14, 17, 20
+$ z [3m[90m&lt;int&gt;[39m[23m 3, 6, 9, 12, 15, 18, 21
 </pre></div>
-</div>
-</div>
 </div>
 </div>
 </div>
@@ -488,9 +463,7 @@ $ z &lt;int&gt; 3, 6, 9, 12, 15, 18, 21
 <h2>MS Excel files<a class="headerlink" href="#ms-excel-files" title="Permalink to this headline">¶</a></h2>
 <p>Microsoft <strong>Excel</strong> files can be read via the <code class="docutils literal notranslate"><span class="pre">readxl</span></code> package, and you see two versions below – one for the older <code class="docutils literal notranslate"><span class="pre">*.xls</span></code> format and the other for the newer <code class="docutils literal notranslate"><span class="pre">*.xlsx</span></code> format.</p>
 <p>As a rule, I would recommend against storing data in Excel formats since Excel tends to do some funny things. If you must store and share data, try to use the CSV format.</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">library</span><span class="p">(</span><span class="n">readxl</span><span class="p">)</span>
+<div class="highlight-R notranslate"><div class="highlight"><pre><span></span><span class="nf">library</span><span class="p">(</span><span class="n">readxl</span><span class="p">)</span>
 
 <span class="nf">read_excel</span><span class="p">(</span>
   <span class="s">&quot;data/ImportDataXLS.xls&quot;</span>
@@ -501,63 +474,47 @@ $ z &lt;int&gt; 3, 6, 9, 12, 15, 18, 21
   <span class="p">)</span> <span class="o">-&gt;</span> <span class="n">df.xlsx</span>
 </pre></div>
 </div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">names</span><span class="p">(</span><span class="n">df.xls</span><span class="p">)</span>
+<div class="highlight-R notranslate"><div class="highlight"><pre><span></span><span class="nf">names</span><span class="p">(</span><span class="n">df.xls</span><span class="p">)</span>
 
 <span class="nf">glimpse</span><span class="p">(</span><span class="n">df.xls</span><span class="p">)</span>
 </pre></div>
 </div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_html"><style>
+<style>
 .list-inline {list-style: none; margin:0; padding: 0}
 .list-inline>li {display: inline-block}
 .list-inline>li:not(:last-child)::after {content: "\00b7"; padding: 0 .5ex}
 </style>
 <ol class=list-inline><li>'x'</li><li>'y'</li><li>'z'</li></ol>
-</div><div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Rows: 7
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>Rows: 7
 Columns: 3
-$ x &lt;dbl&gt; 1, 4, 7, 10, 13, 16, 19
-$ y &lt;dbl&gt; 2, 5, 8, 11, 14, 17, 20
-$ z &lt;dbl&gt; 3, 6, 9, 12, 15, 18, 21
+$ x [3m[90m&lt;dbl&gt;[39m[23m 1, 4, 7, 10, 13, 16, 19
+$ y [3m[90m&lt;dbl&gt;[39m[23m 2, 5, 8, 11, 14, 17, 20
+$ z [3m[90m&lt;dbl&gt;[39m[23m 3, 6, 9, 12, 15, 18, 21
 </pre></div>
 </div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">names</span><span class="p">(</span><span class="n">df.xlsx</span><span class="p">)</span>
+<div class="highlight-R notranslate"><div class="highlight"><pre><span></span><span class="nf">names</span><span class="p">(</span><span class="n">df.xlsx</span><span class="p">)</span>
 
 <span class="nf">glimpse</span><span class="p">(</span><span class="n">df.xlsx</span><span class="p">)</span>
 </pre></div>
 </div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_html"><style>
+<style>
 .list-inline {list-style: none; margin:0; padding: 0}
 .list-inline>li {display: inline-block}
 .list-inline>li:not(:last-child)::after {content: "\00b7"; padding: 0 .5ex}
 </style>
 <ol class=list-inline><li>'x'</li><li>'y'</li><li>'z'</li></ol>
-</div><div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Rows: 7
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>Rows: 7
 Columns: 3
-$ x &lt;dbl&gt; 1, 4, 7, 10, 13, 16, 19
-$ y &lt;dbl&gt; 2, 5, 8, 11, 14, 17, 20
-$ z &lt;dbl&gt; 3, 6, 9, 12, 15, 18, 21
+$ x [3m[90m&lt;dbl&gt;[39m[23m 1, 4, 7, 10, 13, 16, 19
+$ y [3m[90m&lt;dbl&gt;[39m[23m 2, 5, 8, 11, 14, 17, 20
+$ z [3m[90m&lt;dbl&gt;[39m[23m 3, 6, 9, 12, 15, 18, 21
 </pre></div>
-</div>
-</div>
 </div>
 </div>
 <div class="section" id="spss-stata-sas-files">
 <h2>SPSS, Stata, SAS files<a class="headerlink" href="#spss-stata-sas-files" title="Permalink to this headline">¶</a></h2>
 <p>Some governmental agencies and other sources tend to use SAS, Stata, or SPSS for storing data and for carrying out various data analyses. This is a legacy issue that is changing but a little too slowly for most of us who do not use these commercial software packages as the mainstays of our data work. But, even if you do not use these packages, you should know how to read in data created in their native formats. As it turns out, <strong>SPSS, Stata, SAS</strong> files can be read via the <code class="docutils literal notranslate"><span class="pre">haven</span></code> package, and with relative ease.</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">library</span><span class="p">(</span><span class="n">haven</span><span class="p">)</span>
+<div class="highlight-R notranslate"><div class="highlight"><pre><span></span><span class="nf">library</span><span class="p">(</span><span class="n">haven</span><span class="p">)</span>
 
 <span class="nf">read_stata</span><span class="p">(</span>
   <span class="s">&quot;data/ImportDataStata.dta&quot;</span>
@@ -572,41 +529,31 @@ $ z &lt;dbl&gt; 3, 6, 9, 12, 15, 18, 21
   <span class="p">)</span> <span class="o">-&gt;</span> <span class="n">df.spss</span>
 </pre></div>
 </div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="c1"># Check the files</span>
+<div class="highlight-R notranslate"><div class="highlight"><pre><span></span><span class="c1"># Check the files</span>
 
 <span class="nf">names</span><span class="p">(</span><span class="n">df.stata</span><span class="p">)</span>
 
 <span class="nf">glimpse</span><span class="p">(</span><span class="n">df.sas</span><span class="p">)</span>
 </pre></div>
 </div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_html"><style>
+<style>
 .list-inline {list-style: none; margin:0; padding: 0}
 .list-inline>li {display: inline-block}
 .list-inline>li:not(:last-child)::after {content: "\00b7"; padding: 0 .5ex}
 </style>
 <ol class=list-inline><li>'x'</li><li>'y'</li><li>'z'</li></ol>
-</div><div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Rows: 7
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>Rows: 7
 Columns: 3
-$ x &lt;dbl&gt; 1, 4, 7, 10, 13, 16, 19
-$ y &lt;dbl&gt; 2, 5, 8, 11, 14, 17, 20
-$ z &lt;dbl&gt; 3, 6, 9, 12, 15, 18, 21
+$ x [3m[90m&lt;dbl&gt;[39m[23m 1, 4, 7, 10, 13, 16, 19
+$ y [3m[90m&lt;dbl&gt;[39m[23m 2, 5, 8, 11, 14, 17, 20
+$ z [3m[90m&lt;dbl&gt;[39m[23m 3, 6, 9, 12, 15, 18, 21
 </pre></div>
-</div>
-</div>
 </div>
 </div>
 <div class="section" id="fixed-width-files">
 <h2>Fixed-width files<a class="headerlink" href="#fixed-width-files" title="Permalink to this headline">¶</a></h2>
 <p>It is also common to encounter <strong>fixed-width</strong> files where the raw data are stored without any gaps between successive columns. This is also a legacy format from the early days of computers and punch cards, and one of the most efficient ways of storing large amounts of data. These files come with documentation that will give you the necessary details about where each column starts and ends, etc. <a class="reference external" href="https://www.census.gov/programs-surveys/geography/technical-documentation/records-layout/2010-zcta-record-layout.html#par_textimage_0">See here for some examples of layouts from the Census Bureau</a>.</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">read.fwf</span><span class="p">(</span>
+<div class="highlight-R notranslate"><div class="highlight"><pre><span></span><span class="nf">read.fwf</span><span class="p">(</span>
   <span class="s">&quot;data/fwfdata.txt&quot;</span><span class="p">,</span>
   <span class="n">widths</span> <span class="o">=</span> <span class="nf">c</span><span class="p">(</span><span class="m">4</span><span class="p">,</span> <span class="m">9</span><span class="p">,</span> <span class="m">2</span><span class="p">,</span> <span class="m">4</span><span class="p">),</span>
   <span class="n">header</span> <span class="o">=</span> <span class="kc">FALSE</span><span class="p">,</span>
@@ -614,43 +561,31 @@ $ z &lt;dbl&gt; 3, 6, 9, 12, 15, 18, 21
   <span class="p">)</span> <span class="o">-&gt;</span> <span class="n">df.fw</span> 
 </pre></div>
 </div>
-</div>
-</div>
 <p>Notice we need <code class="docutils literal notranslate"><span class="pre">widths</span> <span class="pre">=</span> <span class="pre">c(4,9,2,4)</span></code> to indicate how many slots each column takes and then <code class="docutils literal notranslate"><span class="pre">col.names</span> <span class="pre">=</span> <span class="pre">c(&quot;Name&quot;,</span> <span class="pre">&quot;Month&quot;,</span> <span class="pre">&quot;Day&quot;,</span> <span class="pre">&quot;Year&quot;)</span></code> to label the columns since the data file does not have variable names. if you mess up with <code class="docutils literal notranslate"><span class="pre">widths</span> <span class="pre">=</span> </code> you end up with garbage because R does not know where any column starts or ends so be careful.</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">glimpse</span><span class="p">(</span><span class="n">df.fw</span><span class="p">)</span>
+<div class="highlight-R notranslate"><div class="highlight"><pre><span></span><span class="nf">glimpse</span><span class="p">(</span><span class="n">df.fw</span><span class="p">)</span>
 </pre></div>
 </div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Rows: 2
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>Rows: 2
 Columns: 4
-$ Name  &lt;chr&gt; &quot;Amy &quot;, &quot;Abby&quot;
-$ Month &lt;chr&gt; &quot; December&quot;, &quot; December&quot;
-$ Day   &lt;int&gt; 1, 11
-$ Year  &lt;int&gt; 2017, 2017
+$ Name  [3m[90m&lt;chr&gt;[39m[23m &quot;Amy &quot;, &quot;Abby&quot;
+$ Month [3m[90m&lt;chr&gt;[39m[23m &quot; December&quot;, &quot; December&quot;
+$ Day   [3m[90m&lt;int&gt;[39m[23m 1, 11
+$ Year  [3m[90m&lt;int&gt;[39m[23m 2017, 2017
 </pre></div>
-</div>
-</div>
 </div>
 </div>
 </div>
 <div class="tex2jax_ignore mathjax_ignore section" id="reading-files-from-the-web">
 <h1>Reading Files from the Web<a class="headerlink" href="#reading-files-from-the-web" title="Permalink to this headline">¶</a></h1>
 <p>One of the benefits of software like R is its ability to read data files over the web <strong>without requiring you to manually download the file and save a physical copy to be read in</strong>. Specifically, it is possible to list the full web-path for a file and read it in. This ability is invaluable when the data tend to be periodically updated by the source (for example, by the Census Bureau, Bureau of Labor, Bureau of Economic Analysis, etc.). Here are a few examples.</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">read.table</span><span class="p">(</span>
+<div class="highlight-R notranslate"><div class="highlight"><pre><span></span><span class="nf">read.table</span><span class="p">(</span>
   <span class="s">&quot;http://data.princeton.edu/wws509/datasets/effort.dat&quot;</span>
   <span class="p">)</span> <span class="o">-&gt;</span> <span class="n">fpe</span> 
 
 <span class="n">fpe</span> <span class="c1"># This command asks R to show us what fpe contains </span>
 </pre></div>
 </div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_html"><table class="dataframe">
+<table class="dataframe">
 <caption>A data.frame: 20 × 3</caption>
 <thead>
 	<tr><th></th><th scope=col>setting</th><th scope=col>effort</th><th scope=col>change</th></tr>
@@ -679,12 +614,8 @@ $ Year  &lt;int&gt; 2017, 2017
 	<tr><th scope=row>Venezuela</th><td>91</td><td> 7</td><td>11</td></tr>
 </tbody>
 </table>
-</div></div>
-</div>
 <p>Here are some more files read directly from the web.</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">read.table</span><span class="p">(</span>
+<div class="highlight-R notranslate"><div class="highlight"><pre><span></span><span class="nf">read.table</span><span class="p">(</span>
   <span class="s">&quot;https://stats.idre.ucla.edu/stat/data/test.txt&quot;</span><span class="p">,</span>
   <span class="n">header</span> <span class="o">=</span> <span class="kc">TRUE</span>
   <span class="p">)</span> <span class="o">-&gt;</span> <span class="n">test.txt</span> 
@@ -698,29 +629,23 @@ $ Year  &lt;int&gt; 2017, 2017
   <span class="p">)</span> <span class="o">-&gt;</span> <span class="n">hsb2.spss</span> 
 </pre></div>
 </div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span><span class=" -Color -Color-Bold">Rows: </span><span class=" -Color -Color-Blue">8</span> <span class=" -Color -Color-Bold">Columns: </span><span class=" -Color -Color-Blue">6</span>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>[1mRows: [22m[34m8[39m [1mColumns: [22m[34m6[39m
 
-<span class=" -Color -Color-Cyan">──</span> <span class=" -Color -Color-Bold">Column specification</span> <span class=" -Color -Color-Cyan">────────────────────────────────────────────────────────</span>
-<span class=" -Color -Color-Bold">Delimiter:</span> &quot;,&quot;
-<span class=" -Color -Color-Red">chr</span> (1): prgtype
-<span class=" -Color -Color-Green">dbl</span> (5): gender, id, ses, schtyp, level
+[36m──[39m [1mColumn specification[22m [36m────────────────────────────────────────────────────────[39m
+[1mDelimiter:[22m &quot;,&quot;
+[31mchr[39m (1): prgtype
+[32mdbl[39m (5): gender, id, ses, schtyp, level
 
 
-<span class=" -Color -Color-Cyan">ℹ</span> Use <span class=" -Color -Color-Black -Color-Black-BGWhite">`spec()`</span> to retrieve the full column specification for this data.
-<span class=" -Color -Color-Cyan">ℹ</span> Specify the column types or set <span class=" -Color -Color-Black -Color-Black-BGWhite">`show_col_types = FALSE`</span> to quiet this message.
+[36mℹ[39m Use [30m[47m[30m[47m`spec()`[47m[30m[49m[39m to retrieve the full column specification for this data.
+[36mℹ[39m Specify the column types or set [30m[47m[30m[47m`show_col_types = FALSE`[47m[30m[49m[39m to quiet this message.
 </pre></div>
-</div>
-</div>
 </div>
 <p>If you look at <code class="docutils literal notranslate"><span class="pre">fpe</span></code> you will notice that there are three columns but the rows each have a unique name. These are <code class="docutils literal notranslate"><span class="pre">row</span> <span class="pre">names</span></code> that are remembered by R but will not show up with a column name.</p>
 <div class="section" id="excel-files-off-the-web">
 <h2>Excel files off the web<a class="headerlink" href="#excel-files-off-the-web" title="Permalink to this headline">¶</a></h2>
 <p>Excel files cannot be read off the web in the same manner as we did <code class="docutils literal notranslate"><span class="pre">*.csv</span></code>, <code class="docutils literal notranslate"><span class="pre">*.txt</span></code>, etc. The code sequence is a little more convoluted, as shown below.</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">library</span><span class="p">(</span><span class="n">readxl</span><span class="p">)</span>
+<div class="highlight-R notranslate"><div class="highlight"><pre><span></span><span class="nf">library</span><span class="p">(</span><span class="n">readxl</span><span class="p">)</span>
 
 <span class="s">&quot;https://github.com/aniruhil/mpa5830-jupyter/blob/main/code/data/Fatalities_by_VehicleType.xlsx&quot;</span> <span class="o">-&gt;</span> <span class="n">my_url</span>
 
@@ -736,32 +661,8 @@ $ Year  &lt;int&gt; 2017, 2017
     <span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Fatalities_by_VehicleType</span>
 </pre></div>
 </div>
-</div>
-<div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="ne">Error</span>: Evaluation error: zip file &#39;/Users/ruhil/Documents/github/my-jbooks/mynewbook/docs/Fatalities_by_VehicleType.xlsx&#39; cannot be opened.
-<span class="ne">Traceback</span>:
-
-<span class="mi">1</span><span class="o">.</span> <span class="n">read_excel</span><span class="p">(</span><span class="n">my_destfile</span><span class="p">)</span>
-<span class="mi">2</span><span class="o">.</span> <span class="n">read_excel_</span><span class="p">(</span><span class="n">path</span> <span class="o">=</span> <span class="n">path</span><span class="p">,</span> <span class="n">sheet</span> <span class="o">=</span> <span class="n">sheet</span><span class="p">,</span> <span class="nb">range</span> <span class="o">=</span> <span class="nb">range</span><span class="p">,</span> <span class="n">col_names</span> <span class="o">=</span> <span class="n">col_names</span><span class="p">,</span> 
- <span class="o">.</span>     <span class="n">col_types</span> <span class="o">=</span> <span class="n">col_types</span><span class="p">,</span> <span class="n">na</span> <span class="o">=</span> <span class="n">na</span><span class="p">,</span> <span class="n">trim_ws</span> <span class="o">=</span> <span class="n">trim_ws</span><span class="p">,</span> <span class="n">skip</span> <span class="o">=</span> <span class="n">skip</span><span class="p">,</span> 
- <span class="o">.</span>     <span class="n">n_max</span> <span class="o">=</span> <span class="n">n_max</span><span class="p">,</span> <span class="n">guess_max</span> <span class="o">=</span> <span class="n">guess_max</span><span class="p">,</span> <span class="n">progress</span> <span class="o">=</span> <span class="n">progress</span><span class="p">,</span> 
- <span class="o">.</span>     <span class="o">.</span><span class="n">name_repair</span> <span class="o">=</span> <span class="o">.</span><span class="n">name_repair</span><span class="p">,</span> <span class="nb">format</span> <span class="o">=</span> <span class="nb">format</span><span class="p">)</span>
-<span class="mi">3</span><span class="o">.</span> <span class="n">set_readxl_names</span><span class="p">(</span><span class="n">read_fun</span><span class="p">(</span><span class="n">path</span> <span class="o">=</span> <span class="n">enc2native</span><span class="p">(</span><span class="n">normalizePath</span><span class="p">(</span><span class="n">path</span><span class="p">)),</span> 
- <span class="o">.</span>     <span class="n">sheet_i</span> <span class="o">=</span> <span class="n">sheet</span><span class="p">,</span> <span class="n">limits</span> <span class="o">=</span> <span class="n">limits</span><span class="p">,</span> <span class="n">shim</span> <span class="o">=</span> <span class="n">shim</span><span class="p">,</span> <span class="n">col_names</span> <span class="o">=</span> <span class="n">col_names</span><span class="p">,</span> 
- <span class="o">.</span>     <span class="n">col_types</span> <span class="o">=</span> <span class="n">col_types</span><span class="p">,</span> <span class="n">na</span> <span class="o">=</span> <span class="n">na</span><span class="p">,</span> <span class="n">trim_ws</span> <span class="o">=</span> <span class="n">trim_ws</span><span class="p">,</span> <span class="n">guess_max</span> <span class="o">=</span> <span class="n">guess_max</span><span class="p">,</span> 
- <span class="o">.</span>     <span class="n">progress</span> <span class="o">=</span> <span class="n">progress</span><span class="p">),</span> <span class="o">.</span><span class="n">name_repair</span> <span class="o">=</span> <span class="o">.</span><span class="n">name_repair</span><span class="p">)</span>
-<span class="mi">4</span><span class="o">.</span> <span class="n">tibble</span><span class="p">::</span><span class="n">as_tibble</span><span class="p">(</span><span class="n">l</span><span class="p">,</span> <span class="o">.</span><span class="n">name_repair</span> <span class="o">=</span> <span class="o">.</span><span class="n">name_repair</span><span class="p">)</span>
-<span class="mi">5</span><span class="o">.</span> <span class="n">read_fun</span><span class="p">(</span><span class="n">path</span> <span class="o">=</span> <span class="n">enc2native</span><span class="p">(</span><span class="n">normalizePath</span><span class="p">(</span><span class="n">path</span><span class="p">)),</span> <span class="n">sheet_i</span> <span class="o">=</span> <span class="n">sheet</span><span class="p">,</span> 
- <span class="o">.</span>     <span class="n">limits</span> <span class="o">=</span> <span class="n">limits</span><span class="p">,</span> <span class="n">shim</span> <span class="o">=</span> <span class="n">shim</span><span class="p">,</span> <span class="n">col_names</span> <span class="o">=</span> <span class="n">col_names</span><span class="p">,</span> <span class="n">col_types</span> <span class="o">=</span> <span class="n">col_types</span><span class="p">,</span> 
- <span class="o">.</span>     <span class="n">na</span> <span class="o">=</span> <span class="n">na</span><span class="p">,</span> <span class="n">trim_ws</span> <span class="o">=</span> <span class="n">trim_ws</span><span class="p">,</span> <span class="n">guess_max</span> <span class="o">=</span> <span class="n">guess_max</span><span class="p">,</span> <span class="n">progress</span> <span class="o">=</span> <span class="n">progress</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-</div>
 <p>You could also do the following with the <code class="docutils literal notranslate"><span class="pre">{rio}</span></code> package but remember to install the package (if missing) and to run <code class="docutils literal notranslate"><span class="pre">rio::install_formats()</span></code> before executing the code below.</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">library</span><span class="p">(</span><span class="n">rio</span><span class="p">)</span>
+<div class="highlight-R notranslate"><div class="highlight"><pre><span></span><span class="nf">library</span><span class="p">(</span><span class="n">rio</span><span class="p">)</span>
 
 <span class="s">&quot;https://raw.githubusercontent.com/aniruhil/mpa5830-jupyter/main/code/data/Fatalities_by_VehicleType.xlsx&quot;</span> <span class="o">-&gt;</span> <span class="n">url</span>
 
@@ -769,15 +670,11 @@ $ Year  &lt;int&gt; 2017, 2017
 </pre></div>
 </div>
 </div>
-</div>
-</div>
 <div class="section" id="reading-compressed-files-zip-gz-etc">
 <h2>Reading compressed files (*.zip, *.gz, etc.)<a class="headerlink" href="#reading-compressed-files-zip-gz-etc" title="Permalink to this headline">¶</a></h2>
 <p>Large files may sit in compressed archives on the web and R has a neat way of allowing you to download the file, unzip it, and read it. Why is this useful? Because if these files tend to be update periodicially, this ability lets you use the same piece of R code to download/unzip/read the updated file. The tedious way would be to manually download, unzip, place in the appropriate data folder, and then read it.</p>
 <p>The code is shown below but not run.</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">temp</span> <span class="o">&lt;-</span> <span class="nf">tempfile</span><span class="p">()</span>
+<div class="highlight-R notranslate"><div class="highlight"><pre><span></span><span class="n">temp</span> <span class="o">&lt;-</span> <span class="nf">tempfile</span><span class="p">()</span>
 
 <span class="nf">download.file</span><span class="p">(</span>
   <span class="s">&quot;ftp://ftp.cdc.gov/pub/Health_Statistics/NCHS/nvss/bridged_race/pcen_v2018_y1018.sas7bdat.zip&quot;</span><span class="p">,</span>
@@ -794,8 +691,6 @@ $ Year  &lt;int&gt; 2017, 2017
 
 <span class="nf">unlink</span><span class="p">(</span><span class="n">temp</span><span class="p">)</span>
 </pre></div>
-</div>
-</div>
 </div>
 </div>
 <div class="section" id="labeling-data-values">
@@ -864,26 +759,18 @@ $ Year  &lt;int&gt; 2017, 2017
 <li><p>socst = standardized social studies score</p></li>
 </ul>
 <p>Let us start by reading in these data.</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">read.table</span><span class="p">(</span>
+<div class="highlight-R notranslate"><div class="highlight"><pre><span></span><span class="nf">read.table</span><span class="p">(</span>
   <span class="s">&#39;https://stats.idre.ucla.edu/stat/data/hsb2.csv&#39;</span><span class="p">,</span>
   <span class="n">header</span> <span class="o">=</span> <span class="kc">TRUE</span><span class="p">,</span>
   <span class="n">sep</span> <span class="o">=</span> <span class="s">&quot;,&quot;</span>
   <span class="p">)</span> <span class="o">-&gt;</span> <span class="n">hsb2</span>
 </pre></div>
 </div>
-</div>
-</div>
 <p>We can easily check the basic descriptive statistics of each column in a data file by running the <code class="docutils literal notranslate"><span class="pre">summary(filename)</span></code> command. Let us see what results if we do this with the <code class="docutils literal notranslate"><span class="pre">hsb2</span></code> data set.</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">summary</span><span class="p">(</span><span class="n">hsb2</span><span class="p">)</span>
+<div class="highlight-R notranslate"><div class="highlight"><pre><span></span><span class="nf">summary</span><span class="p">(</span><span class="n">hsb2</span><span class="p">)</span>
 </pre></div>
 </div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>       id             female           race           ses            schtyp    
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>       id             female           race           ses            schtyp    
  Min.   :  1.00   Min.   :0.000   Min.   :1.00   Min.   :1.000   Min.   :1.00  
  1st Qu.: 50.75   1st Qu.:0.000   1st Qu.:3.00   1st Qu.:2.000   1st Qu.:1.00  
  Median :100.50   Median :1.000   Median :4.00   Median :2.000   Median :1.00  
@@ -906,16 +793,12 @@ $ Year  &lt;int&gt; 2017, 2017
  Max.   :74.00   Max.   :71.00  
 </pre></div>
 </div>
-</div>
-</div>
 <p>Look at the output! R mistakenly treats several of the qualitative variables as if they are numeric, rendering incorrect information. Let us fix this problem and then we can rerun the <code class="docutils literal notranslate"><span class="pre">summary()</span></code> command to see if things have improved.</p>
 <p>The way we append value labels is by converting a numeric variable\column to what R calls a <code class="docutils literal notranslate"><span class="pre">factor</span></code>. When we do so, we tell R to assign a particular label <em>(the word or the phrase)</em> to a particular level <em>(the number)</em> as shown below.</p>
 <blockquote>
 <div><p>It is good habit to create a new variable each time you do some conversion so that the original variable does not get overwritten. If you do not get into the habit and end up overwriting the original variable, you will have to start from scratch if you end up making a mistake.</p>
 </div></blockquote>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">factor</span><span class="p">(</span><span class="n">hsb2</span><span class="o">$</span><span class="n">female</span><span class="p">,</span>
+<div class="highlight-R notranslate"><div class="highlight"><pre><span></span><span class="nf">factor</span><span class="p">(</span><span class="n">hsb2</span><span class="o">$</span><span class="n">female</span><span class="p">,</span>
        <span class="n">levels</span> <span class="o">=</span> <span class="nf">c</span><span class="p">(</span><span class="m">0</span><span class="p">,</span> <span class="m">1</span><span class="p">),</span>
        <span class="n">labels</span> <span class="o">=</span> <span class="nf">c</span><span class="p">(</span><span class="s">&quot;Male&quot;</span><span class="p">,</span> <span class="s">&quot;Female&quot;</span><span class="p">)</span>
        <span class="p">)</span> <span class="o">-&gt;</span> <span class="n">hsb2</span><span class="o">$</span><span class="n">female.f</span> 
@@ -941,17 +824,11 @@ $ Year  &lt;int&gt; 2017, 2017
        <span class="p">)</span> <span class="o">-&gt;</span> <span class="n">hsb2</span><span class="o">$</span><span class="n">prog.f</span>
 </pre></div>
 </div>
-</div>
-</div>
 <p>Now we check our work by re-running the <code class="docutils literal notranslate"><span class="pre">summary(hsb2)</span></code> command.</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">summary</span><span class="p">(</span><span class="n">hsb2</span><span class="p">)</span>
+<div class="highlight-R notranslate"><div class="highlight"><pre><span></span><span class="nf">summary</span><span class="p">(</span><span class="n">hsb2</span><span class="p">)</span>
 </pre></div>
 </div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>       id             female           race           ses            schtyp    
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>       id             female           race           ses            schtyp    
  Min.   :  1.00   Min.   :0.000   Min.   :1.00   Min.   :1.000   Min.   :1.00  
  1st Qu.: 50.75   1st Qu.:0.000   1st Qu.:3.00   1st Qu.:2.000   1st Qu.:1.00  
  Median :100.50   Median :1.000   Median :4.00   Median :2.000   Median :1.00  
@@ -976,44 +853,27 @@ $ Year  &lt;int&gt; 2017, 2017
  Low   :47   Public :168   General   : 45  
  Middle:95   Private: 32   Academic  :105  
  High  :58                 Vocational: 50  
-                                           
-                                           
-                                           
 </pre></div>
-</div>
-</div>
 </div>
 <p>Aha! Everything is as it should be.</p>
 <p>Before we move on though, let us save our hsb2 data file that has new columns. We will save it in the native <code class="docutils literal notranslate"><span class="pre">R</span></code> format. The command to save a file is very simple – <code class="docutils literal notranslate"><span class="pre">save(filename,</span> <span class="pre">file</span> <span class="pre">=</span> <span class="pre">&quot;filepath/filename.RData&quot;)</span></code></p>
 <blockquote>
 <div><p>You could also do <code class="docutils literal notranslate"><span class="pre">save(filename,</span> <span class="pre">file</span> <span class="pre">=</span> <span class="pre">&quot;filepath/filename.rdata&quot;)</span></code> if that is what you intuitively prefer.</p>
 </div></blockquote>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">save</span><span class="p">(</span><span class="n">hsb2</span><span class="p">,</span> <span class="n">file</span> <span class="o">=</span> <span class="s">&quot;data/hsb2.RData&quot;</span><span class="p">)</span>
+<div class="highlight-R notranslate"><div class="highlight"><pre><span></span><span class="nf">save</span><span class="p">(</span><span class="n">hsb2</span><span class="p">,</span> <span class="n">file</span> <span class="o">=</span> <span class="s">&quot;data/hsb2.RData&quot;</span><span class="p">)</span>
 </pre></div>
-</div>
-</div>
 </div>
 <div class="section" id="loading-rdata-files">
 <h2>Loading RData files<a class="headerlink" href="#loading-rdata-files" title="Permalink to this headline">¶</a></h2>
 <p>When we want to work with RData files, we have to load them with the <code class="docutils literal notranslate"><span class="pre">load(&quot;filepath/filename.RData&quot;)</span></code> command. Here I am doing it for the hsb2 data.</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">load</span><span class="p">(</span><span class="s">&quot;data/hsb2.RData&quot;</span><span class="p">)</span>
+<div class="highlight-R notranslate"><div class="highlight"><pre><span></span><span class="nf">load</span><span class="p">(</span><span class="s">&quot;data/hsb2.RData&quot;</span><span class="p">)</span>
 </pre></div>
-</div>
-</div>
 </div>
 <p>Whenever I load a data-set, I run the <code class="docutils literal notranslate"><span class="pre">summary(...)</span></code> command just to ensure that the file did load without errors.</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">summary</span><span class="p">(</span><span class="n">hsb2</span><span class="p">)</span>
+<div class="highlight-R notranslate"><div class="highlight"><pre><span></span><span class="nf">summary</span><span class="p">(</span><span class="n">hsb2</span><span class="p">)</span>
 </pre></div>
 </div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>       id             female           race           ses            schtyp    
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>       id             female           race           ses            schtyp    
  Min.   :  1.00   Min.   :0.000   Min.   :1.00   Min.   :1.000   Min.   :1.00  
  1st Qu.: 50.75   1st Qu.:0.000   1st Qu.:3.00   1st Qu.:2.000   1st Qu.:1.00  
  Median :100.50   Median :1.000   Median :4.00   Median :2.000   Median :1.00  
@@ -1038,12 +898,7 @@ $ Year  &lt;int&gt; 2017, 2017
  Low   :47   Public :168   General   : 45  
  Middle:95   Private: 32   Academic  :105  
  High  :58                 Vocational: 50  
-                                           
-                                           
-                                           
 </pre></div>
-</div>
-</div>
 </div>
 </div>
 <div class="section" id="data-in-packages">
@@ -1055,9 +910,7 @@ $ Year  &lt;int&gt; 2017, 2017
 <li><p><a class="reference external" href="http://www.public.iastate.edu/~hofmann/data_in_r_sortable.html">and some more</a></p></li>
 </ul>
 <p>To load data from a package, if you know the data-set’s name, it is easy to load it, as shown below. Some times you may need to install the package. We do this with the <code class="docutils literal notranslate"><span class="pre">install.packages(&quot;packagename&quot;)</span></code> command.</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">install.packages</span><span class="p">(</span><span class="s">&#39;palmerpenguins&#39;</span><span class="p">)</span>
+<div class="highlight-R notranslate"><div class="highlight"><pre><span></span><span class="nf">install.packages</span><span class="p">(</span><span class="s">&#39;palmerpenguins&#39;</span><span class="p">)</span>
 
 <span class="nf">library</span><span class="p">(</span><span class="n">palmerpenguins</span><span class="p">)</span>
 
@@ -1066,13 +919,11 @@ $ Year  &lt;int&gt; 2017, 2017
 <span class="nf">head</span><span class="p">(</span><span class="n">penguins</span><span class="p">)</span>
 </pre></div>
 </div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The downloaded binary packages are in
-	/var/folders/qh/6q39v0755_54rxmbl8m5ttnwy0twd7/T//RtmpCwKw8e/downloaded_packages
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>The downloaded binary packages are in
+	/var/folders/qh/6q39v0755_54rxmbl8m5ttnwy0twd7/T//Rtmp7WI5qh/downloaded_packages
 </pre></div>
 </div>
-<div class="output text_html"><table class="dataframe">
+<table class="dataframe">
 <caption>A tibble: 6 × 8</caption>
 <thead>
 	<tr><th scope=col>species</th><th scope=col>island</th><th scope=col>bill_length_mm</th><th scope=col>bill_depth_mm</th><th scope=col>flipper_length_mm</th><th scope=col>body_mass_g</th><th scope=col>sex</th><th scope=col>year</th></tr>
@@ -1087,20 +938,14 @@ $ Year  &lt;int&gt; 2017, 2017
 	<tr><td>Adelie</td><td>Torgersen</td><td>39.3</td><td>20.6</td><td>190</td><td>3650</td><td>male  </td><td>2007</td></tr>
 </tbody>
 </table>
-</div></div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">library</span><span class="p">(</span><span class="n">ggplot2</span><span class="p">)</span>
+<div class="highlight-R notranslate"><div class="highlight"><pre><span></span><span class="nf">library</span><span class="p">(</span><span class="n">ggplot2</span><span class="p">)</span>
 
 <span class="nf">data</span><span class="p">(</span><span class="n">diamonds</span><span class="p">,</span> <span class="n">package</span> <span class="o">=</span> <span class="s">&#39;ggplot2&#39;</span><span class="p">)</span>
 
 <span class="nf">head</span><span class="p">(</span><span class="n">diamonds</span><span class="p">)</span>
 </pre></div>
 </div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_html"><table class="dataframe">
+<table class="dataframe">
 <caption>A tibble: 6 × 10</caption>
 <thead>
 	<tr><th scope=col>carat</th><th scope=col>cut</th><th scope=col>color</th><th scope=col>clarity</th><th scope=col>depth</th><th scope=col>table</th><th scope=col>price</th><th scope=col>x</th><th scope=col>y</th><th scope=col>z</th></tr>
@@ -1115,8 +960,6 @@ $ Year  &lt;int&gt; 2017, 2017
 	<tr><td>0.24</td><td>Very Good</td><td>J</td><td>VVS2</td><td>62.8</td><td>57</td><td>336</td><td>3.94</td><td>3.96</td><td>2.48</td></tr>
 </tbody>
 </table>
-</div></div>
-</div>
 </div>
 <hr class="docutils" />
 <div class="section" id="exercises-for-practice">
@@ -1166,16 +1009,16 @@ $ Year  &lt;int&gt; 2017, 2017
         },
         codeMirrorConfig: {
             theme: "abcdef",
-            mode: "r"
+            mode: "python"
         },
         kernelOptions: {
-            kernelName: "ir",
+            kernelName: "python3",
             path: "./docs"
         },
         predefinedOutput: true
     }
     </script>
-    <script>kernelName = 'ir'</script>
+    <script>kernelName = 'python3'</script>
 
               </div>
               

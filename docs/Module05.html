@@ -484,16 +484,14 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>── <span class=" -Color -Color-Bold">Attaching packages</span> ────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────── tidyverse 1.3.1 ──
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span><span class=" -Color -Color-Green">✔</span> <span class=" -Color -Color-Blue">ggplot2</span> 3.3.5     <span class=" -Color -Color-Green">✔</span> <span class=" -Color -Color-Blue">purrr  </span> 0.3.4
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>── <span class=" -Color -Color-Bold">Attaching packages</span> ─────────────────────────────────────── tidyverse 1.3.1 ──
+
+<span class=" -Color -Color-Green">✔</span> <span class=" -Color -Color-Blue">ggplot2</span> 3.3.5     <span class=" -Color -Color-Green">✔</span> <span class=" -Color -Color-Blue">purrr  </span> 0.3.4
 <span class=" -Color -Color-Green">✔</span> <span class=" -Color -Color-Blue">tibble </span> 3.1.6     <span class=" -Color -Color-Green">✔</span> <span class=" -Color -Color-Blue">dplyr  </span> 1.0.7
 <span class=" -Color -Color-Green">✔</span> <span class=" -Color -Color-Blue">tidyr  </span> 1.1.4     <span class=" -Color -Color-Green">✔</span> <span class=" -Color -Color-Blue">stringr</span> 1.4.0
 <span class=" -Color -Color-Green">✔</span> <span class=" -Color -Color-Blue">readr  </span> 2.1.1     <span class=" -Color -Color-Green">✔</span> <span class=" -Color -Color-Blue">forcats</span> 0.5.1
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>── <span class=" -Color -Color-Bold">Conflicts</span> ───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────── tidyverse_conflicts() ──
+
+── <span class=" -Color -Color-Bold">Conflicts</span> ────────────────────────────────────────── tidyverse_conflicts() ──
 <span class=" -Color -Color-Red">✖</span> <span class=" -Color -Color-Blue">dplyr</span>::<span class=" -Color -Color-Green">filter()</span> masks <span class=" -Color -Color-Blue">stats</span>::filter()
 <span class=" -Color -Color-Red">✖</span> <span class=" -Color -Color-Blue">dplyr</span>::<span class=" -Color -Color-Green">lag()</span>    masks <span class=" -Color -Color-Blue">stats</span>::lag()
 </pre></div>
@@ -1120,19 +1118,19 @@
 </div>
 <div class="cell_output docutils container">
 <div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Attaching package: ‘scales’
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The following object is masked from ‘package:purrr’:
+
+
+The following object is masked from ‘package:purrr’:
 
     discard
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The following object is masked from ‘package:readr’:
+
+
+The following object is masked from ‘package:readr’:
 
     col_factor
 </pre></div>
 </div>
-<img alt="../_images/Module05_48_3.png" src="../_images/Module05_48_3.png" />
+<img alt="../_images/Module05_48_1.png" src="../_images/Module05_48_1.png" />
 </div>
 </div>
 <p>Note the addition of</p>
@@ -1183,6 +1181,19 @@
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Warning message in gzfile(file, &quot;wb&quot;):
+“cannot open compressed file &#39;/Users/ruhil/Documents/github/my-jbooks/mynewbook/docs/data/hsb2.RData&#39;, probable reason &#39;No such file or directory&#39;”
+</pre></div>
+</div>
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="n">Error</span> <span class="ow">in</span> <span class="n">gzfile</span><span class="p">(</span><span class="n">file</span><span class="p">,</span> <span class="s2">&quot;wb&quot;</span><span class="p">):</span> <span class="n">cannot</span> <span class="nb">open</span> <span class="n">the</span> <span class="n">connection</span>
+<span class="ne">Traceback</span>:
+
+<span class="mi">1</span><span class="o">.</span> <span class="n">save</span><span class="p">(</span><span class="n">hsb2</span><span class="p">,</span> <span class="n">file</span> <span class="o">=</span> <span class="n">here</span><span class="p">::</span><span class="n">here</span><span class="p">(</span><span class="s2">&quot;data&quot;</span><span class="p">,</span> <span class="s2">&quot;hsb2.RData&quot;</span><span class="p">))</span>
+<span class="mi">2</span><span class="o">.</span> <span class="n">gzfile</span><span class="p">(</span><span class="n">file</span><span class="p">,</span> <span class="s2">&quot;wb&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1193,9 +1204,6 @@
   <span class="nf">labs</span><span class="p">(</span><span class="n">x</span> <span class="o">=</span> <span class="s">&quot;Socioeconomic Status&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
-</div>
-<div class="cell_output docutils container">
-<img alt="../_images/Module05_51_0.png" src="../_images/Module05_51_0.png" />
 </div>
 </div>
 <p>Okay, fair enough. But what if I wanted to see how socioeconomic status varies across male and female students?</p>
@@ -1217,9 +1225,6 @@
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<img alt="../_images/Module05_53_0.png" src="../_images/Module05_53_0.png" />
-</div>
 </div>
 <p>This is not very useful since the viewer has to estimate the relative sizes of the two colors within any given bar. That can be fixed with <code class="docutils literal notranslate"><span class="pre">position</span> <span class="pre">=</span> <span class="pre">&quot;dodge&quot;</span></code>, juxtaposing the bars for the groups as a result, and the end product is much better. But note: <code class="docutils literal notranslate"><span class="pre">position</span> <span class="pre">=</span> <span class="pre">&quot;dodge&quot;</span></code> has to be put outside the <code class="docutils literal notranslate"><span class="pre">aes()</span></code> but still inside <code class="docutils literal notranslate"><span class="pre">geom_bar()</span></code> so be careful.</p>
 <div class="cell docutils container">
@@ -1240,9 +1245,6 @@
   <span class="p">)</span>
 </pre></div>
 </div>
-</div>
-<div class="cell_output docutils container">
-<img alt="../_images/Module05_55_0.png" src="../_images/Module05_55_0.png" />
 </div>
 </div>
 <p>What if you wanted to calculate percentages within each sex? That is, what percent of male students fall within a particular ses category, and the same thing for female students?</p>
@@ -1266,9 +1268,6 @@
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<img alt="../_images/Module05_57_0.png" src="../_images/Module05_57_0.png" />
-</div>
 </div>
 <p>What about within each ses instead of within gender? That is, what if we wanted percent of Low ses that is Male versus Female, and so on?</p>
 <div class="cell docutils container">
@@ -1291,9 +1290,6 @@
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<img alt="../_images/Module05_59_0.png" src="../_images/Module05_59_0.png" />
-</div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1314,9 +1310,6 @@
     <span class="p">)</span> 
 </pre></div>
 </div>
-</div>
-<div class="cell_output docutils container">
-<img alt="../_images/Module05_60_0.png" src="../_images/Module05_60_0.png" />
 </div>
 </div>
 <p>There is some more we will do with bar-charts but for now let us set them aside and instead look at a few other charts – histograms, box-plots, and line-charts.</p>
@@ -1342,12 +1335,6 @@
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>`stat_bin()` using `bins = 30`. Pick better value with `binwidth`.
-</pre></div>
-</div>
-<img alt="../_images/Module05_62_1.png" src="../_images/Module05_62_1.png" />
-</div>
 </div>
 <p>Note the warning <code class="docutils literal notranslate"><span class="pre">stat_bin()</span></code> using <code class="docutils literal notranslate"><span class="pre">bins</span> <span class="pre">=</span> <span class="pre">30</span></code>. Pick better value with <code class="docutils literal notranslate"><span class="pre">binwidth</span></code>. This is because numerical variables need to be grouped in order to have meaningful histograms we can make sense of. How do you define the bins (aka the groups)? We could set <code class="docutils literal notranslate"><span class="pre">bins</span> <span class="pre">=</span> <span class="pre">5</span></code> and we could also experiment with <code class="docutils literal notranslate"><span class="pre">binwidth</span> <span class="pre">=</span></code>. Let us do <code class="docutils literal notranslate"><span class="pre">bins</span> <span class="pre">=</span> <span class="pre">5</span></code> which will say give us 5 groups, and go ahead and calculate them yourself.</p>
 <div class="cell docutils container">
@@ -1368,9 +1355,6 @@
     <span class="p">)</span>
 </pre></div>
 </div>
-</div>
-<div class="cell_output docutils container">
-<img alt="../_images/Module05_64_0.png" src="../_images/Module05_64_0.png" />
 </div>
 </div>
 <p>If we wanted more/fewer bins we could tweak it up or down as needed.
@@ -1394,9 +1378,6 @@ What about binwidth? This will specify how wide each group must be.</p>
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<img alt="../_images/Module05_66_0.png" src="../_images/Module05_66_0.png" />
-</div>
 </div>
 <p>If we wanted to disaggregate the histogram by one or more categorical variables, we could do so quite easily:</p>
 <div class="cell docutils container">
@@ -1418,9 +1399,6 @@ What about binwidth? This will specify how wide each group must be.</p>
   <span class="nf">facet_wrap</span><span class="p">(</span><span class="o">~</span> <span class="n">female</span><span class="p">)</span>
 </pre></div>
 </div>
-</div>
-<div class="cell_output docutils container">
-<img alt="../_images/Module05_68_0.png" src="../_images/Module05_68_0.png" />
 </div>
 </div>
 <p>When we do this, it is often useful to organize them so that only one histogram shows up in a row. This is done with the <code class="docutils literal notranslate"><span class="pre">ncol</span> <span class="pre">=</span> <span class="pre">1</span></code> command.</p>
@@ -1444,9 +1422,6 @@ What about binwidth? This will specify how wide each group must be.</p>
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<img alt="../_images/Module05_70_0.png" src="../_images/Module05_70_0.png" />
-</div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1467,9 +1442,6 @@ What about binwidth? This will specify how wide each group must be.</p>
   <span class="nf">facet_wrap</span><span class="p">(</span><span class="o">~</span> <span class="n">ses</span><span class="p">,</span> <span class="n">ncol</span> <span class="o">=</span> <span class="m">1</span><span class="p">)</span>
 </pre></div>
 </div>
-</div>
-<div class="cell_output docutils container">
-<img alt="../_images/Module05_71_0.png" src="../_images/Module05_71_0.png" />
 </div>
 </div>
 <p>Now the distributions are stacked above each, easing comparisons; do they have the same average? Do they vary the same? Are they similarly skewed/symmetric?.</p>
@@ -1494,9 +1466,6 @@ What about binwidth? This will specify how wide each group must be.</p>
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<img alt="../_images/Module05_73_0.png" src="../_images/Module05_73_0.png" />
-</div>
 </div>
 <p>Note that <code class="docutils literal notranslate"><span class="pre">ses</span> <span class="pre">~</span> <span class="pre">schtyp</span></code> renders the panels for the first category of <code class="docutils literal notranslate"><span class="pre">ses</span></code> by all categories of schtyp and then repeats for the other categories in rows 2 and 3. If we did <code class="docutils literal notranslate"><span class="pre">facet_wrap(schtype</span> <span class="pre">~</span> <span class="pre">ses,</span> <span class="pre">ncol</span> <span class="pre">=</span> <span class="pre">3)</span></code> we would have a different result:</p>
 <div class="cell docutils container">
@@ -1519,13 +1488,6 @@ What about binwidth? This will specify how wide each group must be.</p>
   <span class="nf">ylim</span><span class="p">(</span><span class="nf">c</span><span class="p">(</span><span class="m">0</span><span class="p">,</span> <span class="m">23</span><span class="p">))</span>
 </pre></div>
 </div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Warning message:
-“Removed 1 rows containing missing values (geom_bar).”
-</pre></div>
-</div>
-<img alt="../_images/Module05_75_1.png" src="../_images/Module05_75_1.png" />
 </div>
 </div>
 <p>Notice that here I also add a <code class="docutils literal notranslate"><span class="pre">ylim(c(...))</span></code> command to set the minimum and maximum values of the y-axis. This is useful, and I suggest you do not forget to set the y limit to start at 0 or then make a note in the plot for readers so they don’t assume it is at 0 when in fact it has been truncated for ease of data presentation. This misstates the pattern in the data, do not do it or then, again, annotate the plot to that effect so nobody is misled. Bar-charts and histograms will have 0 as the minimum y-limit but this is not true for some other plots.</p>
@@ -1551,13 +1513,6 @@ What about binwidth? This will specify how wide each group must be.</p>
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Warning message:
-“Removed 565 rows containing non-finite values (stat_boxplot).”
-</pre></div>
-</div>
-<img alt="../_images/Module05_78_1.png" src="../_images/Module05_78_1.png" />
-</div>
 </div>
 <p>Note:</p>
 <ul class="simple">
@@ -1578,13 +1533,6 @@ What about binwidth? This will specify how wide each group must be.</p>
   <span class="nf">coord_flip</span><span class="p">()</span>
 </pre></div>
 </div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Warning message:
-“Removed 565 rows containing non-finite values (stat_boxplot).”
-</pre></div>
-</div>
-<img alt="../_images/Module05_80_1.png" src="../_images/Module05_80_1.png" />
 </div>
 </div>
 <p>And now for a slightly different data-set, one that measures male adults’ hemoglobin concentration for a few populations.</p>
@@ -1614,22 +1562,6 @@ What about binwidth? This will specify how wide each group must be.</p>
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span><span class=" -Color -Color-Bold">Rows: </span><span class=" -Color -Color-Blue">1962</span> <span class=" -Color -Color-Bold">Columns: </span><span class=" -Color -Color-Blue">3</span>
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span><span class=" -Color -Color-Cyan">──</span> <span class=" -Color -Color-Bold">Column specification</span> <span class=" -Color -Color-Cyan">───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────</span>
-<span class=" -Color -Color-Bold">Delimiter:</span> &quot;,&quot;
-<span class=" -Color -Color-Red">chr</span> (2): id, population
-<span class=" -Color -Color-Green">dbl</span> (1): hemoglobin
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span><span class=" -Color -Color-Cyan">ℹ</span> Use <span class=" -Color -Color-Black -Color-Black-BGWhite">`spec()`</span> to retrieve the full column specification for this data.
-<span class=" -Color -Color-Cyan">ℹ</span> Specify the column types or set <span class=" -Color -Color-Black -Color-Black-BGWhite">`show_col_types = FALSE`</span> to quiet this message.
-</pre></div>
-</div>
-<img alt="../_images/Module05_82_3.png" src="../_images/Module05_82_3.png" />
-</div>
 </div>
 <p>Notice the need for no legend with <code class="docutils literal notranslate"><span class="pre">fill</span> <span class="pre">=</span> <span class="pre">population</span></code> Notice also how <code class="docutils literal notranslate"><span class="pre">fill</span> <span class="pre">=</span> </code> is inside <code class="docutils literal notranslate"><span class="pre">aes(...)</span></code> here because we are asking that each unique value seen in a variable called <code class="docutils literal notranslate"><span class="pre">population</span></code> be mapped to a unique color.</p>
 <p>Could we use our <code class="docutils literal notranslate"><span class="pre">facet_wrap(...)</span></code> here too? Of course.</p>
@@ -1648,13 +1580,6 @@ What about binwidth? This will specify how wide each group must be.</p>
   <span class="nf">facet_wrap</span><span class="p">(</span><span class="o">~</span> <span class="n">Month</span><span class="p">)</span>
 </pre></div>
 </div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Warning message:
-“Removed 565 rows containing non-finite values (stat_boxplot).”
-</pre></div>
-</div>
-<img alt="../_images/Module05_84_1.png" src="../_images/Module05_84_1.png" />
 </div>
 </div>
 </div>
@@ -1680,33 +1605,6 @@ What about binwidth? This will specify how wide each group must be.</p>
   <span class="p">)</span>
 </pre></div>
 </div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Attaching package: ‘plotly’
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The following object is masked from ‘package:ggplot2’:
-
-    last_plot
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The following object is masked from ‘package:stats’:
-
-    filter
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The following object is masked from ‘package:graphics’:
-
-    layout
-</pre></div>
-</div>
-<div class="output text_html"><style>
-.list-inline {list-style: none; margin:0; padding: 0}
-.list-inline>li {display: inline-block}
-.list-inline>li:not(:last-child)::after {content: "\00b7"; padding: 0 .5ex}
-</style>
-<ol class=list-inline><li>'date'</li><li>'pce'</li><li>'pop'</li><li>'psavert'</li><li>'uempmed'</li><li>'unemploy'</li></ol>
-</div><img alt="../_images/Module05_86_5.png" src="../_images/Module05_86_5.png" />
 </div>
 </div>
 <p>They can look very plain and aesthetically unappealing unless you dress them up. See the one below and then the one that follows.</p>
@@ -1744,9 +1642,6 @@ What about binwidth? This will specify how wide each group must be.</p>
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<img alt="../_images/Module05_88_0.png" src="../_images/Module05_88_0.png" />
-</div>
 </div>
 </div>
 <div class="section" id="scatter-plots">
@@ -1768,9 +1663,6 @@ What about binwidth? This will specify how wide each group must be.</p>
     <span class="p">)</span> 
 </pre></div>
 </div>
-</div>
-<div class="cell_output docutils container">
-<img alt="../_images/Module05_90_0.png" src="../_images/Module05_90_0.png" />
 </div>
 </div>
 <p>We could highlight the different <code class="docutils literal notranslate"><span class="pre">ses</span></code> groups, to see if there is any difference in the relationship between writing scores and science scores by the different ses levels.</p>
@@ -1794,9 +1686,6 @@ What about binwidth? This will specify how wide each group must be.</p>
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<img alt="../_images/Module05_92_0.png" src="../_images/Module05_92_0.png" />
-</div>
 </div>
 <p>This is not very helpful so why not breakout ses for ease of interpretation?</p>
 <div class="cell docutils container">
@@ -1817,9 +1706,6 @@ What about binwidth? This will specify how wide each group must be.</p>
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<img alt="../_images/Module05_94_0.png" src="../_images/Module05_94_0.png" />
-</div>
 </div>
 <p>Could we add another layer, perhaps <code class="docutils literal notranslate"><span class="pre">female</span></code>?</p>
 <div class="cell docutils container">
@@ -1839,9 +1725,6 @@ What about binwidth? This will specify how wide each group must be.</p>
   <span class="nf">facet_wrap</span><span class="p">(</span><span class="n">ses</span> <span class="o">~</span> <span class="n">female</span><span class="p">,</span> <span class="n">ncol</span> <span class="o">=</span> <span class="m">2</span><span class="p">)</span> 
 </pre></div>
 </div>
-</div>
-<div class="cell_output docutils container">
-<img alt="../_images/Module05_96_0.png" src="../_images/Module05_96_0.png" />
 </div>
 </div>
 <p>And finally, a few suggestion about how to build up your visualizations:</p>
@@ -1867,22 +1750,6 @@ What about binwidth? This will specify how wide each group must be.</p>
 <div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">readr</span><span class="o">::</span><span class="nf">read_csv</span><span class="p">(</span>
     <span class="s">&quot;https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2019/2019-05-14/nobel_winners.csv&quot;</span>
     <span class="p">)</span> <span class="o">-&gt;</span> <span class="n">nobel_winners</span> 
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span><span class=" -Color -Color-Bold">Rows: </span><span class=" -Color -Color-Blue">969</span> <span class=" -Color -Color-Bold">Columns: </span><span class=" -Color -Color-Blue">18</span>
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span><span class=" -Color -Color-Cyan">──</span> <span class=" -Color -Color-Bold">Column specification</span> <span class=" -Color -Color-Cyan">───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────</span>
-<span class=" -Color -Color-Bold">Delimiter:</span> &quot;,&quot;
-<span class=" -Color -Color-Red">chr</span>  (14): category, prize, motivation, prize_share, laureate_type, full_nam...
-<span class=" -Color -Color-Green">dbl</span>   (2): prize_year, laureate_id
-<span class=" -Color -Color-Blue">date</span>  (2): birth_date, death_date
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span><span class=" -Color -Color-Cyan">ℹ</span> Use <span class=" -Color -Color-Black -Color-Black-BGWhite">`spec()`</span> to retrieve the full column specification for this data.
-<span class=" -Color -Color-Cyan">ℹ</span> Specify the column types or set <span class=" -Color -Color-Black -Color-Black-BGWhite">`show_col_types = FALSE`</span> to quiet this message.
 </pre></div>
 </div>
 </div>
@@ -1992,23 +1859,6 @@ What about binwidth? This will specify how wide each group must be.</p>
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output text_html"><table class="dataframe">
-<caption>A tibble: 6 × 6</caption>
-<thead>
-	<tr><th scope=col>monthyear</th><th scope=col>Superior</th><th scope=col>MichiganHuron</th><th scope=col>St.Clair</th><th scope=col>Erie</th><th scope=col>Ontario</th></tr>
-	<tr><th scope=col>&lt;dttm&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th></tr>
-</thead>
-<tbody>
-	<tr><td>1918-01-01</td><td>183.25</td><td>176.71</td><td>174.59</td><td>173.90</td><td>74.74</td></tr>
-	<tr><td>1918-02-01</td><td>183.20</td><td>176.73</td><td>174.74</td><td>173.82</td><td>74.72</td></tr>
-	<tr><td>1918-03-01</td><td>183.17</td><td>176.80</td><td>174.74</td><td>174.01</td><td>74.92</td></tr>
-	<tr><td>1918-04-01</td><td>183.14</td><td>176.89</td><td>174.84</td><td>174.02</td><td>75.10</td></tr>
-	<tr><td>1918-05-01</td><td>183.22</td><td>176.99</td><td>175.00</td><td>173.98</td><td>75.09</td></tr>
-	<tr><td>1918-06-01</td><td>183.34</td><td>177.07</td><td>175.14</td><td>174.10</td><td>75.06</td></tr>
-</tbody>
-</table>
-</div></div>
 </div>
 <p>Now use an appropriate chart to show the water level for Lake Superior.</p>
 </div>
@@ -2029,23 +1879,6 @@ What about binwidth? This will specify how wide each group must be.</p>
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output text_html"><table class="dataframe">
-<caption>A tibble: 6 × 8</caption>
-<thead>
-	<tr><th scope=col>state</th><th scope=col>Adult_obesity</th><th scope=col>Children_in_poverty</th><th scope=col>Diabetes_monitoring</th><th scope=col>High_school_graduation</th><th scope=col>Premature_death</th><th scope=col>Preventable_hospital_stays</th><th scope=col>Unemployment_rate</th></tr>
-	<tr><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th></tr>
-</thead>
-<tbody>
-	<tr><td>AK</td><td>0.29</td><td>0.15</td><td>0.75</td><td>0.76</td><td>7403.4</td><td>35.99</td><td>0.06</td></tr>
-	<tr><td>AL</td><td>0.34</td><td>0.27</td><td>0.85</td><td>0.89</td><td>9573.2</td><td>61.13</td><td>0.06</td></tr>
-	<tr><td>AR</td><td>0.34</td><td>0.26</td><td>0.84</td><td>0.85</td><td>9150.7</td><td>61.95</td><td>0.05</td></tr>
-	<tr><td>AZ</td><td>0.26</td><td>0.25</td><td>0.80</td><td>0.78</td><td>6787.7</td><td>36.97</td><td>0.06</td></tr>
-	<tr><td>CA</td><td>0.23</td><td>0.21</td><td>0.82</td><td>  NA</td><td>5213.2</td><td>35.74</td><td>0.06</td></tr>
-	<tr><td>CO</td><td>0.20</td><td>0.15</td><td>0.84</td><td>0.77</td><td>5711.5</td><td>32.09</td><td>0.04</td></tr>
-</tbody>
-</table>
-</div></div>
 </div>
 <p>Construct appropriate plots that shows the relationship between the following pairs of variables</p>
 <p>(a) Adult obesity and High school graduation</p>
@@ -2064,23 +1897,6 @@ What about binwidth? This will specify how wide each group must be.</p>
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output text_html"><table class="dataframe">
-<caption>A tibble: 6 × 3</caption>
-<thead>
-	<tr><th scope=col>yearmonth</th><th scope=col>educ_group</th><th scope=col>rate</th></tr>
-	<tr><th scope=col>&lt;date&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;dbl&gt;</th></tr>
-</thead>
-<tbody>
-	<tr><td>2007-04-01</td><td>BA_or_more</td><td>1.9</td></tr>
-	<tr><td>2007-08-01</td><td>BA_or_more</td><td>2.1</td></tr>
-	<tr><td>2007-12-01</td><td>BA_or_more</td><td>2.1</td></tr>
-	<tr><td>2007-02-01</td><td>BA_or_more</td><td>1.9</td></tr>
-	<tr><td>2007-01-01</td><td>BA_or_more</td><td>2.1</td></tr>
-	<tr><td>2007-07-01</td><td>BA_or_more</td><td>2.1</td></tr>
-</tbody>
-</table>
-</div></div>
 </div>
 <p>Be sure to use a unique color for each educational attainment group</p>
 </div>
