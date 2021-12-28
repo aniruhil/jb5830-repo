@@ -88,6 +88,44 @@ read_sav(
   "https://stats.idre.ucla.edu/stat/data/hsb2.sav"
   ) -> hsb2.spss 
 
+library(readxl)
+
+"https://github.com/aniruhil/mpa5830-jupyter/blob/main/code/data/Fatalities_by_VehicleType.xlsx" -> my_url
+
+"Fatalities_by_VehicleType.xlsx" -> my_destfile 
+
+curl::curl_download(
+    my_url, 
+    my_destfile
+    )
+
+read_excel(
+    my_destfile
+    ) -> Fatalities_by_VehicleType
+
+library(rio)
+
+"https://raw.githubusercontent.com/aniruhil/mpa5830-jupyter/main/code/data/Fatalities_by_VehicleType.xlsx" -> url
+
+import(url) -> my_data
+
+temp <- tempfile()
+
+download.file(
+  "ftp://ftp.cdc.gov/pub/Health_Statistics/NCHS/nvss/bridged_race/pcen_v2018_y1018.sas7bdat.zip",
+  temp, 
+  mode = "wb"
+  )
+
+haven::read_sas(
+  unzip(
+    temp,
+    "pcen_v2018_y1018.sas7bdat/pcen_v2018_y1018.sas7bdat"
+    )
+  ) -> oursasdata 
+
+unlink(temp)
+
 read.table(
   'https://stats.idre.ucla.edu/stat/data/hsb2.csv',
   header = TRUE,
