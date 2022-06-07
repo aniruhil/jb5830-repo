@@ -41,7 +41,7 @@
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
-    <script src="../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script src="../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
     <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
     <script>
         const thebe_selector = ".thebe,.cell"
@@ -193,7 +193,7 @@
                 data-placement="left">.ipynb</button></a>
         <!-- Download PDF via print -->
         <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
-            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
     </div>
 </div>
 
@@ -247,7 +247,7 @@
         </div>
 
         <!-- Table of contents -->
-        <div class="d-none d-md-block col-md-2 bd-toc show">
+        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
             
             <div class="tocsection onthispage pt-5 pb-3">
                 <i class="fas fa-list"></i> Contents
@@ -267,7 +267,30 @@
 </div>
     <div id="main-content" class="row">
         <div class="col-12 col-md-9 pl-md-3 pr-md-0">
-        
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Introduction to MPA 5830</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#data-analytics-for-leadership-public-service">
+   Data Analytics for Leadership &amp; Public Service
+  </a>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            
               <div>
                 
   <div class="tex2jax_ignore mathjax_ignore section" id="introduction-to-mpa-5830">
@@ -275,7 +298,7 @@
 <div class="section" id="data-analytics-for-leadership-public-service">
 <h2>Data Analytics for Leadership &amp; Public Service<a class="headerlink" href="#data-analytics-for-leadership-public-service" title="Permalink to this headline">¶</a></h2>
 <p>This is a hands-on course in which you will learn how to use open-source software (R in particular) to gather, clean, analyze, and visualize data. These four steps are the essence of <code class="docutils literal notranslate"><span class="pre">data</span> <span class="pre">analytics</span></code>, <code class="docutils literal notranslate"><span class="pre">data</span> <span class="pre">science</span></code>, or whatever other buzzword you see\hear in the media out there. At first you might think of these four steps in the analytics process and wonder what could be the big deal about gather and cleaning data. Surprise, surprise – these are the very steps that take up the majority of your time (anywhere between 50% to 80% of the total time you might spend on a project).</p>
-<p>It is only once you have the data ready for analysis can you start analyzing it, and that analysis may be no more than basic exploratory analysis per se, or explorations that culminate in some model-based analyses (for ecample, running a regression model or two). Visualization comes into play in both the exploratory phase (think simple tables and charts that show you how one or more variables are distributed, whether you have outliers, skewed distributions, and so on). Visualizations can be simple, complex, static, and even interactive, with the choice depending upon the data, the analysis, and of course what you feel best conveys the narrative YOU want to convey. You will several of these features in action in the very last chapter – the Case Study.</p>
+<p>It is only once you have the data ready for analysis can you start analyzing it, and that analysis may be no more than basic exploratory analysis per se, or explorations that culminate in some model-based analyses (for ecample, running a regression model or two). Visualization comes into play in both the exploratory phase (think simple tables and charts that show you how one or more variables are distributed, whether you have outliers, skewed distributions, and so on). Visualizations can be simple, complex, static, and even interactive, with the choice depending upon the data, the analysis, and of course what you feel best conveys the narrative YOU want to convey. You will put several of these features in action in the very last chapter – the Case Study.</p>
 <p>This is not an easy course so of course you should not expect it to be a breeze. If you have never done coding before, and I mean line by line coding, then this is your chance to play in that sandbox. It is not impossible to learn a lot and become good at coding over the span of three-four months. Many have graduated from this course and gone on to data-work in the public or private sector while teaching themselves more advanced techniques. ‘You mean this course will not teach me everything?’ No, this will only get you started with enough a foundation that you can build on at will.</p>
 <p>Be prepared to put in long hours because you cannot get comfortable with coding, leave alone become good at it, if you do not practice, practice, practice. And to practice does not mean run the same code on the same data over and over again. Nah. What you should do is gather some data-sets (ask me if you can’t find any) and then tinker with them, applying what you learn in class. Keep some good humor about you, try not to cuss at the computer if a piece of code misbehaves, and, above all, see how much you can surprise yourself with acquiring coding skills.</p>
 </div>
@@ -309,8 +332,8 @@
 
               </div>
               
-        
             
+                
 
 
 
@@ -327,22 +350,20 @@
      </div>
 
 </div>
-        
+            
         </div>
     </div>
     <footer class="footer">
-    <div class="container">
-      <p>
-        
-          By Ani Ruhil<br/>
-        
-            &copy; Copyright 2022.<br/>
-          <div class="extra_footer">
-            Fall 2021
-          </div>
-      </p>
-    </div>
-  </footer>
+  <p>
+    
+      By Ani Ruhil<br/>
+    
+        &copy; Copyright 2022.<br/>
+      <div class="extra_footer">
+        Fall 2021
+      </div>
+  </p>
+</footer>
 </main>
 
 

@@ -41,7 +41,7 @@
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
-    <script src="../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script src="../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
     <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
     <script>
         const thebe_selector = ".thebe,.cell"
@@ -194,7 +194,7 @@
                 data-placement="left">.ipynb</button></a>
         <!-- Download PDF via print -->
         <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
-            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
     </div>
 </div>
 
@@ -248,7 +248,7 @@
         </div>
 
         <!-- Table of contents -->
-        <div class="d-none d-md-block col-md-2 bd-toc show">
+        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
             
             <div class="tocsection onthispage pt-5 pb-3">
                 <i class="fas fa-list"></i> Contents
@@ -402,7 +402,164 @@
 </div>
     <div id="main-content" class="row">
         <div class="col-12 col-md-9 pl-md-3 pr-md-0">
-        
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Visualizing Data with {ggplot2}</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#">
+   Visualizing Data with {ggplot2}
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#ggplot2-and-the-grammar-of-graphics">
+   <code class="docutils literal notranslate">
+    <span class="pre">
+     ggplot2
+    </span>
+   </code>
+   and the grammar of graphics
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#geom-bar-the-bar-chart">
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       geom_bar()
+      </span>
+     </code>
+     … the bar-chart
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#color-versus-fill">
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       color
+      </span>
+     </code>
+     versus
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       fill
+      </span>
+     </code>
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#adding-labels-with-labs">
+     Adding labels with
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       labs
+      </span>
+     </code>
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#controlling-the-chart-legend-with-theme">
+     Controlling the chart legend with
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       theme()
+      </span>
+     </code>
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#customizing-colors">
+     Customizing colors
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#selected-color-palettes">
+     Selected color palettes
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#themes-with-ggthemes">
+     Themes with
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       {ggthemes}
+      </span>
+     </code>
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#more-with-bar-charts">
+     More with bar-charts
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#disaggregating-bar-charts-for-groups">
+     Disaggregating bar-charts for groups
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#histograms">
+     Histograms
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#box-plots">
+     Box-plots
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#line-charts">
+     Line-charts
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#scatter-plots">
+     Scatter-plots
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#exercises-for-practice">
+   Exercises for Practice
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#exercise-01-nobel-prize-winners">
+     Exercise 01 – Nobel Prize Winners
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#exercise-02-water-levels-in-the-great-lakes">
+     Exercise 02 – Water levels in the Great Lakes
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#exercise-03-county-health-rankings">
+     Exercise 03 – County Health Rankings
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#exercise-04-unemployment-rates">
+     Exercise 04 – Unemployment Rates
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            
               <div>
                 
   <div class="tex2jax_ignore mathjax_ignore section" id="visualizing-data-with-ggplot2">
@@ -2108,8 +2265,8 @@ What about binwidth? This will specify how wide each group must be.</p>
 
               </div>
               
-        
             
+                
 
 
 
@@ -2135,22 +2292,20 @@ What about binwidth? This will specify how wide each group must be.</p>
      </div>
 
 </div>
-        
+            
         </div>
     </div>
     <footer class="footer">
-    <div class="container">
-      <p>
-        
-          By Ani Ruhil<br/>
-        
-            &copy; Copyright 2022.<br/>
-          <div class="extra_footer">
-            Fall 2021
-          </div>
-      </p>
-    </div>
-  </footer>
+  <p>
+    
+      By Ani Ruhil<br/>
+    
+        &copy; Copyright 2022.<br/>
+      <div class="extra_footer">
+        Fall 2021
+      </div>
+  </p>
+</footer>
 </main>
 
 

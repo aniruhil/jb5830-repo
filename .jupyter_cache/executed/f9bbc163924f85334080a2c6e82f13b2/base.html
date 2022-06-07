@@ -1,0 +1,1696 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>&lt;no title&gt; &#8212; Data Analytics with R (MPA 5830)</title>
+    
+  <link href="../../../_static/css/theme.css" rel="stylesheet">
+  <link href="../../../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../../../_static/js/index.be7d3bbb2ef33a8344ce.js">
+
+    <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
+    <script src="../../../_static/jquery.js"></script>
+    <script src="../../../_static/underscore.js"></script>
+    <script src="../../../_static/doctools.js"></script>
+    <script src="../../../_static/togglebutton.js"></script>
+    <script src="../../../_static/clipboard.min.js"></script>
+    <script src="../../../_static/copybutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../../../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script>
+        const thebe_selector = ".thebe,.cell"
+        const thebe_selector_input = "pre,.cell_input div.highlight"
+        const thebe_selector_output = ".output,.cell_output"
+    </script>
+    <script async="async" src="../../../_static/sphinx-thebe.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <link rel="canonical" href="https://aniruhil.github.io/jb530-repo/index.html/.jupyter_cache/executed/f9bbc163924f85334080a2c6e82f13b2/base.html" />
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../../../index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="../../../_static/logo5830.svg" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Data Analytics with R (MPA 5830)</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../docs/Intro.html">
+   Introduction to MPA 5830
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Reading Data
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../docs/Module01.html">
+   Reading data in R
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Cleaning &amp; Organizng Data
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../docs/Module02.html">
+   Cleaning Data with {dplyr}
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../docs/Module03.html">
+   Rearranging Data with {tidyr}
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../docs/Module04.html">
+   Managing dates and Times with {lubridate}
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Visualizing Data
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../docs/Module05.html">
+   Visualizing Data with {ggplot2}
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../docs/Module06.html">
+   Advanced Data Visualization
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../../../_sources/.jupyter_cache/executed/f9bbc163924f85334080a2c6e82f13b2/base.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/aniruhil/jb5830-repo"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/aniruhil/jb5830-repo/issues/new?title=Issue%20on%20page%20%2F.jupyter_cache/executed/f9bbc163924f85334080a2c6e82f13b2/base.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        
+    </div>
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/aniruhil/jb5830-repo/main?urlpath=tree/docs/.jupyter_cache/executed/f9bbc163924f85334080a2c6e82f13b2/base.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="../../../_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        <button type="button" class="btn btn-secondary topbarbtn"
+            onclick="initThebeSBT()" title="Launch Thebe" data-toggle="tooltip" data-placement="left"><i
+                class="fas fa-play"></i><span style="margin-left: .4em;">Live Code</span></button>
+        
+    </div>
+</div>
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="simple visible nav section-nav flex-column">
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1><no title></h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="simple visible nav section-nav flex-column">
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            
+              <div>
+                
+  <div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">library</span><span class="p">(</span><span class="n">ggplot2movies</span><span class="p">)</span>
+<span class="nf">data</span><span class="p">(</span><span class="n">movies</span><span class="p">)</span>
+<span class="nf">names</span><span class="p">(</span><span class="n">movies</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><style>
+.list-inline {list-style: none; margin:0; padding: 0}
+.list-inline>li {display: inline-block}
+.list-inline>li:not(:last-child)::after {content: "\00b7"; padding: 0 .5ex}
+</style>
+<ol class=list-inline><li>'title'</li><li>'year'</li><li>'length'</li><li>'budget'</li><li>'rating'</li><li>'votes'</li><li>'r1'</li><li>'r2'</li><li>'r3'</li><li>'r4'</li><li>'r5'</li><li>'r6'</li><li>'r7'</li><li>'r8'</li><li>'r9'</li><li>'r10'</li><li>'mpaa'</li><li>'Action'</li><li>'Animation'</li><li>'Comedy'</li><li>'Drama'</li><li>'Documentary'</li><li>'Romance'</li><li>'Short'</li></ol>
+</div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">library</span><span class="p">(</span><span class="n">tidyverse</span><span class="p">)</span>
+<span class="nf">data</span><span class="p">(</span><span class="n">starwars</span><span class="p">)</span>
+<span class="nf">names</span><span class="p">(</span><span class="n">starwars</span><span class="p">)</span>
+<span class="c1"># str(starwars)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>── <span class=" -Color -Color-Bold">Attaching packages</span> ────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────── tidyverse 1.3.1 ──
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span><span class=" -Color -Color-Green">✔</span> <span class=" -Color -Color-Blue">ggplot2</span> 3.3.5     <span class=" -Color -Color-Green">✔</span> <span class=" -Color -Color-Blue">purrr  </span> 0.3.4
+<span class=" -Color -Color-Green">✔</span> <span class=" -Color -Color-Blue">tibble </span> 3.1.6     <span class=" -Color -Color-Green">✔</span> <span class=" -Color -Color-Blue">dplyr  </span> 1.0.7
+<span class=" -Color -Color-Green">✔</span> <span class=" -Color -Color-Blue">tidyr  </span> 1.1.4     <span class=" -Color -Color-Green">✔</span> <span class=" -Color -Color-Blue">stringr</span> 1.4.0
+<span class=" -Color -Color-Green">✔</span> <span class=" -Color -Color-Blue">readr  </span> 2.1.1     <span class=" -Color -Color-Green">✔</span> <span class=" -Color -Color-Blue">forcats</span> 0.5.1
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>── <span class=" -Color -Color-Bold">Conflicts</span> ───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────── tidyverse_conflicts() ──
+<span class=" -Color -Color-Red">✖</span> <span class=" -Color -Color-Blue">dplyr</span>::<span class=" -Color -Color-Green">filter()</span> masks <span class=" -Color -Color-Blue">stats</span>::filter()
+<span class=" -Color -Color-Red">✖</span> <span class=" -Color -Color-Blue">dplyr</span>::<span class=" -Color -Color-Green">lag()</span>    masks <span class=" -Color -Color-Blue">stats</span>::lag()
+</pre></div>
+</div>
+<div class="output text_html"><style>
+.list-inline {list-style: none; margin:0; padding: 0}
+.list-inline>li {display: inline-block}
+.list-inline>li:not(:last-child)::after {content: "\00b7"; padding: 0 .5ex}
+</style>
+<ol class=list-inline><li>'name'</li><li>'height'</li><li>'mass'</li><li>'hair_color'</li><li>'skin_color'</li><li>'eye_color'</li><li>'birth_year'</li><li>'sex'</li><li>'gender'</li><li>'homeworld'</li><li>'species'</li><li>'films'</li><li>'vehicles'</li><li>'starships'</li></ol>
+</div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">library</span><span class="p">(</span><span class="n">ggplot2</span><span class="p">)</span>
+
+<span class="nf">options</span><span class="p">(</span><span class="n">repr.plot.width</span> <span class="o">=</span> <span class="m">16</span><span class="p">,</span> <span class="n">repr.plot.height</span> <span class="o">=</span> <span class="m">8</span><span class="p">)</span> 
+
+<span class="nf">ggplot</span><span class="p">(</span>
+  <span class="n">data</span> <span class="o">=</span> <span class="n">starwars</span>
+  <span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../../../_images/base_2_01.png" src="../../../_images/base_2_01.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">ggplot</span><span class="p">(</span>
+  <span class="n">data</span> <span class="o">=</span> <span class="n">starwars</span><span class="p">,</span>
+  <span class="n">mapping</span> <span class="o">=</span> <span class="nf">aes</span><span class="p">(</span>
+    <span class="n">x</span> <span class="o">=</span> <span class="n">eye_color</span>
+    <span class="p">)</span>
+  <span class="p">)</span> 
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../../../_images/base_3_01.png" src="../../../_images/base_3_01.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">ggplot</span><span class="p">(</span>
+  <span class="n">data</span> <span class="o">=</span> <span class="n">starwars</span><span class="p">,</span>
+  <span class="n">mapping</span> <span class="o">=</span> <span class="nf">aes</span><span class="p">(</span>
+    <span class="n">x</span> <span class="o">=</span> <span class="n">eye_color</span>
+    <span class="p">)</span>
+  <span class="p">)</span> <span class="o">+</span>
+  <span class="nf">geom_bar</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../../../_images/base_4_01.png" src="../../../_images/base_4_01.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">ggplot</span><span class="p">(</span>
+  <span class="n">data</span> <span class="o">=</span> <span class="n">starwars</span><span class="p">,</span>
+  <span class="n">mapping</span> <span class="o">=</span> <span class="nf">aes</span><span class="p">(</span>
+    <span class="n">x</span> <span class="o">=</span> <span class="n">eye_color</span><span class="p">,</span>
+    <span class="n">color</span> <span class="o">=</span> <span class="n">eye_color</span>
+    <span class="p">)</span>
+  <span class="p">)</span> <span class="o">+</span>
+  <span class="nf">geom_bar</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../../../_images/base_5_01.png" src="../../../_images/base_5_01.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">ggplot</span><span class="p">(</span>
+  <span class="n">data</span> <span class="o">=</span> <span class="n">starwars</span><span class="p">,</span>
+  <span class="n">mapping</span> <span class="o">=</span> <span class="nf">aes</span><span class="p">(</span>
+    <span class="n">x</span> <span class="o">=</span> <span class="n">eye_color</span><span class="p">,</span>
+    <span class="n">fill</span> <span class="o">=</span> <span class="n">eye_color</span>
+    <span class="p">)</span>
+  <span class="p">)</span> <span class="o">+</span>
+  <span class="nf">geom_bar</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../../../_images/base_6_04.png" src="../../../_images/base_6_04.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">ggplot</span><span class="p">(</span>
+  <span class="n">data</span> <span class="o">=</span> <span class="n">starwars</span><span class="p">,</span>
+  <span class="n">mapping</span> <span class="o">=</span> <span class="nf">aes</span><span class="p">(</span>
+    <span class="n">x</span> <span class="o">=</span> <span class="n">eye_color</span><span class="p">,</span>
+    <span class="n">fill</span> <span class="o">=</span> <span class="n">eye_color</span>
+    <span class="p">)</span>
+  <span class="p">)</span> <span class="o">+</span>
+  <span class="nf">geom_bar</span><span class="p">()</span> <span class="o">+</span>
+  <span class="nf">labs</span><span class="p">(</span>
+    <span class="n">x</span> <span class="o">=</span> <span class="s">&quot;Eye Color&quot;</span><span class="p">,</span>
+    <span class="n">y</span> <span class="o">=</span> <span class="s">&quot;Frequency (n)&quot;</span><span class="p">,</span>
+    <span class="n">title</span> <span class="o">=</span> <span class="s">&quot;Bar-chart of Eye Colors&quot;</span><span class="p">,</span>
+    <span class="n">subtitle</span> <span class="o">=</span> <span class="s">&quot;(of Star Wars characters)&quot;</span><span class="p">,</span>
+    <span class="n">caption</span> <span class="o">=</span> <span class="s">&quot;My little work of art!!&quot;</span>
+    <span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../../../_images/base_7_04.png" src="../../../_images/base_7_04.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">ggplot</span><span class="p">(</span>
+  <span class="n">data</span> <span class="o">=</span> <span class="n">starwars</span><span class="p">,</span>
+  <span class="n">mapping</span> <span class="o">=</span> <span class="nf">aes</span><span class="p">(</span>
+    <span class="n">x</span> <span class="o">=</span> <span class="n">eye_color</span><span class="p">,</span>
+    <span class="n">fill</span> <span class="o">=</span> <span class="n">eye_color</span>
+    <span class="p">)</span>
+  <span class="p">)</span> <span class="o">+</span>
+  <span class="nf">geom_bar</span><span class="p">()</span> <span class="o">+</span>
+  <span class="nf">labs</span><span class="p">(</span>
+    <span class="n">x</span> <span class="o">=</span> <span class="s">&quot;Eye Color&quot;</span><span class="p">,</span>
+    <span class="n">y</span> <span class="o">=</span> <span class="s">&quot;Frequency (n)&quot;</span><span class="p">,</span>
+    <span class="n">title</span> <span class="o">=</span> <span class="s">&quot;Bar-chart of Eye Colors&quot;</span><span class="p">,</span>
+    <span class="n">subtitle</span> <span class="o">=</span> <span class="s">&quot;(of Star Wars characters)&quot;</span><span class="p">,</span>
+    <span class="n">caption</span> <span class="o">=</span> <span class="s">&quot;My little work of art!!&quot;</span>
+    <span class="p">)</span> <span class="o">+</span>
+  <span class="nf">theme</span><span class="p">(</span><span class="n">legend.position</span> <span class="o">=</span> <span class="s">&quot;none&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../../../_images/base_8_04.png" src="../../../_images/base_8_04.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">c</span><span class="p">(</span>
+  <span class="s">&quot;black&quot;</span><span class="p">,</span> <span class="s">&quot;blue&quot;</span><span class="p">,</span> <span class="s">&quot;slategray&quot;</span><span class="p">,</span> <span class="s">&quot;brown&quot;</span><span class="p">,</span> <span class="s">&quot;gray34&quot;</span><span class="p">,</span> <span class="s">&quot;gold&quot;</span><span class="p">,</span>
+  <span class="s">&quot;greenyellow&quot;</span><span class="p">,</span> <span class="s">&quot;navajowhite1&quot;</span><span class="p">,</span> <span class="s">&quot;orange&quot;</span><span class="p">,</span> <span class="s">&quot;pink&quot;</span><span class="p">,</span> <span class="s">&quot;red&quot;</span><span class="p">,</span>
+  <span class="s">&quot;magenta&quot;</span><span class="p">,</span> <span class="s">&quot;thistle3&quot;</span><span class="p">,</span> <span class="s">&quot;white&quot;</span><span class="p">,</span> <span class="s">&quot;yellow&quot;</span>
+  <span class="p">)</span> <span class="o">-&gt;</span> <span class="n">mycolors</span>
+
+<span class="nf">ggplot</span><span class="p">(</span>
+  <span class="n">data</span> <span class="o">=</span> <span class="n">starwars</span><span class="p">,</span>
+  <span class="n">mapping</span> <span class="o">=</span> <span class="nf">aes</span><span class="p">(</span>
+    <span class="n">x</span> <span class="o">=</span> <span class="n">eye_color</span>
+    <span class="p">)</span>
+  <span class="p">)</span> <span class="o">+</span> 
+  <span class="nf">geom_bar</span><span class="p">(</span>
+    <span class="n">fill</span> <span class="o">=</span> <span class="n">mycolors</span>
+    <span class="p">)</span> <span class="o">+</span> 
+  <span class="nf">labs</span><span class="p">(</span>
+    <span class="n">x</span> <span class="o">=</span> <span class="s">&quot;Eye Color&quot;</span><span class="p">,</span>
+    <span class="n">y</span> <span class="o">=</span> <span class="s">&quot;Frequency (n)&quot;</span><span class="p">,</span>
+    <span class="n">title</span> <span class="o">=</span> <span class="s">&quot;Bar-chart of Eye Colors&quot;</span><span class="p">,</span>
+    <span class="n">subtitle</span> <span class="o">=</span> <span class="s">&quot;(of Star Wars characters)&quot;</span><span class="p">,</span>
+    <span class="n">caption</span> <span class="o">=</span> <span class="s">&quot;My little work of art!!&quot;</span>
+    <span class="p">)</span> <span class="o">+</span>
+  <span class="nf">theme</span><span class="p">(</span><span class="n">legend.position</span> <span class="o">=</span> <span class="s">&quot;none&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../../../_images/base_9_04.png" src="../../../_images/base_9_04.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">ggplot</span><span class="p">(</span>
+  <span class="n">data</span> <span class="o">=</span> <span class="n">starwars</span><span class="p">,</span>
+  <span class="n">mapping</span> <span class="o">=</span> <span class="nf">aes</span><span class="p">(</span>
+    <span class="n">x</span> <span class="o">=</span> <span class="n">gender</span>
+    <span class="p">)</span>
+  <span class="p">)</span> <span class="o">+</span> 
+  <span class="nf">geom_bar</span><span class="p">(</span>
+    <span class="nf">aes</span><span class="p">(</span><span class="n">fill</span> <span class="o">=</span> <span class="n">gender</span><span class="p">)</span>
+    <span class="p">)</span> <span class="o">+</span> 
+  <span class="nf">labs</span><span class="p">(</span>
+    <span class="n">x</span> <span class="o">=</span> <span class="s">&quot;Gender&quot;</span><span class="p">,</span>
+    <span class="n">y</span> <span class="o">=</span> <span class="s">&quot;Frequency&quot;</span><span class="p">,</span>
+    <span class="n">title</span> <span class="o">=</span> <span class="s">&quot;Bar-chart of Gender&quot;</span><span class="p">,</span>
+    <span class="n">subttitle</span> <span class="o">=</span> <span class="s">&quot;(of Star Wars characters)&quot;</span><span class="p">,</span>
+    <span class="n">caption</span> <span class="o">=</span> <span class="s">&quot;(Source: The dplyr package)&quot;</span><span class="p">)</span> <span class="o">+</span>
+  <span class="nf">scale_fill_brewer</span><span class="p">(</span>
+    <span class="n">palette</span> <span class="o">=</span> <span class="s">&quot;Pastel1&quot;</span>
+    <span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../../../_images/base_10_04.png" src="../../../_images/base_10_04.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">ggplot</span><span class="p">(</span>
+  <span class="n">data</span> <span class="o">=</span> <span class="n">starwars</span><span class="p">,</span>
+  <span class="n">mapping</span> <span class="o">=</span> <span class="nf">aes</span><span class="p">(</span>
+    <span class="n">x</span> <span class="o">=</span> <span class="n">gender</span>
+    <span class="p">)</span>
+  <span class="p">)</span> <span class="o">+</span> 
+  <span class="nf">geom_bar</span><span class="p">(</span>
+    <span class="nf">aes</span><span class="p">(</span><span class="n">fill</span> <span class="o">=</span> <span class="n">gender</span><span class="p">)</span>
+    <span class="p">)</span> <span class="o">+</span> 
+  <span class="nf">labs</span><span class="p">(</span>
+    <span class="n">x</span> <span class="o">=</span> <span class="s">&quot;Gender&quot;</span><span class="p">,</span>
+    <span class="n">y</span> <span class="o">=</span> <span class="s">&quot;Frequency&quot;</span><span class="p">,</span>
+    <span class="n">title</span> <span class="o">=</span> <span class="s">&quot;Bar-chart of Gender&quot;</span><span class="p">,</span>
+    <span class="n">subttitle</span> <span class="o">=</span> <span class="s">&quot;(of Star Wars characters)&quot;</span><span class="p">,</span>
+    <span class="n">caption</span> <span class="o">=</span> <span class="s">&quot;(Source: The dplyr package)&quot;</span><span class="p">)</span> <span class="o">+</span>
+  <span class="nf">scale_fill_brewer</span><span class="p">(</span>
+    <span class="n">palette</span> <span class="o">=</span> <span class="s">&quot;Set1&quot;</span>
+    <span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../../../_images/base_11_04.png" src="../../../_images/base_11_04.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">ggplot</span><span class="p">(</span>
+  <span class="n">data</span> <span class="o">=</span> <span class="nf">subset</span><span class="p">(</span><span class="n">starwars</span><span class="p">,</span> <span class="o">!</span><span class="nf">is.na</span><span class="p">(</span><span class="n">gender</span><span class="p">)),</span>
+  <span class="n">mapping</span> <span class="o">=</span> <span class="nf">aes</span><span class="p">(</span>
+    <span class="n">x</span> <span class="o">=</span> <span class="n">gender</span>
+    <span class="p">)</span>
+  <span class="p">)</span> <span class="o">+</span> 
+  <span class="nf">geom_bar</span><span class="p">(</span>
+    <span class="nf">aes</span><span class="p">(</span><span class="n">fill</span> <span class="o">=</span> <span class="n">gender</span><span class="p">)</span>
+    <span class="p">)</span> <span class="o">+</span> 
+  <span class="nf">labs</span><span class="p">(</span>
+    <span class="n">x</span> <span class="o">=</span> <span class="s">&quot;Gender&quot;</span><span class="p">,</span>
+    <span class="n">y</span> <span class="o">=</span> <span class="s">&quot;Frequency&quot;</span><span class="p">,</span>
+    <span class="n">title</span> <span class="o">=</span> <span class="s">&quot;Bar-chart of Gender&quot;</span><span class="p">,</span>
+    <span class="n">subttitle</span> <span class="o">=</span> <span class="s">&quot;(of Star Wars characters)&quot;</span><span class="p">,</span>
+    <span class="n">caption</span> <span class="o">=</span> <span class="s">&quot;(Source: The dplyr package)&quot;</span><span class="p">)</span> <span class="o">+</span>
+  <span class="nf">scale_fill_brewer</span><span class="p">(</span>
+    <span class="n">palette</span> <span class="o">=</span> <span class="s">&quot;Set1&quot;</span>
+    <span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../../../_images/base_12_04.png" src="../../../_images/base_12_04.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">starwars</span> <span class="o">%&gt;%</span>
+  <span class="nf">filter</span><span class="p">(</span><span class="o">!</span><span class="nf">is.na</span><span class="p">(</span><span class="n">gender</span><span class="p">))</span> <span class="o">-&gt;</span> <span class="n">my.data</span>
+
+<span class="nf">ggplot</span><span class="p">(</span>
+  <span class="n">data</span> <span class="o">=</span> <span class="n">my.data</span><span class="p">,</span>
+  <span class="n">mapping</span> <span class="o">=</span> <span class="nf">aes</span><span class="p">(</span>
+    <span class="n">x</span> <span class="o">=</span> <span class="n">gender</span>
+    <span class="p">)</span>
+  <span class="p">)</span> <span class="o">+</span> 
+  <span class="nf">geom_bar</span><span class="p">(</span>
+    <span class="nf">aes</span><span class="p">(</span><span class="n">fill</span> <span class="o">=</span> <span class="n">gender</span><span class="p">)</span>
+    <span class="p">)</span> <span class="o">+</span> 
+  <span class="nf">labs</span><span class="p">(</span>
+    <span class="n">x</span> <span class="o">=</span> <span class="s">&quot;Gender&quot;</span><span class="p">,</span>
+    <span class="n">y</span> <span class="o">=</span> <span class="s">&quot;Frequency&quot;</span><span class="p">,</span>
+    <span class="n">title</span> <span class="o">=</span> <span class="s">&quot;Bar-chart of Gender&quot;</span><span class="p">,</span>
+    <span class="n">subttitle</span> <span class="o">=</span> <span class="s">&quot;(of Star Wars characters)&quot;</span><span class="p">,</span>
+    <span class="n">caption</span> <span class="o">=</span> <span class="s">&quot;(Source: The dplyr package)&quot;</span><span class="p">)</span> <span class="o">+</span>
+  <span class="nf">scale_fill_brewer</span><span class="p">(</span>
+    <span class="n">palette</span> <span class="o">=</span> <span class="s">&quot;Set1&quot;</span>
+    <span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../../../_images/base_13_04.png" src="../../../_images/base_13_04.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">ggplot</span><span class="p">(</span>
+  <span class="n">data</span> <span class="o">=</span> <span class="n">my.data</span><span class="p">,</span>
+  <span class="n">mapping</span> <span class="o">=</span> <span class="nf">aes</span><span class="p">(</span>
+    <span class="n">x</span> <span class="o">=</span> <span class="n">gender</span>
+    <span class="p">)</span>
+  <span class="p">)</span> <span class="o">+</span> 
+  <span class="nf">geom_bar</span><span class="p">(</span>
+    <span class="nf">aes</span><span class="p">(</span><span class="n">fill</span> <span class="o">=</span> <span class="n">gender</span><span class="p">)</span>
+    <span class="p">)</span> <span class="o">+</span> 
+  <span class="nf">labs</span><span class="p">(</span>
+    <span class="n">x</span> <span class="o">=</span> <span class="s">&quot;Gender&quot;</span><span class="p">,</span>
+    <span class="n">y</span> <span class="o">=</span> <span class="s">&quot;Frequency&quot;</span><span class="p">,</span>
+    <span class="n">title</span> <span class="o">=</span> <span class="s">&quot;Bar-chart of Gender&quot;</span><span class="p">,</span>
+    <span class="n">subttitle</span> <span class="o">=</span> <span class="s">&quot;(of Star Wars characters)&quot;</span><span class="p">,</span>
+    <span class="n">caption</span> <span class="o">=</span> <span class="s">&quot;(Source: The dplyr package)&quot;</span><span class="p">)</span> <span class="o">+</span>
+  <span class="nf">scale_fill_viridis_d</span><span class="p">(</span>
+    <span class="n">option</span> <span class="o">=</span> <span class="s">&quot;viridis&quot;</span>
+    <span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../../../_images/base_14_04.png" src="../../../_images/base_14_04.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">ggplot</span><span class="p">(</span>
+  <span class="n">data</span> <span class="o">=</span> <span class="n">my.data</span><span class="p">,</span>
+  <span class="n">mapping</span> <span class="o">=</span> <span class="nf">aes</span><span class="p">(</span>
+    <span class="n">x</span> <span class="o">=</span> <span class="n">gender</span>
+    <span class="p">)</span>
+  <span class="p">)</span> <span class="o">+</span> 
+  <span class="nf">geom_bar</span><span class="p">(</span>
+    <span class="nf">aes</span><span class="p">(</span><span class="n">fill</span> <span class="o">=</span> <span class="n">gender</span><span class="p">)</span>
+    <span class="p">)</span> <span class="o">+</span> 
+  <span class="nf">labs</span><span class="p">(</span>
+    <span class="n">x</span> <span class="o">=</span> <span class="s">&quot;Gender&quot;</span><span class="p">,</span>
+    <span class="n">y</span> <span class="o">=</span> <span class="s">&quot;Frequency&quot;</span><span class="p">,</span>
+    <span class="n">title</span> <span class="o">=</span> <span class="s">&quot;Bar-chart of Gender&quot;</span><span class="p">,</span>
+    <span class="n">subttitle</span> <span class="o">=</span> <span class="s">&quot;(of Star Wars characters)&quot;</span><span class="p">,</span>
+    <span class="n">caption</span> <span class="o">=</span> <span class="s">&quot;(Source: The dplyr package)&quot;</span><span class="p">)</span> <span class="o">+</span>
+  <span class="nf">scale_fill_viridis_d</span><span class="p">(</span>
+    <span class="n">option</span> <span class="o">=</span> <span class="s">&quot;magma&quot;</span>
+    <span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../../../_images/base_15_04.png" src="../../../_images/base_15_04.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">ggplot</span><span class="p">(</span>
+  <span class="n">data</span> <span class="o">=</span> <span class="n">my.data</span><span class="p">,</span>
+  <span class="n">mapping</span> <span class="o">=</span> <span class="nf">aes</span><span class="p">(</span>
+    <span class="n">x</span> <span class="o">=</span> <span class="n">gender</span>
+    <span class="p">)</span>
+  <span class="p">)</span> <span class="o">+</span> 
+  <span class="nf">geom_bar</span><span class="p">(</span>
+    <span class="nf">aes</span><span class="p">(</span><span class="n">fill</span> <span class="o">=</span> <span class="n">gender</span><span class="p">)</span>
+    <span class="p">)</span> <span class="o">+</span> 
+  <span class="nf">labs</span><span class="p">(</span>
+    <span class="n">x</span> <span class="o">=</span> <span class="s">&quot;Gender&quot;</span><span class="p">,</span>
+    <span class="n">y</span> <span class="o">=</span> <span class="s">&quot;Frequency&quot;</span><span class="p">,</span>
+    <span class="n">title</span> <span class="o">=</span> <span class="s">&quot;Bar-chart of Gender&quot;</span><span class="p">,</span>
+    <span class="n">subttitle</span> <span class="o">=</span> <span class="s">&quot;(of Star Wars characters)&quot;</span><span class="p">,</span>
+    <span class="n">caption</span> <span class="o">=</span> <span class="s">&quot;(Source: The dplyr package)&quot;</span><span class="p">)</span> <span class="o">+</span>
+  <span class="nf">scale_fill_viridis_d</span><span class="p">(</span>
+    <span class="n">option</span> <span class="o">=</span> <span class="s">&quot;plasma&quot;</span>
+    <span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../../../_images/base_16_04.png" src="../../../_images/base_16_04.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">ggplot</span><span class="p">(</span>
+  <span class="n">data</span> <span class="o">=</span> <span class="n">my.data</span><span class="p">,</span>
+  <span class="n">mapping</span> <span class="o">=</span> <span class="nf">aes</span><span class="p">(</span>
+    <span class="n">x</span> <span class="o">=</span> <span class="n">gender</span>
+    <span class="p">)</span>
+  <span class="p">)</span> <span class="o">+</span> 
+  <span class="nf">geom_bar</span><span class="p">(</span>
+    <span class="nf">aes</span><span class="p">(</span><span class="n">fill</span> <span class="o">=</span> <span class="n">gender</span><span class="p">)</span>
+    <span class="p">)</span> <span class="o">+</span> 
+  <span class="nf">labs</span><span class="p">(</span>
+    <span class="n">x</span> <span class="o">=</span> <span class="s">&quot;Gender&quot;</span><span class="p">,</span>
+    <span class="n">y</span> <span class="o">=</span> <span class="s">&quot;Frequency&quot;</span><span class="p">,</span>
+    <span class="n">title</span> <span class="o">=</span> <span class="s">&quot;Bar-chart of Gender&quot;</span><span class="p">,</span>
+    <span class="n">subttitle</span> <span class="o">=</span> <span class="s">&quot;(of Star Wars characters)&quot;</span><span class="p">,</span>
+    <span class="n">caption</span> <span class="o">=</span> <span class="s">&quot;(Source: The dplyr package)&quot;</span><span class="p">)</span> <span class="o">+</span>
+  <span class="nf">scale_fill_viridis_d</span><span class="p">(</span>
+    <span class="n">option</span> <span class="o">=</span> <span class="s">&quot;cividis&quot;</span>
+    <span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../../../_images/base_17_04.png" src="../../../_images/base_17_04.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">library</span><span class="p">(</span><span class="n">ggthemes</span><span class="p">)</span>
+
+<span class="nf">ggplot</span><span class="p">(</span>
+  <span class="n">data</span> <span class="o">=</span> <span class="n">starwars</span><span class="p">,</span>
+  <span class="n">mapping</span> <span class="o">=</span> <span class="nf">aes</span><span class="p">(</span>
+    <span class="n">x</span> <span class="o">=</span> <span class="n">eye_color</span>
+    <span class="p">)</span>
+  <span class="p">)</span> <span class="o">+</span>
+  <span class="nf">geom_bar</span><span class="p">()</span> <span class="o">+</span>
+  <span class="nf">theme_tufte</span><span class="p">()</span> 
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../../../_images/base_18_04.png" src="../../../_images/base_18_04.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">ggplot</span><span class="p">(</span>
+  <span class="n">data</span> <span class="o">=</span> <span class="n">starwars</span><span class="p">,</span>
+  <span class="n">mapping</span> <span class="o">=</span> <span class="nf">aes</span><span class="p">(</span>
+    <span class="n">x</span> <span class="o">=</span> <span class="n">eye_color</span>
+    <span class="p">)</span>
+  <span class="p">)</span> <span class="o">+</span>
+  <span class="nf">geom_bar</span><span class="p">()</span> <span class="o">+</span>
+  <span class="nf">theme_economist</span><span class="p">()</span> 
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../../../_images/base_19_04.png" src="../../../_images/base_19_04.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">ggplot</span><span class="p">(</span>
+  <span class="n">data</span> <span class="o">=</span> <span class="n">starwars</span><span class="p">,</span>
+  <span class="n">mapping</span> <span class="o">=</span> <span class="nf">aes</span><span class="p">(</span>
+    <span class="n">x</span> <span class="o">=</span> <span class="n">eye_color</span>
+    <span class="p">)</span>
+  <span class="p">)</span> <span class="o">+</span>
+  <span class="nf">geom_bar</span><span class="p">()</span> <span class="o">+</span>
+  <span class="nf">theme_fivethirtyeight</span><span class="p">()</span> 
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../../../_images/base_20_01.png" src="../../../_images/base_20_01.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">ggplot</span><span class="p">(</span>
+  <span class="n">data</span> <span class="o">=</span> <span class="n">movies</span><span class="p">,</span>
+  <span class="n">mapping</span> <span class="o">=</span> <span class="nf">aes</span><span class="p">(</span>
+    <span class="n">x</span> <span class="o">=</span> <span class="n">mpaa</span>
+    <span class="p">)</span>
+  <span class="p">)</span> <span class="o">+</span> 
+  <span class="nf">geom_bar</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../../../_images/base_21_01.png" src="../../../_images/base_21_01.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">ggplot</span><span class="p">()</span> <span class="o">+</span> 
+  <span class="nf">geom_bar</span><span class="p">(</span>
+    <span class="n">data</span> <span class="o">=</span> <span class="n">movies</span><span class="p">,</span>
+    <span class="n">mapping</span> <span class="o">=</span> <span class="nf">aes</span><span class="p">(</span><span class="n">x</span> <span class="o">=</span> <span class="n">mpaa</span><span class="p">)</span>
+    <span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../../../_images/base_22_04.png" src="../../../_images/base_22_04.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">movies</span> <span class="o">%&gt;%</span> 
+  <span class="nf">filter</span><span class="p">(</span><span class="n">mpaa</span> <span class="o">!=</span> <span class="s">&quot;&quot;</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">movies2</span> 
+
+<span class="nf">ggplot</span><span class="p">()</span> <span class="o">+</span> 
+  <span class="nf">geom_bar</span><span class="p">(</span>
+    <span class="n">data</span> <span class="o">=</span> <span class="n">movies2</span><span class="p">,</span>
+    <span class="n">mapping</span> <span class="o">=</span> <span class="nf">aes</span><span class="p">(</span><span class="n">x</span> <span class="o">=</span> <span class="n">mpaa</span><span class="p">)</span>
+    <span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../../../_images/base_23_04.png" src="../../../_images/base_23_04.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="nf">tibble</span><span class="p">(</span><span class="n">x</span> <span class="o">=</span> <span class="nf">c</span><span class="p">(</span><span class="nf">rep</span><span class="p">(</span><span class="s">&quot;A&quot;</span><span class="p">,</span> <span class="m">2</span><span class="p">),</span> <span class="nf">rep</span><span class="p">(</span><span class="s">&quot;B&quot;</span><span class="p">,</span> <span class="m">4</span><span class="p">),</span> <span class="nf">rep</span><span class="p">(</span><span class="s">&quot;C&quot;</span><span class="p">,</span> <span class="m">1</span><span class="p">)))</span>
+
+<span class="nf">ggplot</span><span class="p">()</span> <span class="o">+</span> 
+  <span class="nf">geom_bar</span><span class="p">(</span>
+    <span class="n">data</span> <span class="o">=</span> <span class="n">df</span><span class="p">,</span> 
+    <span class="n">mapping</span> <span class="o">=</span> <span class="nf">aes</span><span class="p">(</span><span class="n">x</span> <span class="o">=</span> <span class="n">x</span><span class="p">)</span>
+  <span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../../../_images/base_24_01.png" src="../../../_images/base_24_01.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">library</span><span class="p">(</span><span class="n">scales</span><span class="p">)</span>
+
+<span class="nf">ggplot</span><span class="p">()</span> <span class="o">+</span> 
+  <span class="nf">geom_bar</span><span class="p">(</span>
+    <span class="n">data</span> <span class="o">=</span> <span class="n">movies2</span><span class="p">,</span>
+    <span class="n">mapping</span> <span class="o">=</span> <span class="nf">aes</span><span class="p">(</span>
+      <span class="n">x</span> <span class="o">=</span> <span class="n">mpaa</span><span class="p">,</span>
+      <span class="n">y</span> <span class="o">=</span> <span class="p">(</span><span class="n">..count..</span><span class="p">)</span><span class="o">/</span><span class="nf">sum</span><span class="p">(</span><span class="n">..count..</span><span class="p">)</span>
+      <span class="p">)</span>
+    <span class="p">)</span> <span class="o">+</span> 
+  <span class="nf">scale_y_continuous</span><span class="p">(</span><span class="n">labels</span> <span class="o">=</span> <span class="n">percent</span><span class="p">)</span> <span class="o">+</span> 
+  <span class="nf">labs</span><span class="p">(</span>
+    <span class="n">x</span> <span class="o">=</span> <span class="s">&quot;MPAA Rating&quot;</span><span class="p">,</span>
+    <span class="n">y</span>  <span class="o">=</span> <span class="s">&quot;Relative Frequency (%)&quot;</span>
+    <span class="p">)</span> 
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Attaching package: ‘scales’
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The following object is masked from ‘package:purrr’:
+
+    discard
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The following object is masked from ‘package:readr’:
+
+    col_factor
+</pre></div>
+</div>
+<img alt="../../../_images/base_25_31.png" src="../../../_images/base_25_31.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">read.table</span><span class="p">(</span>
+  <span class="s">&#39;https://stats.idre.ucla.edu/stat/data/hsb2.csv&#39;</span><span class="p">,</span>
+  <span class="n">header</span> <span class="o">=</span> <span class="kc">TRUE</span><span class="p">,</span>
+  <span class="n">sep</span> <span class="o">=</span> <span class="s">&quot;,&quot;</span>
+  <span class="p">)</span> <span class="o">-&gt;</span> <span class="n">hsb2</span>
+
+<span class="nf">factor</span><span class="p">(</span><span class="n">hsb2</span><span class="o">$</span><span class="n">female</span><span class="p">,</span>
+       <span class="n">levels</span> <span class="o">=</span> <span class="nf">c</span><span class="p">(</span><span class="m">0</span><span class="p">,</span> <span class="m">1</span><span class="p">),</span>
+       <span class="n">labels</span> <span class="o">=</span> <span class="nf">c</span><span class="p">(</span><span class="s">&quot;Male&quot;</span><span class="p">,</span> <span class="s">&quot;Female&quot;</span><span class="p">)</span>
+       <span class="p">)</span> <span class="o">-&gt;</span> <span class="n">hsb2</span><span class="o">$</span><span class="n">female</span> 
+
+<span class="nf">factor</span><span class="p">(</span><span class="n">hsb2</span><span class="o">$</span><span class="n">race</span><span class="p">,</span>
+       <span class="n">levels</span> <span class="o">=</span> <span class="nf">c</span><span class="p">(</span><span class="m">1</span><span class="o">:</span><span class="m">4</span><span class="p">),</span>
+       <span class="n">labels</span> <span class="o">=</span> <span class="nf">c</span><span class="p">(</span><span class="s">&quot;Hispanic&quot;</span><span class="p">,</span> <span class="s">&quot;Asian&quot;</span><span class="p">,</span> <span class="s">&quot;African American&quot;</span><span class="p">,</span> <span class="s">&quot;White&quot;</span><span class="p">)</span>
+       <span class="p">)</span> <span class="o">-&gt;</span> <span class="n">hsb2</span><span class="o">$</span><span class="n">race</span>
+
+<span class="nf">factor</span><span class="p">(</span><span class="n">hsb2</span><span class="o">$</span><span class="n">ses</span><span class="p">,</span>
+       <span class="n">levels</span> <span class="o">=</span> <span class="nf">c</span><span class="p">(</span><span class="m">1</span><span class="o">:</span><span class="m">3</span><span class="p">),</span>
+       <span class="n">labels</span> <span class="o">=</span> <span class="nf">c</span><span class="p">(</span><span class="s">&quot;Low&quot;</span><span class="p">,</span> <span class="s">&quot;Middle&quot;</span><span class="p">,</span> <span class="s">&quot;High&quot;</span><span class="p">)</span>
+       <span class="p">)</span> <span class="o">-&gt;</span> <span class="n">hsb2</span><span class="o">$</span><span class="n">ses</span>
+
+<span class="nf">factor</span><span class="p">(</span><span class="n">hsb2</span><span class="o">$</span><span class="n">schtyp</span><span class="p">,</span>
+       <span class="n">levels</span> <span class="o">=</span> <span class="nf">c</span><span class="p">(</span><span class="m">1</span><span class="o">:</span><span class="m">2</span><span class="p">),</span>
+       <span class="n">labels</span> <span class="o">=</span> <span class="nf">c</span><span class="p">(</span><span class="s">&quot;Public&quot;</span><span class="p">,</span> <span class="s">&quot;Private&quot;</span><span class="p">)</span>
+       <span class="p">)</span> <span class="o">-&gt;</span> <span class="n">hsb2</span><span class="o">$</span><span class="n">schtyp</span>
+
+<span class="nf">factor</span><span class="p">(</span><span class="n">hsb2</span><span class="o">$</span><span class="n">prog</span><span class="p">,</span>
+       <span class="n">levels</span> <span class="o">=</span> <span class="nf">c</span><span class="p">(</span><span class="m">1</span><span class="o">:</span><span class="m">3</span><span class="p">),</span>
+       <span class="n">labels</span> <span class="o">=</span> <span class="nf">c</span><span class="p">(</span><span class="s">&quot;General&quot;</span><span class="p">,</span> <span class="s">&quot;Academic&quot;</span><span class="p">,</span> <span class="s">&quot;Vocational&quot;</span><span class="p">)</span>
+       <span class="p">)</span> <span class="o">-&gt;</span> <span class="n">hsb2</span><span class="o">$</span><span class="n">prog</span>
+
+<span class="nf">save</span><span class="p">(</span>
+  <span class="n">hsb2</span><span class="p">,</span> <span class="n">file</span> <span class="o">=</span> <span class="n">here</span><span class="o">::</span><span class="nf">here</span><span class="p">(</span><span class="s">&quot;data&quot;</span><span class="p">,</span> <span class="s">&quot;hsb2.RData&quot;</span><span class="p">)</span>
+  <span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">ggplot</span><span class="p">()</span> <span class="o">+</span> 
+  <span class="nf">geom_bar</span><span class="p">(</span>
+    <span class="n">data</span> <span class="o">=</span> <span class="n">hsb2</span><span class="p">,</span>
+    <span class="n">mapping</span> <span class="o">=</span> <span class="nf">aes</span><span class="p">(</span><span class="n">x</span> <span class="o">=</span> <span class="n">ses</span><span class="p">))</span> <span class="o">+</span>
+  <span class="nf">labs</span><span class="p">(</span><span class="n">x</span> <span class="o">=</span> <span class="s">&quot;Socioeconomic Status&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../../../_images/base_27_04.png" src="../../../_images/base_27_04.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">ggplot</span><span class="p">()</span> <span class="o">+</span> 
+  <span class="nf">geom_bar</span><span class="p">(</span>
+    <span class="n">data</span> <span class="o">=</span> <span class="n">hsb2</span><span class="p">,</span>
+    <span class="n">mapping</span> <span class="o">=</span> <span class="nf">aes</span><span class="p">(</span>
+      <span class="n">x</span> <span class="o">=</span> <span class="n">ses</span><span class="p">,</span>
+      <span class="n">group</span> <span class="o">=</span> <span class="n">female</span><span class="p">,</span> 
+      <span class="n">fill</span> <span class="o">=</span> <span class="n">female</span>
+      <span class="p">)</span>
+    <span class="p">)</span> <span class="o">+</span>
+  <span class="nf">labs</span><span class="p">(</span>
+    <span class="n">x</span> <span class="o">=</span> <span class="s">&quot;Socioeconomic Status&quot;</span><span class="p">,</span>
+    <span class="n">y</span> <span class="o">=</span> <span class="s">&quot;Frequency&quot;</span>
+  <span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../../../_images/base_28_01.png" src="../../../_images/base_28_01.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">ggplot</span><span class="p">()</span> <span class="o">+</span> 
+  <span class="nf">geom_bar</span><span class="p">(</span>
+    <span class="n">data</span> <span class="o">=</span> <span class="n">hsb2</span><span class="p">,</span>
+    <span class="n">mapping</span> <span class="o">=</span> <span class="nf">aes</span><span class="p">(</span>
+      <span class="n">x</span> <span class="o">=</span> <span class="n">ses</span><span class="p">,</span>
+      <span class="n">group</span> <span class="o">=</span> <span class="n">female</span><span class="p">,</span> 
+      <span class="n">fill</span> <span class="o">=</span> <span class="n">female</span>
+      <span class="p">),</span>
+    <span class="n">position</span> <span class="o">=</span> <span class="s">&quot;dodge&quot;</span>
+    <span class="p">)</span> <span class="o">+</span>
+  <span class="nf">labs</span><span class="p">(</span>
+    <span class="n">x</span> <span class="o">=</span> <span class="s">&quot;Socioeconomic Status&quot;</span><span class="p">,</span>
+    <span class="n">y</span> <span class="o">=</span> <span class="s">&quot;Frequency&quot;</span>
+  <span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../../../_images/base_29_04.png" src="../../../_images/base_29_04.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">ggplot</span><span class="p">()</span> <span class="o">+</span> 
+  <span class="nf">geom_bar</span><span class="p">(</span>
+    <span class="n">data</span> <span class="o">=</span> <span class="n">hsb2</span><span class="p">,</span> 
+    <span class="nf">aes</span><span class="p">(</span>
+      <span class="n">x</span> <span class="o">=</span> <span class="n">ses</span><span class="p">,</span> 
+      <span class="n">group</span> <span class="o">=</span> <span class="n">female</span><span class="p">,</span>
+      <span class="n">fill</span> <span class="o">=</span> <span class="n">female</span><span class="p">,</span> 
+      <span class="n">y</span> <span class="o">=</span> <span class="n">..prop..</span>
+      <span class="p">),</span>
+    <span class="n">position</span> <span class="o">=</span> <span class="s">&quot;dodge&quot;</span><span class="p">)</span> <span class="o">+</span>
+  <span class="nf">scale_y_continuous</span><span class="p">(</span><span class="n">labels</span> <span class="o">=</span> <span class="n">scales</span><span class="o">::</span><span class="n">percent</span><span class="p">)</span> <span class="o">+</span> 
+  <span class="nf">labs</span><span class="p">(</span>
+    <span class="n">x</span> <span class="o">=</span> <span class="s">&quot;Socioeconomic Status&quot;</span><span class="p">,</span>
+    <span class="n">y</span> <span class="o">=</span> <span class="s">&quot;Relative Frequency (%)&quot;</span>
+    <span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../../../_images/base_30_01.png" src="../../../_images/base_30_01.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">ggplot</span><span class="p">()</span> <span class="o">+</span> 
+  <span class="nf">geom_bar</span><span class="p">(</span>
+    <span class="n">data</span> <span class="o">=</span> <span class="n">hsb2</span><span class="p">,</span> 
+    <span class="nf">aes</span><span class="p">(</span>
+      <span class="n">x</span> <span class="o">=</span> <span class="n">female</span><span class="p">,</span> 
+      <span class="n">group</span> <span class="o">=</span> <span class="n">ses</span><span class="p">,</span>
+      <span class="n">fill</span> <span class="o">=</span> <span class="n">ses</span><span class="p">,</span> 
+      <span class="n">y</span> <span class="o">=</span> <span class="n">..prop..</span>
+      <span class="p">),</span>
+    <span class="n">position</span> <span class="o">=</span> <span class="s">&quot;dodge&quot;</span><span class="p">)</span> <span class="o">+</span>
+  <span class="nf">scale_y_continuous</span><span class="p">(</span><span class="n">labels</span> <span class="o">=</span> <span class="n">scales</span><span class="o">::</span><span class="n">percent</span><span class="p">)</span> <span class="o">+</span> 
+  <span class="nf">labs</span><span class="p">(</span>
+    <span class="n">x</span> <span class="o">=</span> <span class="s">&quot;Socioeconomic Status&quot;</span><span class="p">,</span>
+    <span class="n">y</span> <span class="o">=</span> <span class="s">&quot;Relative Frequency (%)&quot;</span>
+    <span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../../../_images/base_31_01.png" src="../../../_images/base_31_01.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">ggplot</span><span class="p">()</span> <span class="o">+</span> 
+  <span class="nf">geom_bar</span><span class="p">(</span>
+    <span class="n">data</span> <span class="o">=</span> <span class="n">hsb2</span><span class="p">,</span> 
+    <span class="nf">aes</span><span class="p">(</span>
+      <span class="n">x</span> <span class="o">=</span> <span class="n">female</span><span class="p">,</span> 
+      <span class="n">group</span> <span class="o">=</span> <span class="n">ses</span><span class="p">,</span>
+      <span class="n">fill</span> <span class="o">=</span> <span class="n">ses</span><span class="p">,</span> 
+      <span class="n">y</span> <span class="o">=</span> <span class="n">..prop..</span>
+      <span class="p">),</span>
+    <span class="n">position</span> <span class="o">=</span> <span class="s">&quot;dodge&quot;</span><span class="p">)</span> <span class="o">+</span>
+  <span class="nf">scale_y_continuous</span><span class="p">(</span><span class="n">labels</span> <span class="o">=</span> <span class="n">scales</span><span class="o">::</span><span class="n">percent</span><span class="p">)</span> <span class="o">+</span> 
+  <span class="nf">labs</span><span class="p">(</span>
+    <span class="n">x</span> <span class="o">=</span> <span class="s">&quot;Socioeconomic Status&quot;</span><span class="p">,</span>
+    <span class="n">y</span> <span class="o">=</span> <span class="s">&quot;Relative Frequency (%)&quot;</span>
+    <span class="p">)</span> 
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../../../_images/base_32_01.png" src="../../../_images/base_32_01.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">ggplot</span><span class="p">()</span> <span class="o">+</span> 
+  <span class="nf">geom_histogram</span><span class="p">(</span>
+    <span class="n">data</span> <span class="o">=</span> <span class="n">hsb2</span><span class="p">,</span>
+    <span class="nf">aes</span><span class="p">(</span><span class="n">x</span> <span class="o">=</span> <span class="n">read</span><span class="p">),</span> 
+    <span class="n">fill</span> <span class="o">=</span> <span class="s">&quot;cornflowerblue&quot;</span><span class="p">,</span>
+    <span class="n">color</span> <span class="o">=</span> <span class="s">&quot;white&quot;</span>
+    <span class="p">)</span> <span class="o">+</span> 
+  <span class="nf">labs</span><span class="p">(</span>
+    <span class="n">title</span> <span class="o">=</span> <span class="s">&quot;Histogram of Reading Scores&quot;</span><span class="p">,</span>
+    <span class="n">x</span> <span class="o">=</span> <span class="s">&quot;Reading Score&quot;</span><span class="p">,</span>
+    <span class="n">y</span> <span class="o">=</span> <span class="s">&quot;Frequency&quot;</span>
+    <span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>`stat_bin()` using `bins = 30`. Pick better value with `binwidth`.
+</pre></div>
+</div>
+<img alt="../../../_images/base_33_11.png" src="../../../_images/base_33_11.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">ggplot</span><span class="p">()</span> <span class="o">+</span> 
+  <span class="nf">geom_histogram</span><span class="p">(</span>
+    <span class="n">data</span> <span class="o">=</span> <span class="n">hsb2</span><span class="p">,</span>
+    <span class="nf">aes</span><span class="p">(</span><span class="n">x</span> <span class="o">=</span> <span class="n">read</span><span class="p">),</span> 
+    <span class="n">fill</span> <span class="o">=</span> <span class="s">&quot;cornflowerblue&quot;</span><span class="p">,</span>
+    <span class="n">color</span> <span class="o">=</span> <span class="s">&quot;white&quot;</span><span class="p">,</span>
+    <span class="n">bins</span> <span class="o">=</span> <span class="m">5</span>
+    <span class="p">)</span> <span class="o">+</span> 
+  <span class="nf">labs</span><span class="p">(</span>
+    <span class="n">title</span> <span class="o">=</span> <span class="s">&quot;Histogram of Reading Scores&quot;</span><span class="p">,</span>
+    <span class="n">subtitle</span> <span class="o">=</span> <span class="s">&quot;(with bins = )&quot;</span><span class="p">,</span>
+    <span class="n">x</span> <span class="o">=</span> <span class="s">&quot;Reading Score&quot;</span><span class="p">,</span>
+    <span class="n">y</span> <span class="o">=</span> <span class="s">&quot;Frequency&quot;</span>
+    <span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../../../_images/base_34_01.png" src="../../../_images/base_34_01.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">ggplot</span><span class="p">()</span> <span class="o">+</span> 
+  <span class="nf">geom_histogram</span><span class="p">(</span>
+    <span class="n">data</span> <span class="o">=</span> <span class="n">hsb2</span><span class="p">,</span>
+    <span class="nf">aes</span><span class="p">(</span><span class="n">x</span> <span class="o">=</span> <span class="n">read</span><span class="p">),</span> 
+    <span class="n">fill</span> <span class="o">=</span> <span class="s">&quot;cornflowerblue&quot;</span><span class="p">,</span>
+    <span class="n">color</span> <span class="o">=</span> <span class="s">&quot;white&quot;</span><span class="p">,</span>
+    <span class="n">binwidth</span> <span class="o">=</span> <span class="m">5</span>
+    <span class="p">)</span> <span class="o">+</span> 
+  <span class="nf">labs</span><span class="p">(</span>
+    <span class="n">title</span> <span class="o">=</span> <span class="s">&quot;Histogram of Reading Scores&quot;</span><span class="p">,</span>
+    <span class="n">subtitle</span> <span class="o">=</span> <span class="s">&quot;(with binwidth = )&quot;</span><span class="p">,</span>
+    <span class="n">x</span> <span class="o">=</span> <span class="s">&quot;Reading Score&quot;</span><span class="p">,</span>
+    <span class="n">y</span> <span class="o">=</span> <span class="s">&quot;Frequency&quot;</span>
+    <span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../../../_images/base_35_04.png" src="../../../_images/base_35_04.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">ggplot</span><span class="p">()</span> <span class="o">+</span> 
+  <span class="nf">geom_histogram</span><span class="p">(</span>
+    <span class="n">data</span> <span class="o">=</span> <span class="n">hsb2</span><span class="p">,</span>
+    <span class="nf">aes</span><span class="p">(</span><span class="n">x</span> <span class="o">=</span> <span class="n">read</span><span class="p">),</span> 
+    <span class="n">fill</span> <span class="o">=</span> <span class="s">&quot;cornflowerblue&quot;</span><span class="p">,</span>
+    <span class="n">color</span> <span class="o">=</span> <span class="s">&quot;white&quot;</span><span class="p">,</span>
+    <span class="n">bins</span> <span class="o">=</span> <span class="m">5</span>
+    <span class="p">)</span> <span class="o">+</span> 
+  <span class="nf">labs</span><span class="p">(</span>
+    <span class="n">title</span> <span class="o">=</span> <span class="s">&quot;Histogram of Reading Scores&quot;</span><span class="p">,</span>
+    <span class="n">subtitle</span> <span class="o">=</span> <span class="s">&quot;(broken out for Male vs. Female students)&quot;</span><span class="p">,</span>
+    <span class="n">x</span> <span class="o">=</span> <span class="s">&quot;Reading Score&quot;</span><span class="p">,</span>
+    <span class="n">y</span> <span class="o">=</span> <span class="s">&quot;Frequency&quot;</span>
+    <span class="p">)</span> <span class="o">+</span>
+  <span class="nf">facet_wrap</span><span class="p">(</span><span class="o">~</span> <span class="n">female</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../../../_images/base_36_01.png" src="../../../_images/base_36_01.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">ggplot</span><span class="p">()</span> <span class="o">+</span> 
+  <span class="nf">geom_histogram</span><span class="p">(</span>
+    <span class="n">data</span> <span class="o">=</span> <span class="n">hsb2</span><span class="p">,</span>
+    <span class="nf">aes</span><span class="p">(</span><span class="n">x</span> <span class="o">=</span> <span class="n">read</span><span class="p">),</span> 
+    <span class="n">fill</span> <span class="o">=</span> <span class="s">&quot;cornflowerblue&quot;</span><span class="p">,</span>
+    <span class="n">color</span> <span class="o">=</span> <span class="s">&quot;white&quot;</span><span class="p">,</span>
+    <span class="n">bins</span> <span class="o">=</span> <span class="m">5</span>
+    <span class="p">)</span> <span class="o">+</span> 
+  <span class="nf">labs</span><span class="p">(</span>
+    <span class="n">title</span> <span class="o">=</span> <span class="s">&quot;Histogram of Reading Scores&quot;</span><span class="p">,</span>
+    <span class="n">subtitle</span> <span class="o">=</span> <span class="s">&quot;(broken out for Male vs. Female students)&quot;</span><span class="p">,</span>
+    <span class="n">x</span> <span class="o">=</span> <span class="s">&quot;Reading Score&quot;</span><span class="p">,</span>
+    <span class="n">y</span> <span class="o">=</span> <span class="s">&quot;Frequency&quot;</span>
+    <span class="p">)</span> <span class="o">+</span>
+  <span class="nf">facet_wrap</span><span class="p">(</span><span class="o">~</span> <span class="n">female</span><span class="p">,</span> <span class="n">ncol</span> <span class="o">=</span> <span class="m">1</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../../../_images/base_37_01.png" src="../../../_images/base_37_01.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">ggplot</span><span class="p">()</span> <span class="o">+</span> 
+  <span class="nf">geom_histogram</span><span class="p">(</span>
+    <span class="n">data</span> <span class="o">=</span> <span class="n">hsb2</span><span class="p">,</span>
+    <span class="nf">aes</span><span class="p">(</span><span class="n">x</span> <span class="o">=</span> <span class="n">read</span><span class="p">),</span> 
+    <span class="n">fill</span> <span class="o">=</span> <span class="s">&quot;cornflowerblue&quot;</span><span class="p">,</span>
+    <span class="n">color</span> <span class="o">=</span> <span class="s">&quot;white&quot;</span><span class="p">,</span>
+    <span class="n">bins</span> <span class="o">=</span> <span class="m">5</span>
+    <span class="p">)</span> <span class="o">+</span> 
+  <span class="nf">labs</span><span class="p">(</span>
+    <span class="n">title</span> <span class="o">=</span> <span class="s">&quot;Histogram of Reading Scores&quot;</span><span class="p">,</span>
+    <span class="n">subtitle</span> <span class="o">=</span> <span class="s">&quot;(broken out by Socioeconomic Status)&quot;</span><span class="p">,</span>
+    <span class="n">x</span> <span class="o">=</span> <span class="s">&quot;Reading Score&quot;</span><span class="p">,</span>
+    <span class="n">y</span> <span class="o">=</span> <span class="s">&quot;Frequency&quot;</span>
+    <span class="p">)</span> <span class="o">+</span>
+  <span class="nf">facet_wrap</span><span class="p">(</span><span class="o">~</span> <span class="n">ses</span><span class="p">,</span> <span class="n">ncol</span> <span class="o">=</span> <span class="m">1</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../../../_images/base_38_01.png" src="../../../_images/base_38_01.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">ggplot</span><span class="p">()</span> <span class="o">+</span> 
+  <span class="nf">geom_histogram</span><span class="p">(</span>
+    <span class="n">data</span> <span class="o">=</span> <span class="n">hsb2</span><span class="p">,</span>
+    <span class="nf">aes</span><span class="p">(</span><span class="n">x</span> <span class="o">=</span> <span class="n">read</span><span class="p">),</span> 
+    <span class="n">fill</span> <span class="o">=</span> <span class="s">&quot;cornflowerblue&quot;</span><span class="p">,</span>
+    <span class="n">color</span> <span class="o">=</span> <span class="s">&quot;white&quot;</span><span class="p">,</span>
+    <span class="n">bins</span> <span class="o">=</span> <span class="m">5</span>
+    <span class="p">)</span> <span class="o">+</span> 
+  <span class="nf">labs</span><span class="p">(</span>
+    <span class="n">title</span> <span class="o">=</span> <span class="s">&quot;Histogram of Reading Scores&quot;</span><span class="p">,</span>
+    <span class="n">subtitle</span> <span class="o">=</span> <span class="s">&quot;(broken out by Socioeconomic Status and School Type)&quot;</span><span class="p">,</span>
+    <span class="n">x</span> <span class="o">=</span> <span class="s">&quot;Reading Score&quot;</span><span class="p">,</span>
+    <span class="n">y</span> <span class="o">=</span> <span class="s">&quot;Frequency&quot;</span>
+    <span class="p">)</span> <span class="o">+</span>
+  <span class="nf">facet_wrap</span><span class="p">(</span><span class="n">ses</span> <span class="o">~</span> <span class="n">schtyp</span><span class="p">,</span> <span class="n">ncol</span> <span class="o">=</span> <span class="m">3</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../../../_images/base_39_04.png" src="../../../_images/base_39_04.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">ggplot</span><span class="p">()</span> <span class="o">+</span> 
+  <span class="nf">geom_histogram</span><span class="p">(</span>
+    <span class="n">data</span> <span class="o">=</span> <span class="n">hsb2</span><span class="p">,</span>
+    <span class="nf">aes</span><span class="p">(</span><span class="n">x</span> <span class="o">=</span> <span class="n">read</span><span class="p">),</span> 
+    <span class="n">fill</span> <span class="o">=</span> <span class="s">&quot;cornflowerblue&quot;</span><span class="p">,</span>
+    <span class="n">color</span> <span class="o">=</span> <span class="s">&quot;white&quot;</span><span class="p">,</span>
+    <span class="n">bins</span> <span class="o">=</span> <span class="m">5</span>
+    <span class="p">)</span> <span class="o">+</span> 
+  <span class="nf">labs</span><span class="p">(</span>
+    <span class="n">title</span> <span class="o">=</span> <span class="s">&quot;Histogram of Reading Scores&quot;</span><span class="p">,</span>
+    <span class="n">subtitle</span> <span class="o">=</span> <span class="s">&quot;(broken out by Socioeconomic Status and School Type)&quot;</span><span class="p">,</span>
+    <span class="n">x</span> <span class="o">=</span> <span class="s">&quot;Reading Score&quot;</span><span class="p">,</span>
+    <span class="n">y</span> <span class="o">=</span> <span class="s">&quot;Frequency&quot;</span>
+    <span class="p">)</span> <span class="o">+</span>
+  <span class="nf">facet_wrap</span><span class="p">(</span><span class="n">schtyp</span> <span class="o">~</span> <span class="n">ses</span><span class="p">,</span> <span class="n">ncol</span> <span class="o">=</span> <span class="m">3</span><span class="p">)</span> <span class="o">+</span>
+  <span class="nf">ylim</span><span class="p">(</span><span class="nf">c</span><span class="p">(</span><span class="m">0</span><span class="p">,</span> <span class="m">23</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Warning message:
+“Removed 1 rows containing missing values (geom_bar).”
+</pre></div>
+</div>
+<img alt="../../../_images/base_40_11.png" src="../../../_images/base_40_11.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">load</span><span class="p">(</span>
+  <span class="n">here</span><span class="o">::</span><span class="nf">here</span><span class="p">(</span><span class="s">&quot;data&quot;</span><span class="p">,</span> <span class="s">&quot;cmhflights_01092017.RData&quot;</span><span class="p">)</span>
+  <span class="p">)</span>
+
+<span class="nf">ggplot</span><span class="p">()</span> <span class="o">+</span> 
+  <span class="nf">geom_boxplot</span><span class="p">(</span>
+    <span class="n">data</span> <span class="o">=</span> <span class="n">cmhflights</span><span class="p">,</span>
+    <span class="n">mapping</span> <span class="o">=</span> <span class="nf">aes</span><span class="p">(</span>
+      <span class="n">y</span> <span class="o">=</span> <span class="n">ArrDelay</span><span class="p">,</span>
+      <span class="n">x</span> <span class="o">=</span> <span class="s">&quot;&quot;</span>
+      <span class="p">),</span>
+    <span class="n">fill</span> <span class="o">=</span> <span class="s">&quot;cornflowerblue&quot;</span>
+    <span class="p">)</span> 
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Warning message:
+“Removed 565 rows containing non-finite values (stat_boxplot).”
+</pre></div>
+</div>
+<img alt="../../../_images/base_41_11.png" src="../../../_images/base_41_11.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">ggplot</span><span class="p">()</span> <span class="o">+</span> 
+  <span class="nf">geom_boxplot</span><span class="p">(</span>
+    <span class="n">data</span> <span class="o">=</span> <span class="n">cmhflights</span><span class="p">,</span>
+    <span class="n">mapping</span> <span class="o">=</span> <span class="nf">aes</span><span class="p">(</span>
+      <span class="n">y</span> <span class="o">=</span> <span class="n">ArrDelay</span><span class="p">,</span>
+      <span class="n">x</span> <span class="o">=</span> <span class="s">&quot;&quot;</span>
+      <span class="p">),</span>
+    <span class="n">fill</span> <span class="o">=</span> <span class="s">&quot;cornflowerblue&quot;</span>
+    <span class="p">)</span> <span class="o">+</span>
+  <span class="nf">coord_flip</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Warning message:
+“Removed 565 rows containing non-finite values (stat_boxplot).”
+</pre></div>
+</div>
+<img alt="../../../_images/base_42_11.png" src="../../../_images/base_42_11.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">read_csv</span><span class="p">(</span>
+  <span class="s">&quot;http://whitlockschluter.zoology.ubc.ca/wp-content/data/chapter02/chap02e3cHumanHemoglobinElevation.csv&quot;</span>
+  <span class="p">)</span> <span class="o">-&gt;</span> <span class="n">hemoglobin</span>
+
+<span class="nf">ggplot</span><span class="p">()</span> <span class="o">+</span>
+  <span class="nf">geom_boxplot</span><span class="p">(</span>
+    <span class="n">data</span> <span class="o">=</span> <span class="n">hemoglobin</span><span class="p">,</span>
+    <span class="n">mapping</span> <span class="o">=</span> <span class="nf">aes</span><span class="p">(</span>
+      <span class="n">x</span> <span class="o">=</span> <span class="n">population</span><span class="p">,</span>
+      <span class="n">y</span> <span class="o">=</span> <span class="n">hemoglobin</span><span class="p">,</span>
+      <span class="n">fill</span> <span class="o">=</span> <span class="n">population</span>
+      <span class="p">)</span>
+    <span class="p">)</span> <span class="o">+</span>
+  <span class="nf">coord_flip</span><span class="p">()</span> <span class="o">+</span>
+  <span class="nf">labs</span><span class="p">(</span>
+    <span class="n">x</span> <span class="o">=</span> <span class="s">&quot;Population&quot;</span><span class="p">,</span>
+    <span class="n">y</span> <span class="o">=</span> <span class="s">&quot;Hemoglobin Concentration&quot;</span><span class="p">,</span>
+    <span class="n">title</span> <span class="o">=</span> <span class="s">&quot;Hemoglobin Concentration in Adult Males&quot;</span><span class="p">,</span>
+    <span class="n">subtitle</span> <span class="o">=</span> <span class="s">&quot;(Andes, Ethiopia, Tibet, USA)&quot;</span>
+    <span class="p">)</span> <span class="o">+</span>
+  <span class="nf">theme</span><span class="p">(</span><span class="n">legend.position</span> <span class="o">=</span> <span class="s">&quot;none&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span><span class=" -Color -Color-Bold">Rows: </span><span class=" -Color -Color-Blue">1962</span> <span class=" -Color -Color-Bold">Columns: </span><span class=" -Color -Color-Blue">3</span>
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span><span class=" -Color -Color-Cyan">──</span> <span class=" -Color -Color-Bold">Column specification</span> <span class=" -Color -Color-Cyan">───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────</span>
+<span class=" -Color -Color-Bold">Delimiter:</span> &quot;,&quot;
+<span class=" -Color -Color-Red">chr</span> (2): id, population
+<span class=" -Color -Color-Green">dbl</span> (1): hemoglobin
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span><span class=" -Color -Color-Cyan">ℹ</span> Use <span class=" -Color -Color-Black -Color-Black-BGWhite">`spec()`</span> to retrieve the full column specification for this data.
+<span class=" -Color -Color-Cyan">ℹ</span> Specify the column types or set <span class=" -Color -Color-Black -Color-Black-BGWhite">`show_col_types = FALSE`</span> to quiet this message.
+</pre></div>
+</div>
+<img alt="../../../_images/base_43_31.png" src="../../../_images/base_43_31.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">ggplot</span><span class="p">()</span> <span class="o">+</span> 
+  <span class="nf">geom_boxplot</span><span class="p">(</span>
+    <span class="n">data</span> <span class="o">=</span> <span class="n">cmhflights</span><span class="p">,</span>
+    <span class="n">mapping</span> <span class="o">=</span> <span class="nf">aes</span><span class="p">(</span>
+      <span class="n">y</span> <span class="o">=</span> <span class="n">ArrDelay</span><span class="p">,</span>
+      <span class="n">x</span> <span class="o">=</span> <span class="n">Carrier</span>
+      <span class="p">),</span>
+    <span class="n">fill</span> <span class="o">=</span> <span class="s">&quot;cornflowerblue&quot;</span>
+    <span class="p">)</span> <span class="o">+</span>
+  <span class="nf">coord_flip</span><span class="p">()</span> <span class="o">+</span>
+  <span class="nf">facet_wrap</span><span class="p">(</span><span class="o">~</span> <span class="n">Month</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Warning message:
+“Removed 565 rows containing non-finite values (stat_boxplot).”
+</pre></div>
+</div>
+<img alt="../../../_images/base_44_11.png" src="../../../_images/base_44_11.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">library</span><span class="p">(</span><span class="n">plotly</span><span class="p">)</span>
+<span class="nf">data</span><span class="p">(</span><span class="n">economics</span><span class="p">)</span>
+<span class="nf">names</span><span class="p">(</span><span class="n">economics</span><span class="p">)</span>
+<span class="nf">ggplot</span><span class="p">()</span> <span class="o">+</span>
+  <span class="nf">geom_line</span><span class="p">(</span>
+    <span class="n">data</span> <span class="o">=</span> <span class="n">economics</span><span class="p">,</span> 
+    <span class="n">mapping</span> <span class="o">=</span> <span class="nf">aes</span><span class="p">(</span>
+      <span class="n">x</span> <span class="o">=</span> <span class="n">date</span><span class="p">,</span>
+      <span class="n">y</span> <span class="o">=</span> <span class="n">uempmed</span>
+      <span class="p">)</span>
+    <span class="p">)</span> <span class="o">+</span> 
+  <span class="nf">labs</span><span class="p">(</span>
+    <span class="n">x</span> <span class="o">=</span> <span class="s">&quot;Date&quot;</span><span class="p">,</span>
+    <span class="n">y</span> <span class="o">=</span> <span class="s">&quot;Unemployment Rate&quot;</span>
+  <span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Attaching package: ‘plotly’
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The following object is masked from ‘package:ggplot2’:
+
+    last_plot
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The following object is masked from ‘package:stats’:
+
+    filter
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The following object is masked from ‘package:graphics’:
+
+    layout
+</pre></div>
+</div>
+<div class="output text_html"><style>
+.list-inline {list-style: none; margin:0; padding: 0}
+.list-inline>li {display: inline-block}
+.list-inline>li:not(:last-child)::after {content: "\00b7"; padding: 0 .5ex}
+</style>
+<ol class=list-inline><li>'date'</li><li>'pce'</li><li>'pop'</li><li>'psavert'</li><li>'uempmed'</li><li>'unemploy'</li></ol>
+</div><img alt="../../../_images/base_45_51.png" src="../../../_images/base_45_51.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">load</span><span class="p">(</span>
+  <span class="n">here</span><span class="o">::</span><span class="nf">here</span><span class="p">(</span><span class="s">&quot;data&quot;</span><span class="p">,</span> <span class="s">&quot;gap.df.RData&quot;</span><span class="p">)</span>
+  <span class="p">)</span>
+
+<span class="n">gap.df</span> <span class="o">%&gt;%</span>
+    <span class="nf">ungroup</span><span class="p">()</span> <span class="o">%&gt;%</span>
+    <span class="nf">ggplot</span><span class="p">()</span> <span class="o">+</span>
+    <span class="nf">geom_line</span><span class="p">(</span>
+    <span class="n">mapping</span> <span class="o">=</span> <span class="nf">aes</span><span class="p">(</span>
+      <span class="n">x</span> <span class="o">=</span> <span class="n">year</span><span class="p">,</span>
+      <span class="n">y</span> <span class="o">=</span> <span class="n">LifeExp</span><span class="p">,</span>
+      <span class="n">group</span> <span class="o">=</span> <span class="n">continent</span><span class="p">,</span>
+      <span class="n">color</span> <span class="o">=</span> <span class="n">continent</span>
+      <span class="p">)</span>
+    <span class="p">)</span> <span class="o">+</span> 
+  <span class="nf">geom_point</span><span class="p">(</span>
+    <span class="n">mapping</span> <span class="o">=</span> <span class="nf">aes</span><span class="p">(</span>
+      <span class="n">x</span> <span class="o">=</span> <span class="n">year</span><span class="p">,</span>
+      <span class="n">y</span> <span class="o">=</span> <span class="n">LifeExp</span><span class="p">,</span>
+      <span class="n">group</span> <span class="o">=</span> <span class="n">continent</span><span class="p">,</span>
+      <span class="n">color</span> <span class="o">=</span> <span class="n">continent</span>
+      <span class="p">)</span>
+    <span class="p">)</span> <span class="o">+</span> 
+  <span class="nf">labs</span><span class="p">(</span>
+    <span class="n">x</span> <span class="o">=</span> <span class="s">&quot;Year&quot;</span><span class="p">,</span>
+    <span class="n">y</span> <span class="o">=</span> <span class="s">&quot;Median Life Expectancy (in years)&quot;</span><span class="p">,</span>
+    <span class="n">color</span> <span class="o">=</span> <span class="s">&quot;&quot;</span>
+  <span class="p">)</span> <span class="o">+</span> 
+  <span class="nf">theme</span><span class="p">(</span><span class="n">legend.position</span> <span class="o">=</span> <span class="s">&quot;bottom&quot;</span><span class="p">)</span> 
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../../../_images/base_46_01.png" src="../../../_images/base_46_01.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">ggplot</span><span class="p">()</span> <span class="o">+</span> 
+  <span class="nf">geom_point</span><span class="p">(</span>
+    <span class="n">data</span> <span class="o">=</span> <span class="n">hsb2</span><span class="p">,</span> 
+    <span class="n">mapping</span> <span class="o">=</span> <span class="nf">aes</span><span class="p">(</span>
+      <span class="n">x</span> <span class="o">=</span> <span class="n">write</span><span class="p">,</span>
+      <span class="n">y</span> <span class="o">=</span> <span class="n">science</span>
+      <span class="p">)</span>
+    <span class="p">)</span> <span class="o">+</span>
+  <span class="nf">labs</span><span class="p">(</span>
+    <span class="n">x</span> <span class="o">=</span> <span class="s">&quot;Writing Scores&quot;</span><span class="p">,</span> 
+    <span class="n">y</span> <span class="o">=</span> <span class="s">&quot;Science Scores&quot;</span>
+    <span class="p">)</span> 
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../../../_images/base_47_01.png" src="../../../_images/base_47_01.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">ggplot</span><span class="p">()</span> <span class="o">+</span>
+  <span class="nf">geom_point</span><span class="p">(</span>
+    <span class="n">data</span> <span class="o">=</span> <span class="n">hsb2</span><span class="p">,</span>
+    <span class="n">mapping</span> <span class="o">=</span> <span class="nf">aes</span><span class="p">(</span>
+      <span class="n">x</span> <span class="o">=</span> <span class="n">write</span><span class="p">,</span>
+      <span class="n">y</span> <span class="o">=</span> <span class="n">science</span><span class="p">,</span>
+      <span class="n">color</span> <span class="o">=</span> <span class="n">ses</span>
+      <span class="p">)</span>
+    <span class="p">)</span> <span class="o">+</span> 
+  <span class="nf">labs</span><span class="p">(</span>
+    <span class="n">x</span> <span class="o">=</span> <span class="s">&quot;Writing Scores&quot;</span><span class="p">,</span> 
+    <span class="n">y</span> <span class="o">=</span> <span class="s">&quot;Science Scores&quot;</span><span class="p">,</span>
+    <span class="n">color</span> <span class="o">=</span> <span class="s">&quot;&quot;</span>
+    <span class="p">)</span> <span class="o">+</span> 
+  <span class="nf">theme</span><span class="p">(</span><span class="n">legend.position</span> <span class="o">=</span> <span class="s">&quot;bottom&quot;</span><span class="p">)</span> 
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../../../_images/base_48_01.png" src="../../../_images/base_48_01.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">ggplot</span><span class="p">()</span> <span class="o">+</span>
+  <span class="nf">geom_point</span><span class="p">(</span>
+    <span class="n">data</span> <span class="o">=</span> <span class="n">hsb2</span><span class="p">,</span>
+    <span class="n">mapping</span> <span class="o">=</span> <span class="nf">aes</span><span class="p">(</span>
+      <span class="n">x</span> <span class="o">=</span> <span class="n">write</span><span class="p">,</span>
+      <span class="n">y</span> <span class="o">=</span> <span class="n">science</span>
+      <span class="p">)</span>
+    <span class="p">)</span> <span class="o">+</span> 
+  <span class="nf">labs</span><span class="p">(</span>
+    <span class="n">x</span> <span class="o">=</span> <span class="s">&quot;Writing Scores&quot;</span><span class="p">,</span> 
+    <span class="n">y</span> <span class="o">=</span> <span class="s">&quot;Science Scores&quot;</span>
+    <span class="p">)</span> <span class="o">+</span> 
+  <span class="nf">facet_wrap</span><span class="p">(</span><span class="o">~</span> <span class="n">ses</span><span class="p">)</span> 
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../../../_images/base_49_01.png" src="../../../_images/base_49_01.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">ggplot</span><span class="p">()</span> <span class="o">+</span>
+  <span class="nf">geom_point</span><span class="p">(</span>
+    <span class="n">data</span> <span class="o">=</span> <span class="n">hsb2</span><span class="p">,</span>
+    <span class="n">mapping</span> <span class="o">=</span> <span class="nf">aes</span><span class="p">(</span>
+      <span class="n">x</span> <span class="o">=</span> <span class="n">write</span><span class="p">,</span>
+      <span class="n">y</span> <span class="o">=</span> <span class="n">science</span>
+      <span class="p">)</span>
+    <span class="p">)</span> <span class="o">+</span> 
+  <span class="nf">labs</span><span class="p">(</span>
+    <span class="n">x</span> <span class="o">=</span> <span class="s">&quot;Writing Scores&quot;</span><span class="p">,</span> 
+    <span class="n">y</span> <span class="o">=</span> <span class="s">&quot;Science Scores&quot;</span>
+    <span class="p">)</span> <span class="o">+</span> 
+  <span class="nf">facet_wrap</span><span class="p">(</span><span class="n">ses</span> <span class="o">~</span> <span class="n">female</span><span class="p">,</span> <span class="n">ncol</span> <span class="o">=</span> <span class="m">2</span><span class="p">)</span> 
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../../../_images/base_50_01.png" src="../../../_images/base_50_01.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">readr</span><span class="o">::</span><span class="nf">read_csv</span><span class="p">(</span>
+    <span class="s">&quot;https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2019/2019-05-14/nobel_winners.csv&quot;</span>
+    <span class="p">)</span> <span class="o">-&gt;</span> <span class="n">nobel_winners</span> 
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span><span class=" -Color -Color-Bold">Rows: </span><span class=" -Color -Color-Blue">969</span> <span class=" -Color -Color-Bold">Columns: </span><span class=" -Color -Color-Blue">18</span>
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span><span class=" -Color -Color-Cyan">──</span> <span class=" -Color -Color-Bold">Column specification</span> <span class=" -Color -Color-Cyan">───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────</span>
+<span class=" -Color -Color-Bold">Delimiter:</span> &quot;,&quot;
+<span class=" -Color -Color-Red">chr</span>  (14): category, prize, motivation, prize_share, laureate_type, full_nam...
+<span class=" -Color -Color-Green">dbl</span>   (2): prize_year, laureate_id
+<span class=" -Color -Color-Blue">date</span>  (2): birth_date, death_date
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span><span class=" -Color -Color-Cyan">ℹ</span> Use <span class=" -Color -Color-Black -Color-Black-BGWhite">`spec()`</span> to retrieve the full column specification for this data.
+<span class=" -Color -Color-Cyan">ℹ</span> Specify the column types or set <span class=" -Color -Color-Black -Color-Black-BGWhite">`show_col_types = FALSE`</span> to quiet this message.
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">library</span><span class="p">(</span><span class="n">readxl</span><span class="p">)</span>
+<span class="n">url</span> <span class="o">&lt;-</span> <span class="s">&quot;https://aniruhil.github.io/avsr/teaching/dataviz/greatlakes.xlsx&quot;</span>
+<span class="n">destfile</span> <span class="o">&lt;-</span> <span class="s">&quot;greatlakes.xlsx&quot;</span>
+<span class="n">curl</span><span class="o">::</span><span class="nf">curl_download</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">destfile</span><span class="p">)</span>
+<span class="nf">read_excel</span><span class="p">(</span><span class="n">destfile</span><span class="p">,</span> <span class="n">col_types</span> <span class="o">=</span> <span class="nf">c</span><span class="p">(</span><span class="s">&quot;date&quot;</span><span class="p">,</span> 
+     <span class="s">&quot;numeric&quot;</span><span class="p">,</span> <span class="s">&quot;numeric&quot;</span><span class="p">,</span> <span class="s">&quot;numeric&quot;</span><span class="p">,</span> <span class="s">&quot;numeric&quot;</span><span class="p">,</span> 
+     <span class="s">&quot;numeric&quot;</span><span class="p">))</span> <span class="o">-&gt;</span> <span class="n">greatlakes</span> 
+
+<span class="n">greatlakes</span> <span class="o">%&gt;%</span>
+    <span class="nf">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><table class="dataframe">
+<caption>A tibble: 6 × 6</caption>
+<thead>
+	<tr><th scope=col>monthyear</th><th scope=col>Superior</th><th scope=col>MichiganHuron</th><th scope=col>St.Clair</th><th scope=col>Erie</th><th scope=col>Ontario</th></tr>
+	<tr><th scope=col>&lt;dttm&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th></tr>
+</thead>
+<tbody>
+	<tr><td>1918-01-01</td><td>183.25</td><td>176.71</td><td>174.59</td><td>173.90</td><td>74.74</td></tr>
+	<tr><td>1918-02-01</td><td>183.20</td><td>176.73</td><td>174.74</td><td>173.82</td><td>74.72</td></tr>
+	<tr><td>1918-03-01</td><td>183.17</td><td>176.80</td><td>174.74</td><td>174.01</td><td>74.92</td></tr>
+	<tr><td>1918-04-01</td><td>183.14</td><td>176.89</td><td>174.84</td><td>174.02</td><td>75.10</td></tr>
+	<tr><td>1918-05-01</td><td>183.22</td><td>176.99</td><td>175.00</td><td>173.98</td><td>75.09</td></tr>
+	<tr><td>1918-06-01</td><td>183.34</td><td>177.07</td><td>175.14</td><td>174.10</td><td>75.06</td></tr>
+</tbody>
+</table>
+</div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">library</span><span class="p">(</span><span class="n">readxl</span><span class="p">)</span>
+<span class="n">url</span> <span class="o">&lt;-</span> <span class="s">&quot;https://aniruhil.github.io/avsr/teaching/dataviz/CountyHealthRankings2017.xlsx&quot;</span>
+<span class="n">destfile</span> <span class="o">&lt;-</span> <span class="s">&quot;CountyHealthRankings2017.xlsx&quot;</span>
+<span class="n">curl</span><span class="o">::</span><span class="nf">curl_download</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">destfile</span><span class="p">)</span>
+<span class="nf">read_excel</span><span class="p">(</span><span class="n">destfile</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">chr.df</span> 
+
+<span class="n">chr.df</span> <span class="o">%&gt;%</span>
+    <span class="nf">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><table class="dataframe">
+<caption>A tibble: 6 × 8</caption>
+<thead>
+	<tr><th scope=col>state</th><th scope=col>Adult_obesity</th><th scope=col>Children_in_poverty</th><th scope=col>Diabetes_monitoring</th><th scope=col>High_school_graduation</th><th scope=col>Premature_death</th><th scope=col>Preventable_hospital_stays</th><th scope=col>Unemployment_rate</th></tr>
+	<tr><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th></tr>
+</thead>
+<tbody>
+	<tr><td>AK</td><td>0.29</td><td>0.15</td><td>0.75</td><td>0.76</td><td>7403.4</td><td>35.99</td><td>0.06</td></tr>
+	<tr><td>AL</td><td>0.34</td><td>0.27</td><td>0.85</td><td>0.89</td><td>9573.2</td><td>61.13</td><td>0.06</td></tr>
+	<tr><td>AR</td><td>0.34</td><td>0.26</td><td>0.84</td><td>0.85</td><td>9150.7</td><td>61.95</td><td>0.05</td></tr>
+	<tr><td>AZ</td><td>0.26</td><td>0.25</td><td>0.80</td><td>0.78</td><td>6787.7</td><td>36.97</td><td>0.06</td></tr>
+	<tr><td>CA</td><td>0.23</td><td>0.21</td><td>0.82</td><td>  NA</td><td>5213.2</td><td>35.74</td><td>0.06</td></tr>
+	<tr><td>CO</td><td>0.20</td><td>0.15</td><td>0.84</td><td>0.77</td><td>5711.5</td><td>32.09</td><td>0.04</td></tr>
+</tbody>
+</table>
+</div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">load</span><span class="p">(</span><span class="s">&quot;data/unemprate.RData&quot;</span><span class="p">)</span>
+
+<span class="n">urate</span> <span class="o">%&gt;%</span>
+    <span class="nf">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><table class="dataframe">
+<caption>A tibble: 6 × 3</caption>
+<thead>
+	<tr><th scope=col>yearmonth</th><th scope=col>educ_group</th><th scope=col>rate</th></tr>
+	<tr><th scope=col>&lt;date&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;dbl&gt;</th></tr>
+</thead>
+<tbody>
+	<tr><td>2007-04-01</td><td>BA_or_more</td><td>1.9</td></tr>
+	<tr><td>2007-08-01</td><td>BA_or_more</td><td>2.1</td></tr>
+	<tr><td>2007-12-01</td><td>BA_or_more</td><td>2.1</td></tr>
+	<tr><td>2007-02-01</td><td>BA_or_more</td><td>1.9</td></tr>
+	<tr><td>2007-01-01</td><td>BA_or_more</td><td>2.1</td></tr>
+	<tr><td>2007-07-01</td><td>BA_or_more</td><td>2.1</td></tr>
+</tbody>
+</table>
+</div></div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "aniruhil/jb5830-repo",
+            ref: "main",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "r"
+        },
+        kernelOptions: {
+            kernelName: "ir",
+            path: "./.jupyter_cache/executed/f9bbc163924f85334080a2c6e82f13b2"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'ir'</script>
+
+              </div>
+              
+            
+                
+
+
+
+<div class='prev-next-bottom'>
+    
+
+</div>
+            
+        </div>
+    </div>
+    <footer class="footer">
+  <p>
+    
+      By Ani Ruhil<br/>
+    
+        &copy; Copyright 2022.<br/>
+      <div class="extra_footer">
+        Fall 2021
+      </div>
+  </p>
+</footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../../../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+
+  </body>
+</html>

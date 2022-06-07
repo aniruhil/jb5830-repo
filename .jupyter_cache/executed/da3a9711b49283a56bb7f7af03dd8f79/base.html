@@ -1,0 +1,1262 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>&lt;no title&gt; &#8212; Data Analytics with R (MPA 5830)</title>
+    
+  <link href="../../../_static/css/theme.css" rel="stylesheet">
+  <link href="../../../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../../../_static/js/index.be7d3bbb2ef33a8344ce.js">
+
+    <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
+    <script src="../../../_static/jquery.js"></script>
+    <script src="../../../_static/underscore.js"></script>
+    <script src="../../../_static/doctools.js"></script>
+    <script src="../../../_static/togglebutton.js"></script>
+    <script src="../../../_static/clipboard.min.js"></script>
+    <script src="../../../_static/copybutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../../../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script>
+        const thebe_selector = ".thebe,.cell"
+        const thebe_selector_input = "pre,.cell_input div.highlight"
+        const thebe_selector_output = ".output,.cell_output"
+    </script>
+    <script async="async" src="../../../_static/sphinx-thebe.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <link rel="canonical" href="https://aniruhil.github.io/jb530-repo/index.html/.jupyter_cache/executed/da3a9711b49283a56bb7f7af03dd8f79/base.html" />
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../../../index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="../../../_static/logo5830.svg" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Data Analytics with R (MPA 5830)</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../docs/Intro.html">
+   Introduction to MPA 5830
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Reading Data
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../docs/Module01.html">
+   Reading data in R
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Cleaning &amp; Organizng Data
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../docs/Module02.html">
+   Cleaning Data with {dplyr}
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../docs/Module03.html">
+   Rearranging Data with {tidyr}
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../docs/Module04.html">
+   Managing dates and Times with {lubridate}
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Visualizing Data
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../docs/Module05.html">
+   Visualizing Data with {ggplot2}
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../docs/Module06.html">
+   Advanced Data Visualization
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../../../_sources/.jupyter_cache/executed/da3a9711b49283a56bb7f7af03dd8f79/base.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/aniruhil/jb5830-repo"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/aniruhil/jb5830-repo/issues/new?title=Issue%20on%20page%20%2F.jupyter_cache/executed/da3a9711b49283a56bb7f7af03dd8f79/base.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        
+    </div>
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/aniruhil/jb5830-repo/main?urlpath=tree/docs/.jupyter_cache/executed/da3a9711b49283a56bb7f7af03dd8f79/base.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="../../../_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        <button type="button" class="btn btn-secondary topbarbtn"
+            onclick="initThebeSBT()" title="Launch Thebe" data-toggle="tooltip" data-placement="left"><i
+                class="fas fa-play"></i><span style="margin-left: .4em;">Live Code</span></button>
+        
+    </div>
+</div>
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="simple visible nav section-nav flex-column">
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1><no title></h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="simple visible nav section-nav flex-column">
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            
+              <div>
+                
+  <div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="s">&quot;20171217&quot;</span> <span class="o">-&gt;</span> <span class="n">today1</span> 
+<span class="s">&quot;2017-12-17&quot;</span> <span class="o">-&gt;</span> <span class="n">today2</span> 
+<span class="s">&quot;2017 December 17&quot;</span> <span class="o">-&gt;</span> <span class="n">today3</span> 
+<span class="s">&quot;20171217143241&quot;</span> <span class="o">-&gt;</span> <span class="n">today4</span> 
+<span class="s">&quot;2017 December 17 14:32:41&quot;</span> <span class="o">-&gt;</span> <span class="n">today5</span> 
+<span class="s">&quot;December 17 2017 14:32:41&quot;</span> <span class="o">-&gt;</span> <span class="n">today6</span> 
+<span class="s">&quot;17-Dec, 2017 14:32:41&quot;</span> <span class="o">-&gt;</span> <span class="n">today7</span> 
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">library</span><span class="p">(</span><span class="n">tidyverse</span><span class="p">)</span>
+<span class="nf">library</span><span class="p">(</span><span class="n">lubridate</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>── <span class=" -Color -Color-Bold">Attaching packages</span> ────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────── tidyverse 1.3.1 ──
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span><span class=" -Color -Color-Green">✔</span> <span class=" -Color -Color-Blue">ggplot2</span> 3.3.5     <span class=" -Color -Color-Green">✔</span> <span class=" -Color -Color-Blue">purrr  </span> 0.3.4
+<span class=" -Color -Color-Green">✔</span> <span class=" -Color -Color-Blue">tibble </span> 3.1.6     <span class=" -Color -Color-Green">✔</span> <span class=" -Color -Color-Blue">dplyr  </span> 1.0.7
+<span class=" -Color -Color-Green">✔</span> <span class=" -Color -Color-Blue">tidyr  </span> 1.1.4     <span class=" -Color -Color-Green">✔</span> <span class=" -Color -Color-Blue">stringr</span> 1.4.0
+<span class=" -Color -Color-Green">✔</span> <span class=" -Color -Color-Blue">readr  </span> 2.1.1     <span class=" -Color -Color-Green">✔</span> <span class=" -Color -Color-Blue">forcats</span> 0.5.1
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>── <span class=" -Color -Color-Bold">Conflicts</span> ───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────── tidyverse_conflicts() ──
+<span class=" -Color -Color-Red">✖</span> <span class=" -Color -Color-Blue">dplyr</span>::<span class=" -Color -Color-Green">filter()</span> masks <span class=" -Color -Color-Blue">stats</span>::filter()
+<span class=" -Color -Color-Red">✖</span> <span class=" -Color -Color-Blue">dplyr</span>::<span class=" -Color -Color-Green">lag()</span>    masks <span class=" -Color -Color-Blue">stats</span>::lag()
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Attaching package: ‘lubridate’
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The following objects are masked from ‘package:base’:
+
+    date, intersect, setdiff, union
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">ymd</span><span class="p">(</span><span class="n">today1</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">date1</span>
+<span class="nf">ymd</span><span class="p">(</span><span class="n">today2</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">date2</span> 
+<span class="nf">ymd</span><span class="p">(</span><span class="n">today3</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">date3</span> 
+
+<span class="n">date1</span><span class="p">;</span> <span class="n">date2</span><span class="p">;</span> <span class="n">date3</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><time datetime="2017-12-17">2017-12-17</time></div><div class="output text_html"><time datetime="2017-12-17">2017-12-17</time></div><div class="output text_html"><time datetime="2017-12-17">2017-12-17</time></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">ymd_hms</span><span class="p">(</span><span class="n">today4</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">date4</span> 
+<span class="nf">ymd_hms</span><span class="p">(</span><span class="n">today5</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">date5</span> 
+
+<span class="n">date4</span><span class="p">;</span> <span class="n">date5</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[1] &quot;2017-12-17 14:32:41 UTC&quot;
+</pre></div>
+</div>
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[1] &quot;2017-12-17 14:32:41 UTC&quot;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">mdy_hms</span><span class="p">(</span><span class="n">today6</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">date6</span> 
+
+<span class="n">date6</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[1] &quot;2017-12-17 14:32:41 UTC&quot;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">dmy_hms</span><span class="p">(</span><span class="n">today7</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">date7</span> 
+
+<span class="n">date7</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[1] &quot;2017-12-17 14:32:41 UTC&quot;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">load</span><span class="p">(</span><span class="s">&quot;data/cmhflights_01092017.RData&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">names</span><span class="p">(</span><span class="n">cmhflights</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><style>
+.list-inline {list-style: none; margin:0; padding: 0}
+.list-inline>li {display: inline-block}
+.list-inline>li:not(:last-child)::after {content: "\00b7"; padding: 0 .5ex}
+</style>
+<ol class=list-inline><li>'Year'</li><li>'Quarter'</li><li>'Month'</li><li>'DayofMonth'</li><li>'DayOfWeek'</li><li>'FlightDate'</li><li>'UniqueCarrier'</li><li>'AirlineID'</li><li>'Carrier'</li><li>'TailNum'</li><li>'FlightNum'</li><li>'OriginAirportID'</li><li>'OriginAirportSeqID'</li><li>'OriginCityMarketID'</li><li>'Origin'</li><li>'OriginCityName'</li><li>'OriginState'</li><li>'OriginStateFips'</li><li>'OriginStateName'</li><li>'OriginWac'</li><li>'DestAirportID'</li><li>'DestAirportSeqID'</li><li>'DestCityMarketID'</li><li>'Dest'</li><li>'DestCityName'</li><li>'DestState'</li><li>'DestStateFips'</li><li>'DestStateName'</li><li>'DestWac'</li><li>'CRSDepTime'</li><li>'DepTime'</li><li>'DepDelay'</li><li>'DepDelayMinutes'</li><li>'DepDel15'</li><li>'DepartureDelayGroups'</li><li>'DepTimeBlk'</li><li>'TaxiOut'</li><li>'WheelsOff'</li><li>'WheelsOn'</li><li>'TaxiIn'</li><li>'CRSArrTime'</li><li>'ArrTime'</li><li>'ArrDelay'</li><li>'ArrDelayMinutes'</li><li>'ArrDel15'</li><li>'ArrivalDelayGroups'</li><li>'ArrTimeBlk'</li><li>'Cancelled'</li><li>'CancellationCode'</li><li>'Diverted'</li><li>'CRSElapsedTime'</li><li>'ActualElapsedTime'</li><li>'AirTime'</li><li>'Flights'</li><li>'Distance'</li><li>'DistanceGroup'</li><li>'CarrierDelay'</li><li>'WeatherDelay'</li><li>'NASDelay'</li><li>'SecurityDelay'</li><li>'LateAircraftDelay'</li><li>'FirstDepTime'</li><li>'TotalAddGTime'</li><li>'LongestAddGTime'</li><li>'DivAirportLandings'</li><li>'DivReachedDest'</li><li>'DivActualElapsedTime'</li><li>'DivArrDelay'</li><li>'DivDistance'</li><li>'Div1Airport'</li><li>'Div1AirportID'</li><li>'Div1AirportSeqID'</li><li>'Div1WheelsOn'</li><li>'Div1TotalGTime'</li><li>'Div1LongestGTime'</li><li>'Div1WheelsOff'</li><li>'Div1TailNum'</li><li>'Div2Airport'</li><li>'Div2AirportID'</li><li>'Div2AirportSeqID'</li><li>'Div2WheelsOn'</li><li>'Div2TotalGTime'</li><li>'Div2LongestGTime'</li><li>'Div2WheelsOff'</li><li>'Div2TailNum'</li><li>'Div3Airport'</li><li>'Div3AirportID'</li><li>'Div3AirportSeqID'</li><li>'Div3WheelsOn'</li><li>'Div3TotalGTime'</li><li>'Div3LongestGTime'</li><li>'Div3WheelsOff'</li><li>'Div3TailNum'</li><li>'Div4Airport'</li><li>'Div4AirportID'</li><li>'Div4AirportSeqID'</li><li>'Div4WheelsOn'</li><li>'Div4TotalGTime'</li><li>'Div4LongestGTime'</li><li>'Div4WheelsOff'</li><li>'Div4TailNum'</li><li>'Div5Airport'</li><li>'Div5AirportID'</li><li>'Div5AirportSeqID'</li><li>'Div5WheelsOn'</li><li>'Div5TotalGTime'</li><li>'Div5LongestGTime'</li><li>'Div5WheelsOff'</li><li>'Div5TailNum'</li><li>'X110'</li></ol>
+</div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">library</span><span class="p">(</span><span class="n">janitor</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Attaching package: ‘janitor’
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The following objects are masked from ‘package:stats’:
+
+    chisq.test, fisher.test
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">cmhflights</span> <span class="o">%&gt;%</span>
+  <span class="nf">clean_names</span><span class="p">()</span> <span class="o">%&gt;%</span>
+  <span class="nf">select</span><span class="p">(</span>
+    <span class="n">year</span><span class="p">,</span> <span class="n">month</span><span class="p">,</span> <span class="n">dayof_month</span><span class="p">,</span> <span class="n">day_of_week</span><span class="p">,</span> <span class="n">flight_date</span><span class="p">,</span> <span class="n">carrier</span><span class="p">,</span>
+    <span class="n">tail_num</span><span class="p">,</span> <span class="n">flight_num</span><span class="p">,</span> <span class="n">origin_city_name</span><span class="p">,</span> <span class="n">dest_city_name</span><span class="p">,</span>
+    <span class="n">dep_time</span><span class="p">,</span> <span class="n">dep_delay</span><span class="p">,</span> <span class="n">arr_time</span><span class="p">,</span> <span class="n">arr_delay</span><span class="p">,</span> <span class="n">cancelled</span><span class="p">,</span> <span class="n">diverted</span>
+    <span class="p">)</span> <span class="o">-&gt;</span> <span class="n">cmh.df</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">cmh.df</span> <span class="o">%&gt;%</span>
+  <span class="nf">mutate</span><span class="p">(</span>
+    <span class="n">dayofweek</span> <span class="o">=</span> <span class="nf">wday</span><span class="p">(</span>
+      <span class="n">day_of_week</span><span class="p">,</span>
+      <span class="n">abbr</span> <span class="o">=</span> <span class="kc">FALSE</span><span class="p">,</span>
+      <span class="n">label</span> <span class="o">=</span> <span class="kc">TRUE</span>
+      <span class="p">),</span>
+    <span class="n">monthname</span> <span class="o">=</span> <span class="nf">month</span><span class="p">(</span>
+      <span class="n">month</span><span class="p">,</span>
+      <span class="n">abbr</span> <span class="o">=</span> <span class="kc">FALSE</span><span class="p">,</span>
+      <span class="n">label</span> <span class="o">=</span> <span class="kc">TRUE</span>
+      <span class="p">),</span>
+    <span class="n">weekend</span> <span class="o">=</span> <span class="nf">case_when</span><span class="p">(</span>
+      <span class="n">dayofweek</span> <span class="o">%in%</span> <span class="nf">c</span><span class="p">(</span><span class="s">&quot;Saturday&quot;</span><span class="p">,</span> <span class="s">&quot;Sunday&quot;</span><span class="p">)</span> <span class="o">~</span> <span class="s">&quot;Weekend&quot;</span><span class="p">,</span>
+      <span class="kc">TRUE</span> <span class="o">~</span> <span class="s">&quot;Weekday&quot;</span>
+      <span class="p">)</span>
+    <span class="p">)</span> <span class="o">-&gt;</span> <span class="n">cmh.df</span> 
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">cmh.df</span> <span class="o">%&gt;%</span>
+  <span class="nf">count</span><span class="p">(</span><span class="n">monthname</span><span class="p">,</span> <span class="n">sort</span> <span class="o">=</span> <span class="kc">TRUE</span><span class="p">)</span> <span class="c1"># (a)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><table class="dataframe">
+<caption>A tibble: 9 × 2</caption>
+<thead>
+	<tr><th scope=col>monthname</th><th scope=col>n</th></tr>
+	<tr><th scope=col>&lt;ord&gt;</th><th scope=col>&lt;int&gt;</th></tr>
+</thead>
+<tbody>
+	<tr><td>July     </td><td>4295</td></tr>
+	<tr><td>August   </td><td>4279</td></tr>
+	<tr><td>June     </td><td>4138</td></tr>
+	<tr><td>April    </td><td>4123</td></tr>
+	<tr><td>March    </td><td>4101</td></tr>
+	<tr><td>May      </td><td>4098</td></tr>
+	<tr><td>September</td><td>3789</td></tr>
+	<tr><td>January  </td><td>3757</td></tr>
+	<tr><td>February </td><td>3413</td></tr>
+</tbody>
+</table>
+</div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">cmh.df</span> <span class="o">%&gt;%</span>
+  <span class="nf">count</span><span class="p">(</span><span class="n">dayofweek</span><span class="p">,</span> <span class="n">sort</span> <span class="o">=</span> <span class="kc">TRUE</span><span class="p">)</span> <span class="c1"># (b) </span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><table class="dataframe">
+<caption>A tibble: 7 × 2</caption>
+<thead>
+	<tr><th scope=col>dayofweek</th><th scope=col>n</th></tr>
+	<tr><th scope=col>&lt;ord&gt;</th><th scope=col>&lt;int&gt;</th></tr>
+</thead>
+<tbody>
+	<tr><td>Wednesday</td><td>5435</td></tr>
+	<tr><td>Thursday </td><td>5417</td></tr>
+	<tr><td>Sunday   </td><td>5395</td></tr>
+	<tr><td>Tuesday  </td><td>5368</td></tr>
+	<tr><td>Monday   </td><td>5284</td></tr>
+	<tr><td>Saturday </td><td>4892</td></tr>
+	<tr><td>Friday   </td><td>4202</td></tr>
+</tbody>
+</table>
+</div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">cmh.df</span> <span class="o">%&gt;%</span>
+  <span class="nf">count</span><span class="p">(</span><span class="n">weekend</span><span class="p">,</span> <span class="n">sort</span> <span class="o">=</span> <span class="kc">TRUE</span><span class="p">)</span> <span class="c1"># (c) </span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><table class="dataframe">
+<caption>A tibble: 2 × 2</caption>
+<thead>
+	<tr><th scope=col>weekend</th><th scope=col>n</th></tr>
+	<tr><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;int&gt;</th></tr>
+</thead>
+<tbody>
+	<tr><td>Weekday</td><td>25706</td></tr>
+	<tr><td>Weekend</td><td>10287</td></tr>
+</tbody>
+</table>
+</div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">cmh.df</span> <span class="o">%&gt;%</span>
+  <span class="nf">count</span><span class="p">(</span><span class="n">monthname</span><span class="p">,</span> <span class="n">weekend</span><span class="p">,</span> <span class="n">sort</span> <span class="o">=</span> <span class="kc">TRUE</span><span class="p">)</span> <span class="c1"># (d) </span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><table class="dataframe">
+<caption>A tibble: 18 × 3</caption>
+<thead>
+	<tr><th scope=col>monthname</th><th scope=col>weekend</th><th scope=col>n</th></tr>
+	<tr><th scope=col>&lt;ord&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;int&gt;</th></tr>
+</thead>
+<tbody>
+	<tr><td>August   </td><td>Weekday</td><td>3165</td></tr>
+	<tr><td>March    </td><td>Weekday</td><td>3047</td></tr>
+	<tr><td>June     </td><td>Weekday</td><td>3023</td></tr>
+	<tr><td>July     </td><td>Weekday</td><td>2918</td></tr>
+	<tr><td>May      </td><td>Weekday</td><td>2908</td></tr>
+	<tr><td>April    </td><td>Weekday</td><td>2876</td></tr>
+	<tr><td>September</td><td>Weekday</td><td>2760</td></tr>
+	<tr><td>January  </td><td>Weekday</td><td>2557</td></tr>
+	<tr><td>February </td><td>Weekday</td><td>2452</td></tr>
+	<tr><td>July     </td><td>Weekend</td><td>1377</td></tr>
+	<tr><td>April    </td><td>Weekend</td><td>1247</td></tr>
+	<tr><td>January  </td><td>Weekend</td><td>1200</td></tr>
+	<tr><td>May      </td><td>Weekend</td><td>1190</td></tr>
+	<tr><td>June     </td><td>Weekend</td><td>1115</td></tr>
+	<tr><td>August   </td><td>Weekend</td><td>1114</td></tr>
+	<tr><td>March    </td><td>Weekend</td><td>1054</td></tr>
+	<tr><td>September</td><td>Weekend</td><td>1029</td></tr>
+	<tr><td>February </td><td>Weekend</td><td> 961</td></tr>
+</tbody>
+</table>
+</div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">cmh.df</span> <span class="o">%&gt;%</span>
+  <span class="nf">unite</span><span class="p">(</span>
+    <span class="n">col</span> <span class="o">=</span> <span class="s">&quot;flight_date_time&quot;</span><span class="p">,</span>
+    <span class="nf">c</span><span class="p">(</span><span class="n">flight_date</span><span class="p">,</span> <span class="n">dep_time</span><span class="p">),</span>
+    <span class="n">sep</span> <span class="o">=</span> <span class="s">&quot;:&quot;</span><span class="p">,</span>
+    <span class="n">remove</span> <span class="o">=</span> <span class="kc">FALSE</span>
+  <span class="p">)</span> <span class="o">-&gt;</span> <span class="n">cmh.df</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">cmh.df</span> <span class="o">%&gt;%</span>
+  <span class="nf">mutate</span><span class="p">(</span>
+    <span class="n">flt_date_time</span> <span class="o">=</span> <span class="nf">ymd_hm</span><span class="p">(</span><span class="n">flight_date_time</span><span class="p">)</span>
+      <span class="p">)</span> <span class="o">-&gt;</span> <span class="n">cmh.df</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Warning message:
+“ 471 failed to parse.”
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">head</span><span class="p">(</span><span class="n">cmh.df</span><span class="o">$</span><span class="n">flt_date_time</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[1] &quot;2017-01-01 09:36:00 UTC&quot; &quot;2017-01-02 10:09:00 UTC&quot;
+[3] &quot;2017-01-03 09:39:00 UTC&quot; &quot;2017-01-04 09:40:00 UTC&quot;
+[5] &quot;2017-01-05 09:38:00 UTC&quot; &quot;2017-01-06 10:07:00 UTC&quot;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">cmh.df</span> <span class="o">%&gt;%</span>
+  <span class="nf">mutate</span><span class="p">(</span>
+    <span class="n">flt_hour</span> <span class="o">=</span> <span class="nf">hour</span><span class="p">(</span><span class="n">flt_date_time</span><span class="p">),</span>
+    <span class="n">flt_minute</span> <span class="o">=</span> <span class="nf">minute</span><span class="p">(</span><span class="n">flt_date_time</span><span class="p">)</span>
+    <span class="p">)</span> <span class="o">-&gt;</span> <span class="n">cmh.df</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">cmh.df</span> <span class="o">%&gt;%</span>
+  <span class="nf">count</span><span class="p">(</span><span class="n">flt_hour</span><span class="p">,</span> <span class="n">sort</span> <span class="o">=</span> <span class="kc">TRUE</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><table class="dataframe">
+<caption>A tibble: 24 × 2</caption>
+<thead>
+	<tr><th scope=col>flt_hour</th><th scope=col>n</th></tr>
+	<tr><th scope=col>&lt;int&gt;</th><th scope=col>&lt;int&gt;</th></tr>
+</thead>
+<tbody>
+	<tr><td>10</td><td>2626</td></tr>
+	<tr><td>17</td><td>2454</td></tr>
+	<tr><td> 7</td><td>2448</td></tr>
+	<tr><td>16</td><td>2395</td></tr>
+	<tr><td>15</td><td>2392</td></tr>
+	<tr><td>14</td><td>2390</td></tr>
+	<tr><td> 8</td><td>2331</td></tr>
+	<tr><td> 9</td><td>2283</td></tr>
+	<tr><td>18</td><td>2268</td></tr>
+	<tr><td> 6</td><td>2106</td></tr>
+	<tr><td>19</td><td>1829</td></tr>
+	<tr><td>11</td><td>1775</td></tr>
+	<tr><td>12</td><td>1670</td></tr>
+	<tr><td>20</td><td>1620</td></tr>
+	<tr><td>13</td><td>1533</td></tr>
+	<tr><td>22</td><td>1136</td></tr>
+	<tr><td> 5</td><td> 968</td></tr>
+	<tr><td>21</td><td> 956</td></tr>
+	<tr><td>NA</td><td> 471</td></tr>
+	<tr><td>23</td><td> 253</td></tr>
+	<tr><td> 0</td><td>  69</td></tr>
+	<tr><td> 1</td><td>  12</td></tr>
+	<tr><td> 2</td><td>   5</td></tr>
+	<tr><td> 3</td><td>   3</td></tr>
+</tbody>
+</table>
+</div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">cmh.df</span> <span class="o">%&gt;%</span>
+  <span class="nf">count</span><span class="p">(</span><span class="n">monthname</span><span class="p">,</span> <span class="n">flt_hour</span><span class="p">,</span> <span class="n">sort</span> <span class="o">=</span> <span class="kc">TRUE</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><table class="dataframe">
+<caption>A tibble: 199 × 3</caption>
+<thead>
+	<tr><th scope=col>monthname</th><th scope=col>flt_hour</th><th scope=col>n</th></tr>
+	<tr><th scope=col>&lt;ord&gt;</th><th scope=col>&lt;int&gt;</th><th scope=col>&lt;int&gt;</th></tr>
+</thead>
+<tbody>
+	<tr><td>May      </td><td>10</td><td>376</td></tr>
+	<tr><td>August   </td><td> 8</td><td>328</td></tr>
+	<tr><td>June     </td><td>10</td><td>325</td></tr>
+	<tr><td>March    </td><td>17</td><td>323</td></tr>
+	<tr><td>July     </td><td> 8</td><td>319</td></tr>
+	<tr><td>May      </td><td>15</td><td>317</td></tr>
+	<tr><td>April    </td><td>17</td><td>314</td></tr>
+	<tr><td>May      </td><td>18</td><td>314</td></tr>
+	<tr><td>March    </td><td> 7</td><td>313</td></tr>
+	<tr><td>January  </td><td>16</td><td>312</td></tr>
+	<tr><td>March    </td><td>16</td><td>309</td></tr>
+	<tr><td>July     </td><td>10</td><td>306</td></tr>
+	<tr><td>August   </td><td>10</td><td>304</td></tr>
+	<tr><td>January  </td><td>14</td><td>299</td></tr>
+	<tr><td>April    </td><td> 9</td><td>298</td></tr>
+	<tr><td>April    </td><td>10</td><td>298</td></tr>
+	<tr><td>March    </td><td>10</td><td>297</td></tr>
+	<tr><td>April    </td><td>15</td><td>294</td></tr>
+	<tr><td>August   </td><td>14</td><td>294</td></tr>
+	<tr><td>January  </td><td> 7</td><td>287</td></tr>
+	<tr><td>February </td><td> 7</td><td>287</td></tr>
+	<tr><td>August   </td><td>16</td><td>287</td></tr>
+	<tr><td>September</td><td> 8</td><td>287</td></tr>
+	<tr><td>September</td><td>17</td><td>285</td></tr>
+	<tr><td>February </td><td>14</td><td>282</td></tr>
+	<tr><td>April    </td><td> 7</td><td>282</td></tr>
+	<tr><td>July     </td><td> 7</td><td>282</td></tr>
+	<tr><td>May      </td><td> 7</td><td>281</td></tr>
+	<tr><td>June     </td><td> 6</td><td>280</td></tr>
+	<tr><td>June     </td><td>15</td><td>278</td></tr>
+	<tr><td>⋮</td><td>⋮</td><td>⋮</td></tr>
+	<tr><td>January  </td><td>NA</td><td>42</td></tr>
+	<tr><td>January  </td><td>23</td><td>36</td></tr>
+	<tr><td>June     </td><td>NA</td><td>36</td></tr>
+	<tr><td>February </td><td>NA</td><td>34</td></tr>
+	<tr><td>August   </td><td>23</td><td>29</td></tr>
+	<tr><td>April    </td><td>23</td><td>25</td></tr>
+	<tr><td>March    </td><td>23</td><td>23</td></tr>
+	<tr><td>May      </td><td>NA</td><td>21</td></tr>
+	<tr><td>May      </td><td>23</td><td>16</td></tr>
+	<tr><td>June     </td><td> 0</td><td>15</td></tr>
+	<tr><td>February </td><td>23</td><td>12</td></tr>
+	<tr><td>April    </td><td> 0</td><td>11</td></tr>
+	<tr><td>July     </td><td> 0</td><td>10</td></tr>
+	<tr><td>January  </td><td> 0</td><td> 8</td></tr>
+	<tr><td>March    </td><td> 0</td><td> 8</td></tr>
+	<tr><td>August   </td><td> 0</td><td> 8</td></tr>
+	<tr><td>September</td><td>23</td><td> 7</td></tr>
+	<tr><td>May      </td><td> 0</td><td> 5</td></tr>
+	<tr><td>July     </td><td> 1</td><td> 4</td></tr>
+	<tr><td>January  </td><td> 3</td><td> 3</td></tr>
+	<tr><td>April    </td><td> 1</td><td> 3</td></tr>
+	<tr><td>January  </td><td> 1</td><td> 2</td></tr>
+	<tr><td>January  </td><td> 2</td><td> 2</td></tr>
+	<tr><td>February </td><td> 0</td><td> 2</td></tr>
+	<tr><td>June     </td><td> 1</td><td> 2</td></tr>
+	<tr><td>September</td><td> 0</td><td> 2</td></tr>
+	<tr><td>May      </td><td> 1</td><td> 1</td></tr>
+	<tr><td>June     </td><td> 2</td><td> 1</td></tr>
+	<tr><td>July     </td><td> 2</td><td> 1</td></tr>
+	<tr><td>August   </td><td> 2</td><td> 1</td></tr>
+</tbody>
+</table>
+</div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">cmh.df</span> <span class="o">%&gt;%</span>
+  <span class="nf">group_by</span><span class="p">(</span><span class="n">flt_hour</span><span class="p">)</span> <span class="o">%&gt;%</span>
+  <span class="nf">summarise</span><span class="p">(</span><span class="n">md.delay</span> <span class="o">=</span> <span class="nf">median</span><span class="p">(</span><span class="n">dep_delay</span><span class="p">,</span> <span class="n">na.rm</span> <span class="o">=</span> <span class="kc">TRUE</span><span class="p">))</span> <span class="o">%&gt;%</span>
+  <span class="nf">arrange</span><span class="p">(</span><span class="o">-</span><span class="n">md.delay</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><table class="dataframe">
+<caption>A tibble: 24 × 2</caption>
+<thead>
+	<tr><th scope=col>flt_hour</th><th scope=col>md.delay</th></tr>
+	<tr><th scope=col>&lt;int&gt;</th><th scope=col>&lt;dbl&gt;</th></tr>
+</thead>
+<tbody>
+	<tr><td> 3</td><td>290</td></tr>
+	<tr><td> 2</td><td>233</td></tr>
+	<tr><td> 1</td><td>174</td></tr>
+	<tr><td> 0</td><td>137</td></tr>
+	<tr><td>23</td><td> 49</td></tr>
+	<tr><td>21</td><td>  6</td></tr>
+	<tr><td>18</td><td>  2</td></tr>
+	<tr><td>19</td><td>  1</td></tr>
+	<tr><td>15</td><td>  0</td></tr>
+	<tr><td>16</td><td>  0</td></tr>
+	<tr><td>22</td><td>  0</td></tr>
+	<tr><td>17</td><td> -1</td></tr>
+	<tr><td>20</td><td> -1</td></tr>
+	<tr><td>10</td><td> -2</td></tr>
+	<tr><td>11</td><td> -2</td></tr>
+	<tr><td>12</td><td> -2</td></tr>
+	<tr><td>13</td><td> -2</td></tr>
+	<tr><td>14</td><td> -2</td></tr>
+	<tr><td> 8</td><td> -3</td></tr>
+	<tr><td> 9</td><td> -3</td></tr>
+	<tr><td> 5</td><td> -4</td></tr>
+	<tr><td> 6</td><td> -4</td></tr>
+	<tr><td> 7</td><td> -4</td></tr>
+	<tr><td>NA</td><td> NA</td></tr>
+</tbody>
+</table>
+</div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">cmh.df</span> <span class="o">%&gt;%</span>
+  <span class="nf">group_by</span><span class="p">(</span><span class="n">flt_hour</span><span class="p">)</span> <span class="o">%&gt;%</span>
+  <span class="nf">summarise</span><span class="p">(</span><span class="n">md.delay</span> <span class="o">=</span> <span class="nf">median</span><span class="p">(</span><span class="n">dep_delay</span><span class="p">,</span> <span class="n">na.rm</span> <span class="o">=</span> <span class="kc">TRUE</span><span class="p">))</span> <span class="o">%&gt;%</span>
+  <span class="nf">arrange</span><span class="p">(</span><span class="n">md.delay</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><table class="dataframe">
+<caption>A tibble: 24 × 2</caption>
+<thead>
+	<tr><th scope=col>flt_hour</th><th scope=col>md.delay</th></tr>
+	<tr><th scope=col>&lt;int&gt;</th><th scope=col>&lt;dbl&gt;</th></tr>
+</thead>
+<tbody>
+	<tr><td> 5</td><td> -4</td></tr>
+	<tr><td> 6</td><td> -4</td></tr>
+	<tr><td> 7</td><td> -4</td></tr>
+	<tr><td> 8</td><td> -3</td></tr>
+	<tr><td> 9</td><td> -3</td></tr>
+	<tr><td>10</td><td> -2</td></tr>
+	<tr><td>11</td><td> -2</td></tr>
+	<tr><td>12</td><td> -2</td></tr>
+	<tr><td>13</td><td> -2</td></tr>
+	<tr><td>14</td><td> -2</td></tr>
+	<tr><td>17</td><td> -1</td></tr>
+	<tr><td>20</td><td> -1</td></tr>
+	<tr><td>15</td><td>  0</td></tr>
+	<tr><td>16</td><td>  0</td></tr>
+	<tr><td>22</td><td>  0</td></tr>
+	<tr><td>19</td><td>  1</td></tr>
+	<tr><td>18</td><td>  2</td></tr>
+	<tr><td>21</td><td>  6</td></tr>
+	<tr><td>23</td><td> 49</td></tr>
+	<tr><td> 0</td><td>137</td></tr>
+	<tr><td> 1</td><td>174</td></tr>
+	<tr><td> 2</td><td>233</td></tr>
+	<tr><td> 3</td><td>290</td></tr>
+	<tr><td>NA</td><td> NA</td></tr>
+</tbody>
+</table>
+</div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">cmh.df</span> <span class="o">%&gt;%</span>
+  <span class="nf">group_by</span><span class="p">(</span><span class="n">dest_city_name</span><span class="p">,</span> <span class="n">flt_hour</span><span class="p">)</span> <span class="o">%&gt;%</span>
+  <span class="nf">summarise</span><span class="p">(</span><span class="n">md.delay</span> <span class="o">=</span> <span class="nf">median</span><span class="p">(</span><span class="n">dep_delay</span><span class="p">,</span> <span class="n">na.rm</span> <span class="o">=</span> <span class="kc">TRUE</span><span class="p">))</span> <span class="o">%&gt;%</span>
+  <span class="nf">arrange</span><span class="p">(</span><span class="o">-</span><span class="n">md.delay</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>`summarise()` has grouped output by &#39;dest_city_name&#39;. You can override using the `.groups` argument.
+</pre></div>
+</div>
+<div class="output text_html"><table class="dataframe">
+<caption>A grouped_df: 418 × 3</caption>
+<thead>
+	<tr><th scope=col>dest_city_name</th><th scope=col>flt_hour</th><th scope=col>md.delay</th></tr>
+	<tr><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;int&gt;</th><th scope=col>&lt;dbl&gt;</th></tr>
+</thead>
+<tbody>
+	<tr><td>Newark, NJ           </td><td> 6</td><td>1046.0</td></tr>
+	<tr><td>Newark, NJ           </td><td> 7</td><td> 688.0</td></tr>
+	<tr><td>Denver, CO           </td><td>14</td><td> 489.0</td></tr>
+	<tr><td>Houston, TX          </td><td> 7</td><td> 419.5</td></tr>
+	<tr><td>Minneapolis, MN      </td><td> 0</td><td> 381.0</td></tr>
+	<tr><td>Atlanta, GA          </td><td> 1</td><td> 348.0</td></tr>
+	<tr><td>New York, NY         </td><td> 0</td><td> 337.0</td></tr>
+	<tr><td>Tampa, FL            </td><td> 1</td><td> 324.0</td></tr>
+	<tr><td>Nashville, TN        </td><td>23</td><td> 323.0</td></tr>
+	<tr><td>Fort Myers, FL       </td><td> 0</td><td> 297.0</td></tr>
+	<tr><td>Columbus, OH         </td><td> 3</td><td> 290.0</td></tr>
+	<tr><td>Phoenix, AZ          </td><td>23</td><td> 286.0</td></tr>
+	<tr><td>Washington, DC       </td><td>22</td><td> 283.5</td></tr>
+	<tr><td>New Orleans, LA      </td><td> 0</td><td> 279.0</td></tr>
+	<tr><td>St. Louis, MO        </td><td> 1</td><td> 278.0</td></tr>
+	<tr><td>Fort Myers, FL       </td><td>21</td><td> 270.0</td></tr>
+	<tr><td>Fort Myers, FL       </td><td>22</td><td> 263.0</td></tr>
+	<tr><td>Atlanta, GA          </td><td>22</td><td> 262.5</td></tr>
+	<tr><td>Nashville, TN        </td><td>22</td><td> 261.0</td></tr>
+	<tr><td>Dallas, TX           </td><td>21</td><td> 255.0</td></tr>
+	<tr><td>Fort Myers, FL       </td><td>23</td><td> 255.0</td></tr>
+	<tr><td>Atlanta, GA          </td><td> 0</td><td> 254.0</td></tr>
+	<tr><td>Phoenix, AZ          </td><td>22</td><td> 249.5</td></tr>
+	<tr><td>Atlanta, GA          </td><td>23</td><td> 243.0</td></tr>
+	<tr><td>Tampa, FL            </td><td> 0</td><td> 234.0</td></tr>
+	<tr><td>Columbus, OH         </td><td> 2</td><td> 233.0</td></tr>
+	<tr><td>Los Angeles, CA      </td><td>15</td><td> 227.0</td></tr>
+	<tr><td>Detroit, MI          </td><td>12</td><td> 223.0</td></tr>
+	<tr><td>Dallas/Fort Worth, TX</td><td>22</td><td> 213.0</td></tr>
+	<tr><td>New York, NY         </td><td>14</td><td> 196.0</td></tr>
+	<tr><td>⋮</td><td>⋮</td><td>⋮</td></tr>
+	<tr><td>Houston, TX          </td><td> 5</td><td> -8</td></tr>
+	<tr><td>Newark, NJ           </td><td>19</td><td> -8</td></tr>
+	<tr><td>Houston, TX          </td><td>11</td><td> -9</td></tr>
+	<tr><td>Nashville, TN        </td><td>11</td><td> -9</td></tr>
+	<tr><td>Dallas/Fort Worth, TX</td><td>10</td><td>-10</td></tr>
+	<tr><td>Philadelphia, PA     </td><td>17</td><td>-10</td></tr>
+	<tr><td>St. Louis, MO        </td><td>19</td><td>-12</td></tr>
+	<tr><td>Atlanta, GA          </td><td>NA</td><td> NA</td></tr>
+	<tr><td>Baltimore, MD        </td><td>NA</td><td> NA</td></tr>
+	<tr><td>Boston, MA           </td><td>NA</td><td> NA</td></tr>
+	<tr><td>Chicago, IL          </td><td>NA</td><td> NA</td></tr>
+	<tr><td>Columbus, OH         </td><td>NA</td><td> NA</td></tr>
+	<tr><td>Dallas, TX           </td><td>NA</td><td> NA</td></tr>
+	<tr><td>Dallas/Fort Worth, TX</td><td>NA</td><td> NA</td></tr>
+	<tr><td>Denver, CO           </td><td>NA</td><td> NA</td></tr>
+	<tr><td>Detroit, MI          </td><td>NA</td><td> NA</td></tr>
+	<tr><td>Fort Lauderdale, FL  </td><td>NA</td><td> NA</td></tr>
+	<tr><td>Fort Myers, FL       </td><td>NA</td><td> NA</td></tr>
+	<tr><td>Houston, TX          </td><td>NA</td><td> NA</td></tr>
+	<tr><td>Los Angeles, CA      </td><td>NA</td><td> NA</td></tr>
+	<tr><td>Minneapolis, MN      </td><td>NA</td><td> NA</td></tr>
+	<tr><td>Nashville, TN        </td><td>NA</td><td> NA</td></tr>
+	<tr><td>New York, NY         </td><td>NA</td><td> NA</td></tr>
+	<tr><td>Newark, NJ           </td><td>NA</td><td> NA</td></tr>
+	<tr><td>Orlando, FL          </td><td>NA</td><td> NA</td></tr>
+	<tr><td>Philadelphia, PA     </td><td>NA</td><td> NA</td></tr>
+	<tr><td>Phoenix, AZ          </td><td>NA</td><td> NA</td></tr>
+	<tr><td>St. Louis, MO        </td><td>NA</td><td> NA</td></tr>
+	<tr><td>Tampa, FL            </td><td>NA</td><td> NA</td></tr>
+	<tr><td>Washington, DC       </td><td>NA</td><td> NA</td></tr>
+</tbody>
+</table>
+</div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">cmh.df</span> <span class="o">%&gt;%</span>
+  <span class="nf">group_by</span><span class="p">(</span><span class="n">carrier</span><span class="p">,</span> <span class="n">dest_city_name</span><span class="p">,</span> <span class="n">flt_hour</span><span class="p">)</span> <span class="o">%&gt;%</span>
+  <span class="nf">summarise</span><span class="p">(</span><span class="n">md.delay</span> <span class="o">=</span> <span class="nf">median</span><span class="p">(</span><span class="n">dep_delay</span><span class="p">,</span> <span class="n">na.rm</span> <span class="o">=</span> <span class="kc">TRUE</span><span class="p">))</span> <span class="o">%&gt;%</span>
+  <span class="nf">arrange</span><span class="p">(</span><span class="o">-</span><span class="n">md.delay</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>`summarise()` has grouped output by &#39;carrier&#39;, &#39;dest_city_name&#39;. You can override using the `.groups` argument.
+</pre></div>
+</div>
+<div class="output text_html"><table class="dataframe">
+<caption>A grouped_df: 656 × 4</caption>
+<thead>
+	<tr><th scope=col>carrier</th><th scope=col>dest_city_name</th><th scope=col>flt_hour</th><th scope=col>md.delay</th></tr>
+	<tr><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;int&gt;</th><th scope=col>&lt;dbl&gt;</th></tr>
+</thead>
+<tbody>
+	<tr><td>EV</td><td>Newark, NJ     </td><td> 6</td><td>1046.0</td></tr>
+	<tr><td>EV</td><td>Chicago, IL    </td><td> 6</td><td>1024.0</td></tr>
+	<tr><td>EV</td><td>Newark, NJ     </td><td> 7</td><td> 688.0</td></tr>
+	<tr><td>DL</td><td>Columbus, OH   </td><td> 5</td><td> 526.0</td></tr>
+	<tr><td>F9</td><td>Denver, CO     </td><td>14</td><td> 489.0</td></tr>
+	<tr><td>DL</td><td>Los Angeles, CA</td><td>15</td><td> 481.0</td></tr>
+	<tr><td>AA</td><td>Phoenix, AZ    </td><td>15</td><td> 463.0</td></tr>
+	<tr><td>EV</td><td>Houston, TX    </td><td> 7</td><td> 419.5</td></tr>
+	<tr><td>UA</td><td>Chicago, IL    </td><td> 0</td><td> 394.0</td></tr>
+	<tr><td>DL</td><td>Minneapolis, MN</td><td> 0</td><td> 381.0</td></tr>
+	<tr><td>DL</td><td>Atlanta, GA    </td><td> 1</td><td> 348.0</td></tr>
+	<tr><td>F9</td><td>Orlando, FL    </td><td>18</td><td> 339.5</td></tr>
+	<tr><td>EV</td><td>New York, NY   </td><td> 0</td><td> 337.0</td></tr>
+	<tr><td>WN</td><td>Tampa, FL      </td><td> 1</td><td> 324.0</td></tr>
+	<tr><td>WN</td><td>Nashville, TN  </td><td>23</td><td> 323.0</td></tr>
+	<tr><td>AA</td><td>Phoenix, AZ    </td><td>23</td><td> 309.0</td></tr>
+	<tr><td>DL</td><td>Atlanta, GA    </td><td>22</td><td> 303.0</td></tr>
+	<tr><td>UA</td><td>Chicago, IL    </td><td>22</td><td> 299.0</td></tr>
+	<tr><td>WN</td><td>Fort Myers, FL </td><td> 0</td><td> 297.0</td></tr>
+	<tr><td>DL</td><td>Columbus, OH   </td><td> 3</td><td> 290.0</td></tr>
+	<tr><td>WN</td><td>Washington, DC </td><td>22</td><td> 283.5</td></tr>
+	<tr><td>UA</td><td>Denver, CO     </td><td>13</td><td> 279.0</td></tr>
+	<tr><td>WN</td><td>New Orleans, LA</td><td> 0</td><td> 279.0</td></tr>
+	<tr><td>WN</td><td>St. Louis, MO  </td><td> 1</td><td> 278.0</td></tr>
+	<tr><td>AA</td><td>Phoenix, AZ    </td><td>22</td><td> 272.0</td></tr>
+	<tr><td>F9</td><td>Columbus, OH   </td><td>22</td><td> 270.0</td></tr>
+	<tr><td>WN</td><td>Fort Myers, FL </td><td>21</td><td> 270.0</td></tr>
+	<tr><td>F9</td><td>Denver, CO     </td><td>10</td><td> 264.0</td></tr>
+	<tr><td>F9</td><td>Fort Myers, FL </td><td>22</td><td> 263.0</td></tr>
+	<tr><td>WN</td><td>Phoenix, AZ    </td><td>23</td><td> 263.0</td></tr>
+	<tr><td>⋮</td><td>⋮</td><td>⋮</td><td>⋮</td></tr>
+	<tr><td>DL</td><td>Columbus, OH       </td><td>NA</td><td>NA</td></tr>
+	<tr><td>DL</td><td>Los Angeles, CA    </td><td>NA</td><td>NA</td></tr>
+	<tr><td>EV</td><td>Columbus, OH       </td><td>NA</td><td>NA</td></tr>
+	<tr><td>EV</td><td>Detroit, MI        </td><td>NA</td><td>NA</td></tr>
+	<tr><td>EV</td><td>Houston, TX        </td><td>NA</td><td>NA</td></tr>
+	<tr><td>EV</td><td>Minneapolis, MN    </td><td>NA</td><td>NA</td></tr>
+	<tr><td>EV</td><td>New York, NY       </td><td>NA</td><td>NA</td></tr>
+	<tr><td>EV</td><td>Newark, NJ         </td><td>NA</td><td>NA</td></tr>
+	<tr><td>F9</td><td>Columbus, OH       </td><td>NA</td><td>NA</td></tr>
+	<tr><td>F9</td><td>Denver, CO         </td><td>NA</td><td>NA</td></tr>
+	<tr><td>F9</td><td>Orlando, FL        </td><td>NA</td><td>NA</td></tr>
+	<tr><td>OO</td><td>Chicago, IL        </td><td>NA</td><td>NA</td></tr>
+	<tr><td>OO</td><td>Columbus, OH       </td><td>NA</td><td>NA</td></tr>
+	<tr><td>OO</td><td>Denver, CO         </td><td>NA</td><td>NA</td></tr>
+	<tr><td>UA</td><td>Chicago, IL        </td><td>NA</td><td>NA</td></tr>
+	<tr><td>UA</td><td>Columbus, OH       </td><td>NA</td><td>NA</td></tr>
+	<tr><td>UA</td><td>Denver, CO         </td><td>NA</td><td>NA</td></tr>
+	<tr><td>WN</td><td>Atlanta, GA        </td><td>NA</td><td>NA</td></tr>
+	<tr><td>WN</td><td>Baltimore, MD      </td><td>NA</td><td>NA</td></tr>
+	<tr><td>WN</td><td>Boston, MA         </td><td>NA</td><td>NA</td></tr>
+	<tr><td>WN</td><td>Chicago, IL        </td><td>NA</td><td>NA</td></tr>
+	<tr><td>WN</td><td>Columbus, OH       </td><td>NA</td><td>NA</td></tr>
+	<tr><td>WN</td><td>Dallas, TX         </td><td>NA</td><td>NA</td></tr>
+	<tr><td>WN</td><td>Fort Lauderdale, FL</td><td>NA</td><td>NA</td></tr>
+	<tr><td>WN</td><td>Fort Myers, FL     </td><td>NA</td><td>NA</td></tr>
+	<tr><td>WN</td><td>Nashville, TN      </td><td>NA</td><td>NA</td></tr>
+	<tr><td>WN</td><td>Orlando, FL        </td><td>NA</td><td>NA</td></tr>
+	<tr><td>WN</td><td>St. Louis, MO      </td><td>NA</td><td>NA</td></tr>
+	<tr><td>WN</td><td>Tampa, FL          </td><td>NA</td><td>NA</td></tr>
+	<tr><td>WN</td><td>Washington, DC     </td><td>NA</td><td>NA</td></tr>
+</tbody>
+</table>
+</div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">cmh.df</span> <span class="o">%&gt;%</span>
+  <span class="nf">filter</span><span class="p">(</span> <span class="c1"># eliminates all rows where both these columns are blank </span>
+    <span class="o">!</span><span class="nf">is.na</span><span class="p">(</span><span class="n">tail_num</span><span class="p">),</span>
+    <span class="o">!</span><span class="nf">is.na</span><span class="p">(</span><span class="n">flt_date_time</span><span class="p">)</span> 
+    <span class="p">)</span> <span class="o">%&gt;%</span> 
+  <span class="nf">group_by</span><span class="p">(</span><span class="n">tail_num</span><span class="p">)</span> <span class="o">%&gt;%</span> 
+  <span class="nf">arrange</span><span class="p">(</span><span class="n">flt_date_time</span><span class="p">)</span> <span class="o">%&gt;%</span> <span class="c1"># each aircraft is now stacked by when it flew</span>
+  <span class="nf">mutate</span><span class="p">(</span><span class="n">n_flew</span> <span class="o">=</span> <span class="nf">row_number</span><span class="p">())</span> <span class="o">%&gt;%</span> <span class="c1"># each time aan aircraft is seen it gets a number, 1, 2, 3, and so on ... </span>
+  <span class="nf">select</span><span class="p">(</span><span class="n">tail_num</span><span class="p">,</span> <span class="n">flt_date_time</span><span class="p">,</span> <span class="n">n_flew</span><span class="p">)</span> <span class="o">%&gt;%</span>
+  <span class="nf">arrange</span><span class="p">(</span><span class="o">-</span><span class="n">n_flew</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">cmh.df2</span> <span class="c1"># N396SW is seen the most often in this data-set </span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">cmh.df2</span> <span class="o">%&gt;%</span>
+  <span class="nf">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><table class="dataframe">
+<caption>A grouped_df: 6 × 3</caption>
+<thead>
+	<tr><th scope=col>tail_num</th><th scope=col>flt_date_time</th><th scope=col>n_flew</th></tr>
+	<tr><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;dttm&gt;</th><th scope=col>&lt;int&gt;</th></tr>
+</thead>
+<tbody>
+	<tr><td>N396SW</td><td>2017-08-23 10:07:00</td><td>73</td></tr>
+	<tr><td>N396SW</td><td>2017-08-23 08:07:00</td><td>72</td></tr>
+	<tr><td>N396SW</td><td>2017-08-19 08:20:00</td><td>71</td></tr>
+	<tr><td>N396SW</td><td>2017-08-18 15:24:00</td><td>70</td></tr>
+	<tr><td>N396SW</td><td>2017-08-06 21:43:00</td><td>69</td></tr>
+	<tr><td>N396SW</td><td>2017-08-06 18:53:00</td><td>68</td></tr>
+</tbody>
+</table>
+</div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">cmh.df2</span> <span class="o">%&gt;%</span>
+  <span class="nf">group_by</span><span class="p">(</span><span class="n">tail_num</span><span class="p">)</span> <span class="o">%&gt;%</span>
+  <span class="nf">arrange</span><span class="p">(</span><span class="n">flt_date_time</span><span class="p">)</span> <span class="o">%&gt;%</span>
+  <span class="nf">mutate</span><span class="p">(</span>
+    <span class="n">tspan</span> <span class="o">=</span> <span class="nf">interval</span><span class="p">(</span>
+      <span class="nf">lag</span><span class="p">(</span><span class="n">flt_date_time</span><span class="p">,</span> <span class="n">order_by</span> <span class="o">=</span> <span class="n">tail_num</span><span class="p">),</span> <span class="n">flt_date_time</span>
+      <span class="p">),</span> <span class="c1"># calculate the time span between successive flights recorded and save as new varable tspan</span>
+    <span class="n">tspan.minutes</span> <span class="o">=</span> <span class="nf">as.duration</span><span class="p">(</span><span class="n">tspan</span><span class="p">)</span><span class="o">/</span><span class="nf">dminutes</span><span class="p">(</span><span class="m">1</span><span class="p">),</span> <span class="c1"># convert tspan into minutes and save as tspan.minutes</span>
+    <span class="n">tspan.hours</span> <span class="o">=</span> <span class="nf">as.duration</span><span class="p">(</span><span class="n">tspan</span><span class="p">)</span><span class="o">/</span><span class="nf">dhours</span><span class="p">(</span><span class="m">1</span><span class="p">),</span> <span class="c1"># convert tspan into hours and save as tspan.hours</span>
+    <span class="n">tspan.days</span> <span class="o">=</span> <span class="nf">as.duration</span><span class="p">(</span><span class="n">tspan</span><span class="p">)</span><span class="o">/</span><span class="nf">ddays</span><span class="p">(</span><span class="m">1</span><span class="p">),</span> <span class="c1"># convert tspan into days and save as tspan.days </span>
+    <span class="n">tspan.weeks</span> <span class="o">=</span> <span class="nf">as.duration</span><span class="p">(</span><span class="n">tspan</span><span class="p">)</span><span class="o">/</span><span class="nf">dweeks</span><span class="p">(</span><span class="m">1</span><span class="p">)</span> <span class="c1"># convert tspan into weeks and save as tspan.weeks </span>
+    <span class="p">)</span> <span class="o">-&gt;</span> <span class="n">cmh.df2</span> 
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">cmh.df2</span> <span class="o">%&gt;%</span>
+    <span class="nf">filter</span><span class="p">(</span><span class="n">tail_num</span> <span class="o">==</span> <span class="s">&quot;N396SW&quot;</span><span class="p">)</span> <span class="o">%&gt;%</span>
+    <span class="nf">head</span><span class="p">(</span><span class="n">.</span><span class="p">,</span> <span class="m">10</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><table class="dataframe">
+<caption>A grouped_df: 10 × 8</caption>
+<thead>
+	<tr><th scope=col>tail_num</th><th scope=col>flt_date_time</th><th scope=col>n_flew</th><th scope=col>tspan</th><th scope=col>tspan.minutes</th><th scope=col>tspan.hours</th><th scope=col>tspan.days</th><th scope=col>tspan.weeks</th></tr>
+	<tr><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;dttm&gt;</th><th scope=col>&lt;int&gt;</th><th scope=col>&lt;Interval&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th></tr>
+</thead>
+<tbody>
+	<tr><td>N396SW</td><td>2017-01-05 09:30:00</td><td> 1</td><td>NA--NA</td><td>   NA</td><td>        NA</td><td>         NA</td><td>        NA</td></tr>
+	<tr><td>N396SW</td><td>2017-01-05 12:19:00</td><td> 2</td><td>2017-01-05 09:30:00 UTC--2017-01-05 12:19:00 UTC</td><td>  169</td><td>  2.816667</td><td> 0.11736111</td><td>0.01676587</td></tr>
+	<tr><td>N396SW</td><td>2017-01-11 08:34:00</td><td> 3</td><td>2017-01-05 12:19:00 UTC--2017-01-11 08:34:00 UTC</td><td> 8415</td><td>140.250000</td><td> 5.84375000</td><td>0.83482143</td></tr>
+	<tr><td>N396SW</td><td>2017-01-11 10:44:00</td><td> 4</td><td>2017-01-11 08:34:00 UTC--2017-01-11 10:44:00 UTC</td><td>  130</td><td>  2.166667</td><td> 0.09027778</td><td>0.01289683</td></tr>
+	<tr><td>N396SW</td><td>2017-01-19 10:31:00</td><td> 5</td><td>2017-01-11 10:44:00 UTC--2017-01-19 10:31:00 UTC</td><td>11507</td><td>191.783333</td><td> 7.99097222</td><td>1.14156746</td></tr>
+	<tr><td>N396SW</td><td>2017-01-19 14:28:00</td><td> 6</td><td>2017-01-19 10:31:00 UTC--2017-01-19 14:28:00 UTC</td><td>  237</td><td>  3.950000</td><td> 0.16458333</td><td>0.02351190</td></tr>
+	<tr><td>N396SW</td><td>2017-02-10 08:23:00</td><td> 7</td><td>2017-01-19 14:28:00 UTC--2017-02-10 08:23:00 UTC</td><td>31315</td><td>521.916667</td><td>21.74652778</td><td>3.10664683</td></tr>
+	<tr><td>N396SW</td><td>2017-02-10 10:32:00</td><td> 8</td><td>2017-02-10 08:23:00 UTC--2017-02-10 10:32:00 UTC</td><td>  129</td><td>  2.150000</td><td> 0.08958333</td><td>0.01279762</td></tr>
+	<tr><td>N396SW</td><td>2017-02-15 15:20:00</td><td> 9</td><td>2017-02-10 10:32:00 UTC--2017-02-15 15:20:00 UTC</td><td> 7488</td><td>124.800000</td><td> 5.20000000</td><td>0.74285714</td></tr>
+	<tr><td>N396SW</td><td>2017-02-15 18:15:00</td><td>10</td><td>2017-02-15 15:20:00 UTC--2017-02-15 18:15:00 UTC</td><td>  175</td><td>  2.916667</td><td> 0.12152778</td><td>0.01736111</td></tr>
+</tbody>
+</table>
+</div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">cmh.df2</span> <span class="o">%&gt;%</span>
+    <span class="nf">filter</span><span class="p">(</span><span class="n">tail_num</span> <span class="o">==</span> <span class="s">&quot;N396SW&quot;</span><span class="p">)</span> <span class="o">%&gt;%</span>
+    <span class="nf">tail</span><span class="p">(</span><span class="n">.</span><span class="p">,</span> <span class="m">10</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><table class="dataframe">
+<caption>A grouped_df: 10 × 8</caption>
+<thead>
+	<tr><th scope=col>tail_num</th><th scope=col>flt_date_time</th><th scope=col>n_flew</th><th scope=col>tspan</th><th scope=col>tspan.minutes</th><th scope=col>tspan.hours</th><th scope=col>tspan.days</th><th scope=col>tspan.weeks</th></tr>
+	<tr><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;dttm&gt;</th><th scope=col>&lt;int&gt;</th><th scope=col>&lt;Interval&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th></tr>
+</thead>
+<tbody>
+	<tr><td>N396SW</td><td>2017-07-25 08:28:00</td><td>64</td><td>2017-07-14 11:04:00 UTC--2017-07-25 08:28:00 UTC</td><td>15684</td><td>261.400000</td><td>10.89166667</td><td>1.55595238</td></tr>
+	<tr><td>N396SW</td><td>2017-07-25 11:18:00</td><td>65</td><td>2017-07-25 08:28:00 UTC--2017-07-25 11:18:00 UTC</td><td>  170</td><td>  2.833333</td><td> 0.11805556</td><td>0.01686508</td></tr>
+	<tr><td>N396SW</td><td>2017-07-30 16:24:00</td><td>66</td><td>2017-07-25 11:18:00 UTC--2017-07-30 16:24:00 UTC</td><td> 7506</td><td>125.100000</td><td> 5.21250000</td><td>0.74464286</td></tr>
+	<tr><td>N396SW</td><td>2017-07-30 18:31:00</td><td>67</td><td>2017-07-30 16:24:00 UTC--2017-07-30 18:31:00 UTC</td><td>  127</td><td>  2.116667</td><td> 0.08819444</td><td>0.01259921</td></tr>
+	<tr><td>N396SW</td><td>2017-08-06 18:53:00</td><td>68</td><td>2017-07-30 18:31:00 UTC--2017-08-06 18:53:00 UTC</td><td>10102</td><td>168.366667</td><td> 7.01527778</td><td>1.00218254</td></tr>
+	<tr><td>N396SW</td><td>2017-08-06 21:43:00</td><td>69</td><td>2017-08-06 18:53:00 UTC--2017-08-06 21:43:00 UTC</td><td>  170</td><td>  2.833333</td><td> 0.11805556</td><td>0.01686508</td></tr>
+	<tr><td>N396SW</td><td>2017-08-18 15:24:00</td><td>70</td><td>2017-08-06 21:43:00 UTC--2017-08-18 15:24:00 UTC</td><td>16901</td><td>281.683333</td><td>11.73680556</td><td>1.67668651</td></tr>
+	<tr><td>N396SW</td><td>2017-08-19 08:20:00</td><td>71</td><td>2017-08-18 15:24:00 UTC--2017-08-19 08:20:00 UTC</td><td> 1016</td><td> 16.933333</td><td> 0.70555556</td><td>0.10079365</td></tr>
+	<tr><td>N396SW</td><td>2017-08-23 08:07:00</td><td>72</td><td>2017-08-19 08:20:00 UTC--2017-08-23 08:07:00 UTC</td><td> 5747</td><td> 95.783333</td><td> 3.99097222</td><td>0.57013889</td></tr>
+	<tr><td>N396SW</td><td>2017-08-23 10:07:00</td><td>73</td><td>2017-08-23 08:07:00 UTC--2017-08-23 10:07:00 UTC</td><td>  120</td><td>  2.000000</td><td> 0.08333333</td><td>0.01190476</td></tr>
+</tbody>
+</table>
+</div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">library</span><span class="p">(</span><span class="n">readr</span><span class="p">)</span>
+
+<span class="nf">read_csv</span><span class="p">(</span>
+    <span class="s">&quot;https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2019/2019-09-10/saferparks.csv&quot;</span>
+    <span class="p">)</span> <span class="o">-&gt;</span> <span class="n">safer_parks</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span><span class=" -Color -Color-Bold">Rows: </span><span class=" -Color -Color-Blue">8351</span> <span class=" -Color -Color-Bold">Columns: </span><span class=" -Color -Color-Blue">23</span>
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span><span class=" -Color -Color-Cyan">──</span> <span class=" -Color -Color-Bold">Column specification</span> <span class=" -Color -Color-Cyan">───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────</span>
+<span class=" -Color -Color-Bold">Delimiter:</span> &quot;,&quot;
+<span class=" -Color -Color-Red">chr</span> (17): acc_date, acc_state, acc_city, fix_port, source, bus_type, industr...
+<span class=" -Color -Color-Green">dbl</span>  (6): acc_id, num_injured, age_youngest, mechanical, op_error, employee
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span><span class=" -Color -Color-Cyan">ℹ</span> Use <span class=" -Color -Color-Black -Color-Black-BGWhite">`spec()`</span> to retrieve the full column specification for this data.
+<span class=" -Color -Color-Cyan">ℹ</span> Specify the column types or set <span class=" -Color -Color-Black -Color-Black-BGWhite">`show_col_types = FALSE`</span> to quiet this message.
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">read_csv</span><span class="p">(</span>
+  <span class="s">&quot;https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2019/2019-09-10/tx_injuries.csv&quot;</span>
+  <span class="p">)</span> <span class="o">-&gt;</span> <span class="n">tx_injuries</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span><span class=" -Color -Color-Bold">Rows: </span><span class=" -Color -Color-Blue">542</span> <span class=" -Color -Color-Bold">Columns: </span><span class=" -Color -Color-Blue">13</span>
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span><span class=" -Color -Color-Cyan">──</span> <span class=" -Color -Color-Bold">Column specification</span> <span class=" -Color -Color-Cyan">───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────</span>
+<span class=" -Color -Color-Bold">Delimiter:</span> &quot;,&quot;
+<span class=" -Color -Color-Red">chr</span> (12): name_of_operation, city, st, injury_date, ride_name, serial_no, ge...
+<span class=" -Color -Color-Green">dbl</span>  (1): injury_report_rec
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span><span class=" -Color -Color-Cyan">ℹ</span> Use <span class=" -Color -Color-Black -Color-Black-BGWhite">`spec()`</span> to retrieve the full column specification for this data.
+<span class=" -Color -Color-Cyan">ℹ</span> Specify the column types or set <span class=" -Color -Color-Black -Color-Black-BGWhite">`show_col_types = FALSE`</span> to quiet this message.
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">read_csv</span><span class="p">(</span>
+  <span class="s">&quot;https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2019/2019-01-15/launches.csv&quot;</span>
+  <span class="p">)</span> <span class="o">-&gt;</span> <span class="n">launches</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span><span class=" -Color -Color-Bold">Rows: </span><span class=" -Color -Color-Blue">5726</span> <span class=" -Color -Color-Bold">Columns: </span><span class=" -Color -Color-Blue">11</span>
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span><span class=" -Color -Color-Cyan">──</span> <span class=" -Color -Color-Bold">Column specification</span> <span class=" -Color -Color-Cyan">───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────</span>
+<span class=" -Color -Color-Bold">Delimiter:</span> &quot;,&quot;
+<span class=" -Color -Color-Red">chr</span>  (8): tag, type, variant, mission, agency, state_code, category, agency_...
+<span class=" -Color -Color-Green">dbl</span>  (2): JD, launch_year
+<span class=" -Color -Color-Blue">date</span> (1): launch_date
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span><span class=" -Color -Color-Cyan">ℹ</span> Use <span class=" -Color -Color-Black -Color-Black-BGWhite">`spec()`</span> to retrieve the full column specification for this data.
+<span class=" -Color -Color-Cyan">ℹ</span> Specify the column types or set <span class=" -Color -Color-Black -Color-Black-BGWhite">`show_col_types = FALSE`</span> to quiet this message.
+</pre></div>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "aniruhil/jb5830-repo",
+            ref: "main",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "r"
+        },
+        kernelOptions: {
+            kernelName: "ir",
+            path: "./.jupyter_cache/executed/da3a9711b49283a56bb7f7af03dd8f79"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'ir'</script>
+
+              </div>
+              
+            
+                
+
+
+
+<div class='prev-next-bottom'>
+    
+
+</div>
+            
+        </div>
+    </div>
+    <footer class="footer">
+  <p>
+    
+      By Ani Ruhil<br/>
+    
+        &copy; Copyright 2022.<br/>
+      <div class="extra_footer">
+        Fall 2021
+      </div>
+  </p>
+</footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../../../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+
+  </body>
+</html>
